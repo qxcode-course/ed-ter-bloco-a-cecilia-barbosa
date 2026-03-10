@@ -1,0 +1,28 @@
+version: '0.2'
+sources:
+- alias: sandbox
+  target: sandbox
+  type: local
+  writeable: true
+  filters: null
+- alias: fup
+  target: https://github.com/qxcodefup/arcade.git
+  type: git
+  writeable: false
+  cache_timestamp: '2026-03-10 13:43:02'
+  filters: null
+expanded:
+- fup@jogos-em-modo-texto
+- fup@missão-operações
+- fup@jogos-em-modo-texto
+- fup@campanha-principal
+tasks: {}
+flags:
+  painel: 0
+  quests: 2
+  tracks: 0
+  tasks: 0
+  task_graph_mode: 0
+  show_time: 0
+lang: go
+selected: fup@resto

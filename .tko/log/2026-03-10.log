@@ -1,0 +1,10 @@
+2026-03-10 13:58:38, MOVE, v:1, k:ed@balanceada, mode:DOWN
+2026-03-10 13:58:45, MOVE, v:1, k:ed@caminhao, mode:DOWN
+2026-03-10 13:58:49, MOVE, v:1, k:ed@polonesa, mode:DOWN
+2026-03-10 14:07:38, MOVE, v:1, k:ed@princesa, mode:DOWN
+2026-03-10 14:07:42, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-10 14:17:21, EXEC, v:1, k:ed@princesa, mode:FREE, size:5
+2026-03-10 14:17:50, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-10 14:18:04, MOVE, v:1, k:ed@apagando, mode:DOWN
+2026-03-10 14:18:13, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-10 14:18:21, MOVE, v:1, k:ed@princesa, mode:BACK
