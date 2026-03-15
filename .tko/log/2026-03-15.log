@@ -21,3 +21,20 @@
 2026-03-15 05:17:37, MOVE, v:1, k:ed@pintando, mode:BACK
 2026-03-15 05:19:19, SELF, v:1, k:ed@pintando, self:1, rate:100, study:20, friend:Nao
 2026-03-15 05:19:46, MOVE, v:1, k:ed@mumia, mode:DOWN
+2026-03-15 18:53:31, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-15 19:13:35, EXEC, v:1, k:ed@mumia, mode:FULL, rate:66, size:23
+2026-03-15 19:14:07, EXEC, v:1, k:ed@mumia, mode:FULL, rate:44, size:23
+2026-03-15 19:15:29, EXEC, v:1, k:ed@mumia, mode:FULL, rate:100, size:25
+2026-03-15 19:18:05, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-03-15 19:19:03, SELF, v:1, k:ed@mumia, self:1, rate:100, study:20, friend:Nao
+2026-03-15 19:20:21, MOVE, v:1, k:ed@fuga, mode:DOWN
+2026-03-15 19:36:42, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-15 19:36:44, EXEC, v:1, k:ed@fuga, mode:FULL, rate:40, size:21
+2026-03-15 19:37:40, EXEC, v:1, k:ed@fuga, mode:FULL, rate:60, size:23
+2026-03-15 19:40:51, EXEC, v:1, k:ed@fuga, mode:FULL, rate:40, size:23
+2026-03-15 19:42:58, EXEC, v:1, k:ed@fuga, mode:FULL, rate:50, size:29
+2026-03-15 19:43:37, EXEC, v:1, k:ed@fuga, mode:FULL, rate:50, size:35
+2026-03-15 20:08:04, EXEC, v:1, k:ed@fuga, mode:FULL, rate:70, size:47
+2026-03-15 20:13:13, EXEC, v:1, k:ed@fuga, mode:FULL, rate:100, size:47
+2026-03-15 20:13:26, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-15 20:14:29, SELF, v:1, k:ed@fuga, self:1, rate:100, study:40, friend:Nao

@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-15_19-36-44",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -33,17 +33,20 @@\n ain() %7B%0A\n-%09\n+    \n var H, P\n@@ -56,17 +56,20 @@\n , D int%0A\n-%09\n+    \n fmt.Scan\n@@ -85,18 +85,25 @@\n &F, &D)%0A\n-%0A%09\n+    %0A    \n if H %3C P\n@@ -105,26 +105,32 @@\n H %3C P %7B%0A\n-%09%09\n+        \n if D == \n 1 %7B%0A%09%09%09f\n@@ -121,23 +121,33 @@\n if D == \n+-\n 1 %7B%0A\n-%09%09%09\n+            \n fmt.Prin\n@@ -148,34 +148,40 @@\n t.Printf(%22S%5Cn%22)%0A\n-%09%09\n+        \n %7D else %7B%0A%09%09%09fmt.\n@@ -165,35 +165,44 @@\n        %7D else %7B%0A\n-%09%09%09\n+            \n fmt.Printf(%22N%5Cn%22\n@@ -203,21 +203,30 @@\n (%22N%5Cn%22)%0A\n-%09%09%7D%0A%09\n+        %7D%0A    \n %7D else i\n@@ -239,18 +239,24 @@\n P %7B%0A\n-%09%09\n+        \n if D == \n -1 %7B\n@@ -255,16 +255,24 @@\n  == \n--\n 1 %7B%0A\n-%09%09%09\n+            \n fmt.\n@@ -285,18 +285,24 @@\n (%22S%5Cn%22)%0A\n-%09%09\n+        \n %7D else %7B\n@@ -306,11 +306,20 @@\n e %7B%0A\n-%09%09%09\n+            \n fmt.\n@@ -336,13 +336,22 @@\n n%22)%0A\n-%09%09%7D%0A%09\n+        %7D%0A    \n %7D%0A%0A%7D\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-15_19-37-40",
+            "content": "@@ -96,26 +96,8 @@\n %3C P \n-&& F %3C P && F %3E H \n %7B%0A%09%09\n@@ -108,9 +108,8 @@\n  == \n--\n 1 %7B%0A\n@@ -186,26 +186,8 @@\n %3E P \n-&& F %3E P && F %3C H \n %7B%0A%09%09\n@@ -186,32 +186,33 @@\n %3E P %7B%0A%09%09if D == \n+-\n 1 %7B%0A%09%09%09fmt.Print\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-15_19-40-51",
+            "content": "@@ -298,117 +298,8 @@\n %7D%0A%09%7D\n- else if H %3E F && P %3E F && F %3C P %7B%0A%09%09if D == -1 %7B%0A%09%09%09fmt.Printf(%22S%5Cn%22)%0A%09%09%7D else %7B%0A%09%09%09fmt.Printf(%22N%5Cn%22)%0A%09%09%7D%0A%09%7D\n %0A%0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-15_19-42-58",
+            "content": "@@ -407,116 +407,8 @@\n %7D%0A%09%7D\n- else if H %3E F && P %3E F && F %3E P %7B%0A%09%09if D == 1 %7B%0A%09%09%09fmt.Printf(%22S%5Cn%22)%0A%09%09%7D else %7B%0A%09%09%09fmt.Printf(%22N%5Cn%22)%0A%09%09%7D%0A%09%7D\n %0A%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-15_19-43-37",
+            "content": "@@ -86,17 +86,17 @@\n D)%0A%0A%09if \n-F\n+H\n  %3C P && \n@@ -103,37 +103,20 @@\n F %3C \n-H\n+P\n  && \n-P %3C\n+F %3E\n  H %7B\n- // POLICIA ENTRE\n %0A%09%09i\n@@ -187,33 +187,33 @@\n %0A%09%09%7D%0A%09%7D else if \n-F\n+H\n  %3E P && F %3E H &&\n@@ -212,156 +212,20 @@\n F %3E \n-H && P %3E H %7B // POLICIA ENTRE%0A%09%09if D == 1 %7B%0A%09%09%09fmt.Printf(%22S%5Cn%22)%0A%09%09%7D else %7B%0A%09%09%09fmt.Printf(%22N%5Cn%22)%0A%09%09%7D%0A%09%7D else if F %3E P && F %3C H && P %3C H %7B // F ENTRE\n+P && F %3C H %7B\n %0A%09%09i\n@@ -307,164 +307,33 @@\n  if \n-F %3C P && F %3E H\n+H %3E F\n  && P \n-%3C H %7B // F ENTRE%0A%09%09if D == -1 %7B%0A%09%09%09fmt.Printf(%22S%5Cn%22)%0A%09%09%7D else %7B%0A%09%09%09fmt.Printf(%22N%5Cn%22)%0A%09%09%7D%0A%09%7D else if F %3E P && F %3E H && P %3C H %7B // H ENTRE\n+%3E F && F %3C P %7B\n %0A%09%09i\n@@ -416,44 +416,33 @@\n  if \n-F %3E P\n+H %3E F\n  && \n-F %3C H\n+P %3E F\n  && \n-P %3E H\n+F %3E P\n  %7B\n- // H ENTRE\n %0A%09%09i\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-15_20-08-04",
+            "content": "@@ -468,33 +468,33 @@\n P && F %3E H && P \n-%3E\n+%3C\n  H %7B // F ENTRE%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-15_20-13-13",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar H, P, F, D int\n\tfmt.Scan(&H, &P, &F, &D)\n\n\tif F < P && F < H && P < H { // POLICIA ENTRE\n\t\tif D == -1 {\n\t\t\tfmt.Printf(\"S\\n\")\n\t\t} else {\n\t\t\tfmt.Printf(\"N\\n\")\n\t\t}\n\t} else if F > P && F > H && P > H { // POLICIA ENTRE\n\t\tif D == 1 {\n\t\t\tfmt.Printf(\"S\\n\")\n\t\t} else {\n\t\t\tfmt.Printf(\"N\\n\")\n\t\t}\n\t} else if F > P && F < H && P < H { // F ENTRE\n\t\tif D == 1 {\n\t\t\tfmt.Printf(\"S\\n\")\n\t\t} else {\n\t\t\tfmt.Printf(\"N\\n\")\n\t\t}\n\t} else if F < P && F > H && P > H { // F ENTRE\n\t\tif D == -1 {\n\t\t\tfmt.Printf(\"S\\n\")\n\t\t} else {\n\t\t\tfmt.Printf(\"N\\n\")\n\t\t}\n\t} else if F > P && F > H && P < H { // H ENTRE\n\t\tif D == -1 {\n\t\t\tfmt.Printf(\"S\\n\")\n\t\t} else {\n\t\t\tfmt.Printf(\"N\\n\")\n\t\t}\n\t} else if F > P && F < H && P > H { // H ENTRE\n\t\tif D == 1 {\n\t\t\tfmt.Printf(\"S\\n\")\n\t\t} else {\n\t\t\tfmt.Printf(\"N\\n\")\n\t\t}\n\t}\n\n}\n",
+            "lines": "47"
+        }
+    ]
+}
