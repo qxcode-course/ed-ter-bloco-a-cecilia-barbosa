@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-11_13-52-09",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -33,17 +33,16 @@\n ain() %7B%0A\n-%0A\n     fmt.\n@@ -54,174 +54,19 @@\n ln(%22\n-go%22 + %22lang%22)%0A%0A    fmt.Println(%221+1 =%22, 1+1)%0A    fmt.Println(%227.0/3.0 =%22, 7.0/3.0)%0A%0A    fmt.Println(true && false)%0A    fmt.Println(true %7C%7C false)%0A    fmt.Println(!true\n+hello world%22\n )%0A%7D\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-11_13-52-49",
+            "content": "@@ -44,180 +44,166 @@\n     \n-var a = %22initial%22%0A    fmt.Println(a)%0A%0A    var b, c int = 1, 2%0A    fmt.Println(b, c)%0A%0A    var d = true%0A    fmt.Println(d)%0A%0A    var e int%0A    fmt.Println(e)%0A%0A    f := %22apple%22\n+fmt.Println(%22go%22 + %22lang%22)%0A%0A    fmt.Println(%221+1 =%22, 1+1)%0A    fmt.Println(%227.0/3.0 =%22, 7.0/3.0)%0A%0A    fmt.Println(true && false)%0A    fmt.Println(true %7C%7C false)\n %0A   \n@@ -215,12 +215,16 @@\n Println(\n-f\n+!true\n )%0A%7D\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-11_13-54-37",
+            "content": "@@ -127,43 +127,8 @@\n , c)\n-%0A    fmt.Print(%22, sua soma: %22, b+c)\n %0A%0A  \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-11_13-59-08",
+            "content": "@@ -115,16 +115,18 @@\n mt.Print\n+ln\n (b, c)%0A \n@@ -137,18 +137,16 @@\n mt.Print\n-ln\n (%22, sua \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-11_13-59-25",
+            "content": "@@ -18,172 +18,246 @@\n ort \n-(%0A%09\n %22fmt%22%0A\n-%09%22math%22%0A)%0A%0Aconst s string = %22constant%22%0A%0Afunc main() %7B%0A%09fmt.Println(s)%0A%0A%09const n = 500000000%0A%0A%09const d = 3e20 / n%0A%09fmt.Println(d)%0A%0A%09fmt.Println(int64(d))%0A%0A%09\n+%0Afunc main() %7B%0A%0A    var a = %22initial%22%0A    fmt.Println(a)%0A%0A    var b, c int = 1, 2%0A    fmt.Print(b, c)%0A    fmt.Println(%22, sua soma: %22, b+c)%0A%0A    var d = true%0A    fmt.Println(d)%0A%0A    var e int%0A    fmt.Println(e)%0A%0A    f := %22apple%22%0A    \n fmt.\n@@ -268,19 +268,8 @@\n tln(\n-math.Sin(n)\n+f\n )%0A%7D\n-%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-11_14-01-56",
+            "content": "@@ -18,53 +18,71 @@\n ort \n+(%0A%09\n %22fmt%22%0A\n-%0Afunc main() %7B%0A%0A%09i := 1%0A%09for i %3C= 3\n+%09%22math%22%0A)%0A%0Aconst s string = %22constant%22%0A%0Afunc main()\n  %7B%0A\n-%09\n %09fmt\n@@ -94,54 +94,54 @@\n tln(\n-i)%0A%09%09i = i + 1%0A%09%7D%0A%0A%09for j := 0; j %3C 3; j++ %7B%0A%09\n+s)%0A%0A%09const n = 500000000%0A%0A%09const d = 3e20 / n%0A\n %09fmt\n@@ -153,176 +153,60 @@\n tln(\n-j)%0A%09%7D%0A%0A%09for i := range 3 %7B%0A%09%09fmt.Println(%22range%22, i)%0A%09%7D%0A%0A%09for %7B%0A%09%09fmt.Println(%22loop%22)%0A%09%09break%0A%09%7D%0A%0A%09for n := range 6 %7B%0A%09%09if n%252 == 0 %7B%0A%09%09%09continue%0A%09%09%7D%0A%09%09fmt.Printl\n+d)%0A%0A%09fmt.Println(int64(d))%0A%0A%09fmt.Println(math.Si\n n(n)\n-%0A%09%7D\n+)\n %0A%7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-11_14-09-23",
+            "content": "@@ -39,24 +39,272 @@\n ) %7B%0A\n-    fmt.Println()\n+%0A%09i := 1%0A%09for i %3C= 3 %7B%0A%09%09fmt.Println(i)%0A%09%09i = i + 1%0A%09%7D%0A%0A%09for j := 0; j %3C 3; j++ %7B%0A%09%09fmt.Println(j)%0A%09%7D%0A%0A%09for i := range 3 %7B%0A%09%09fmt.Println(%22range%22, i)%0A%09%7D%0A%0A%09for %7B%0A%09%09fmt.Println(%22loop%22)%0A%09%09break%0A%09%7D%0A%0A%09for n := range 6 %7B%0A%09%09if n%252 == 0 %7B%0A%09%09%09continue%0A%09%09%7D%0A%09%09fmt.Println(n)%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-11_14-22-21",
+            "content": "@@ -10,1337 +10,53 @@\n ain%0A\n-import %22fmt%22%0Afunc main() %7B%0AHere we create an array a that will hold exactly 5 ints. The type of elements and length are both part of the array%E2%80%99s type. By default an array is zero-valued, which for ints means 0s.%0A%0A    var a %5B5%5Dint%0A    fmt.Println(%22emp:%22, a)%0AWe can set a value at an index using the array%5Bindex%5D = value syntax, and get a value with array%5Bindex%5D.%0A%0A    a%5B4%5D = 100%0A    fmt.Println(%22set:%22, a)%0A    fmt.Println(%22get:%22, a%5B4%5D)%0AThe builtin len returns the length of an array.%0A%0A    fmt.Println(%22len:%22, len(a))%0AUse this syntax to declare and initialize an array in one line.%0A%0A    b := %5B5%5Dint%7B1, 2, 3, 4, 5%7D%0A    fmt.Println(%22dcl:%22, b)%0AYou can also have the compiler count the number of elements for you with ...%0A%0A    b = %5B...%5Dint%7B1, 2, 3, 4, 5%7D%0A    fmt.Println(%22dcl:%22, b)%0AIf you specify the index with :, the elements in between will be zeroed.%0A%0A    b = %5B...%5Dint%7B100, 3: 400, 500%7D%0A    fmt.Println(%22idx:%22, b)%0AArray types are one-dimensional, but you can compose types to build multi-dimensional data structures.%0A%0A    var twoD %5B2%5D%5B3%5Dint%0A    for i := range 2 %7B%0A        for j := range 3 %7B%0A            twoD%5Bi%5D%5Bj%5D = i + j%0A        %7D%0A    %7D%0A    fmt.Println(%222d: %22, twoD)%0AYou can create and initialize multi-dimensional arrays at once too.%0A%0A    twoD = %5B2%5D%5B3%5Dint%7B%0A        %7B1, 2, 3%7D,%0A        %7B1, 2, 3%7D,%0A    %7D%0A    fmt.Println(%222d: %22, twoD\n+%0Aimport %22fmt%22%0A%0Afunc main() %7B%0A    fmt.Println(\n )%0A%7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-03-11_14-23-05",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,340 +37,995 @@\n ) %7B%0A\n-%0A    var a %5B5%5Dint%0A    fmt.Println(%22emp:%22, a)%0A%0A    a%5B4%5D = 100%0A    fmt.Println(%22set:%22, a)%0A    fmt.Println(%22get:%22, a%5B4%5D)%0A%0A    fmt.Println(%22len:%22, len(a))%0A%0A    b := %5B5%5Dint%7B1, 2, 3, 4, 5%7D%0A    fmt.Println(%22dcl:%22, b)%0A%0A    b = %5B...%5Dint%7B1, 2, 3, 4, 5%7D%0A    fmt.Println(%22dcl:%22, b)%0A%0A    b = %5B...%5Dint%7B100, 3: 400, 500%7D%0A    fmt.Println(%22idx:%22, b)\n+Here we create an array a that will hold exactly 5 ints. The type of elements and length are both part of the array%E2%80%99s type. By default an array is zero-valued, which for ints means 0s.%0A%0A    var a %5B5%5Dint%0A    fmt.Println(%22emp:%22, a)%0AWe can set a value at an index using the array%5Bindex%5D = value syntax, and get a value with array%5Bindex%5D.%0A%0A    a%5B4%5D = 100%0A    fmt.Println(%22set:%22, a)%0A    fmt.Println(%22get:%22, a%5B4%5D)%0AThe builtin len returns the length of an array.%0A%0A    fmt.Println(%22len:%22, len(a))%0AUse this syntax to declare and initialize an array in one line.%0A%0A    b := %5B5%5Dint%7B1, 2, 3, 4, 5%7D%0A    fmt.Println(%22dcl:%22, b)%0AYou can also have the compiler count the number of elements for you with ...%0A%0A    b = %5B...%5Dint%7B1, 2, 3, 4, 5%7D%0A    fmt.Println(%22dcl:%22, b)%0AIf you specify the index with :, the elements in between will be zeroed.%0A%0A    b = %5B...%5Dint%7B100, 3: 400, 500%7D%0A    fmt.Println(%22idx:%22, b)%0AArray types are one-dimensional, but you can compose types to build multi-dimensional data structures.\n %0A%0A  \n@@ -1171,16 +1171,84 @@\n %22, twoD)\n+%0AYou can create and initialize multi-dimensional arrays at once too.\n %0A%0A    tw\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-11_14-23-35",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\n    var a [5]int\n    fmt.Println(\"emp:\", a)\n\n    a[4] = 100\n    fmt.Println(\"set:\", a)\n    fmt.Println(\"get:\", a[4])\n\n    fmt.Println(\"len:\", len(a))\n\n    b := [5]int{1, 2, 3, 4, 5}\n    fmt.Println(\"dcl:\", b)\n\n    b = [...]int{1, 2, 3, 4, 5}\n    fmt.Println(\"dcl:\", b)\n\n    b = [...]int{100, 3: 400, 500}\n    fmt.Println(\"idx:\", b)\n\n    var twoD [2][3]int\n    for i := range 2 {\n        for j := range 3 {\n            twoD[i][j] = i + j\n        }\n    }\n    fmt.Println(\"2d: \", twoD)\n\n    twoD = [2][3]int{\n        {1, 2, 3},\n        {1, 2, 3},\n    }\n    fmt.Println(\"2d: \", twoD)\n}\n",
+            "lines": "38"
+        }
+    ]
+}
