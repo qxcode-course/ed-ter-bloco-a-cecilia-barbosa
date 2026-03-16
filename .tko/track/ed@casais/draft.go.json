@@ -1,0 +1,69 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_21-16-11",
+            "content": "@@ -56,33 +56,11 @@\n asal\n-, femeas, machos := 0, 0,\n+ :=\n  0%0A%09\n@@ -156,151 +156,80 @@\n i%5D)%0A\n+%0A\n %09%09\n-if v%5Bi%5D %3C 0 %7B%0A%09%09%09femeas++%0A%09%09%7D else %7B%0A%09%09%09machos++%0A%09%09%7D%0A%09%7D%0A%0A%09f := make(%5B%5Dint, femeas)%0A%09m := make(%5B%5Dint, machos)%0A%0A%09for j := 0; j %3C machos; j++\n+for j := 0; j %3C i; j++ %7B%0A%09%09%09if v%5Bj%5D == v%5Bi%5D %7C%7C v%5Bj%5D == (-1*v%5Bi%5D)\n  %7B%0A\n+%09%09\n %09%09fo\n@@ -244,16 +244,11 @@\n ; k \n-%3E femeas\n+%3C j\n ; k+\n@@ -258,33 +258,30 @@\n %0A%09%09%09\n+%09%09\n if \n-m\n+v\n %5Bj%5D \n-== (-1 * f%5Bj%5D)\n+!= v%5Bk%5D\n  %7B%0A\n+%09%09\n %09%09%09%09\n@@ -296,21 +296,22 @@\n %09%09%09%09\n-continue%0A%09%09%09%7D\n+%09%7D%0A%09%09%09%09%7D%0A%09%09%09%7D%0A\n %0A%09%09%7D\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-16_21-37-46",
+            "content": "@@ -134,63 +134,8 @@\n os%0A%0A\n-%09var f %5B100%5Dint%0A%09var m %5B100%5Dint%0A%0A%09ftam := 0%0A%09mtam := 0%0A\n %09for\n@@ -208,91 +208,88 @@\n +%0A%09%09\n-%09f%5Bftam%5D = v%5Bi%5D%0A%09%09%09ftam++%0A%09%09%7D else %7B%0A%09%09%09machos++%0A%09%09%09m%5Bmtam%5D = v%5Bi%5D%0A%09%09%09mtam++%0A%09%09%7D%0A%09%7D\n+%7D else %7B%0A%09%09%09machos++%0A%09%09%7D%0A%09%7D%0A%0A%09f := make(%5B%5Dint, femeas)%0A%09m := make(%5B%5Dint, machos)\n %0A%0A%09f\n@@ -304,19 +304,21 @@\n 0; j %3C m\n-tam\n+achos\n ; j++ %7B%0A\n@@ -340,11 +340,13 @@\n  %3E f\n-tam\n+emeas\n ; k+\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-16_21-46-00",
+            "content": "@@ -443,16 +443,29 @@\n casal++%0A\n+%09%09%09%09continue%0A\n %09%09%09%7D%0A%09%09%7D\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-16_21-46-45",
+            "content": "@@ -389,17 +389,17 @@\n := 0; k \n-%3C\n+%3E\n  ftam; k\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-16_21-47-51",
+            "content": "@@ -425,17 +425,17 @@\n (-1 * f%5B\n-k\n+j\n %5D) %7B%0A%09%09%09\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-16_21-50-33",
+            "content": "@@ -447,18 +447,8 @@\n l++%0A\n-%09%09%09%09break%0A\n %09%09%09%7D\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-16_21-51-48",
+            "content": "@@ -122,10 +122,15 @@\n  // \n-to\n+descasa\n dos%0A\n@@ -167,34 +167,8 @@\n nt%0A%0A\n-%09//contar machos e f%C3%AAmeas%0A\n %09fta\n@@ -348,26 +348,8 @@\n %09%7D%0A%0A\n-%09// contar casais%0A\n %09for\n@@ -421,13 +421,19 @@\n  == \n--\n+(-1 * \n f%5Bk%5D\n+)\n  %7B%0A%09\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-16_21-56-15",
+            "content": "@@ -460,19 +460,13 @@\n  == \n-(-1 * \n+-\n f%5Bk%5D\n-)\n  %7B%0A%09\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-16_21-56-40",
+            "content": "@@ -387,31 +387,8 @@\n ais%0A\n-%09var casado %5B100%5Dbool%0A%0A\n %09for\n@@ -451,30 +451,8 @@\n %09%09if\n- casado%5Bj%5D == false &&\n  m%5Bj\n@@ -463,9 +463,11 @@\n  (-1\n-*\n+ * \n f%5Bk%5D\n@@ -486,29 +486,8 @@\n l++%0A\n-%09%09%09%09casado%5Bj%5D = true%0A\n %09%09%09%09\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-16_22-01-45",
+            "content": "@@ -393,17 +393,17 @@\n ar casad\n-a\n+o\n  %5B100%5Dbo\n@@ -476,19 +476,19 @@\n if casad\n-a%5Bk\n+o%5Bj\n %5D == fal\n@@ -538,11 +538,11 @@\n asad\n-a%5Bk\n+o%5Bj\n %5D = \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-16_22-02-14",
+            "content": "@@ -408,34 +408,8 @@\n bool\n- // impedir que case dnovo\n %0A%0A%09f\n@@ -439,17 +439,8 @@\n + %7B%0A\n-        %0A\n %09%09fo\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-16_22-04-39",
+            "content": "@@ -461,16 +461,24 @@\n ; j++ %7B%0A\n+        \n %0A%09%09for k\n@@ -599,63 +599,8 @@\n %09%09%09%7D\n- else %7B%0A                casada%5Bk%5D = false%0A            %7D\n %0A%09%09%7D\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-16_22-04-58",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar N int\n\tcasal, femeas, machos := 0, 0, 0\n\tfmt.Scan(&N)\n\tv := make([]int, N) // todos\n\n\tvar f [100]int\n\tvar m [100]int\n\n\t//contar machos e f\u00eameas\n\tftam := 0\n\tmtam := 0\n\tfor i := 0; i < N; i++ {\n\t\tfmt.Scan(&v[i])\n\t\tif v[i] < 0 {\n\t\t\tfemeas++\n\t\t\tf[ftam] = v[i]\n\t\t\tftam++\n\t\t} else {\n\t\t\tmachos++\n\t\t\tm[mtam] = v[i]\n\t\t\tmtam++\n\t\t}\n\t}\n\n\t// contar casais\n\tvar casada [100]bool // impedir que case dnovo\n\n\tfor j := 0; j < mtam; j++ {\n\n\t\tfor k := 0; k < ftam; k++ {\n\t\t\tif casada[k] == false && m[j] == (-1*f[k]) {\n\t\t\t\tcasal++\n\t\t\t\tcasada[k] = true\n\t\t\t\tbreak\n\t\t\t} else {\n                casada[k] = false\n            }\n\t\t}\n\t}\n\n\tfmt.Printf(\"%v\\n\", casal)\n\n}\n",
+            "lines": "48"
+        }
+    ]
+}
