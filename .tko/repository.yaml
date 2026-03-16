@@ -13,8 +13,8 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@main-quest
 - ed@revisão
+- ed@main-quest
 - sandbox@sandbox:00_rascunhos
 tasks:
   ed@pintando: '{self:1, rate:100, study:20, friend:Nao}'

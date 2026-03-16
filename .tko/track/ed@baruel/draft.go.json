@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_23-34-59",
+            "content": "@@ -61,18 +61,16 @@\n  := -1%0A%09\n-//\n faltam :\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-16_23-35-13",
+            "content": "@@ -219,23 +219,14 @@\n %0A%09%7D%0A\n-%0A\n %09var \n-repetidos\n+p\n  %5B10\n@@ -234,16 +234,8 @@\n %5Dint\n-%0A%09k := 0\n %0A%0A%09f\n@@ -314,47 +314,29 @@\n %09%09%09%09\n-repetidos%5Bk\n+p%5Bi\n %5D = v%5B\n-i\n+j\n %5D%0A%09%09%09%09\n-k++%0A%09%09%09%09rep = 1\n+rep++\n %0A%09%09%09\n@@ -409,17 +409,19 @@\n  0; i %3C \n-k\n+rep\n ; i++ %7B%0A\n@@ -440,17 +440,17 @@\n f(%22%25v%22, \n-v\n+p\n %5Bi%5D)%0A%09%09%7D\n@@ -450,14 +450,13 @@\n i%5D)%0A%09%09%7D%0A\n+\n %09%7D%0A\n-%0A\n %7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-16_23-43-43",
+            "content": "@@ -470,17 +470,16 @@\n intf(%22%25v\n- \n %22, v%5Bi%5D)\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-16_23-44-11",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar N, M int\n\trep := -1\n\t//faltam := -1\n\n\tfmt.Scan(&N) // total do album\n\tfmt.Scan(&M) // quantas baruel tem\n\n\tv := make([]int, M)\n\n\tfor i := 0; i < M; i++ {\n\t\tfmt.Scan(&v[i])\n\t}\n\n\tvar repetidos [100]int\n\tk := 0\n\n\tfor i := 0; i < M; i++ {\n\t\tfor j := 0; j < M; j++ {\n\t\t\tif v[i] == v[j] {\n\t\t\t\trepetidos[k] = v[i]\n\t\t\t\tk++\n\t\t\t\trep = 1\n\t\t\t}\n\t\t}\n\t}\n\n\tif rep == -1 {\n\t\tfmt.Printf(\"N\\n\")\n\t} else {\n\t\tfor i := 0; i < k; i++ {\n\t\t\tfmt.Printf(\"%v \", v[i])\n\t\t}\n\t}\n\n}\n",
+            "lines": "40"
+        }
+    ]
+}
