@@ -62,8 +62,13 @@
         },
         {
             "label": "2026-03-16_22-04-58",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar N int\n\tcasal, femeas, machos := 0, 0, 0\n\tfmt.Scan(&N)\n\tv := make([]int, N) // todos\n\n\tvar f [100]int\n\tvar m [100]int\n\n\t//contar machos e f\u00eameas\n\tftam := 0\n\tmtam := 0\n\tfor i := 0; i < N; i++ {\n\t\tfmt.Scan(&v[i])\n\t\tif v[i] < 0 {\n\t\t\tfemeas++\n\t\t\tf[ftam] = v[i]\n\t\t\tftam++\n\t\t} else {\n\t\t\tmachos++\n\t\t\tm[mtam] = v[i]\n\t\t\tmtam++\n\t\t}\n\t}\n\n\t// contar casais\n\tvar casada [100]bool // impedir que case dnovo\n\n\tfor j := 0; j < mtam; j++ {\n\n\t\tfor k := 0; k < ftam; k++ {\n\t\t\tif casada[k] == false && m[j] == (-1*f[k]) {\n\t\t\t\tcasal++\n\t\t\t\tcasada[k] = true\n\t\t\t\tbreak\n\t\t\t} else {\n                casada[k] = false\n            }\n\t\t}\n\t}\n\n\tfmt.Printf(\"%v\\n\", casal)\n\n}\n",
+            "content": "@@ -52,19 +52,41 @@\n t%0A%09casal\n- :=\n+, femeas, machos := 0, 0,\n  0%0A%09fmt.\n@@ -266,16 +266,28 @@\n %5D %3C 0 %7B%0A\n+%09%09%09femeas++%0A\n %09%09%09f%5Bfta\n@@ -317,16 +317,28 @@\n  else %7B%0A\n+%09%09%09machos++%0A\n %09%09%09m%5Bmta\n@@ -595,20 +595,32 @@\n  else %7B%0A\n-%09%09%09%09\n+                \n casada%5Bk\n@@ -629,19 +629,28 @@\n = false%0A\n-%09%09%09\n+            \n %7D%0A%09%09%7D%0A%09%7D\n",
             "lines": "48"
+        },
+        {
+            "label": "2026-03-17_14-34-52",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar N int\n\tcasal := 0\n\tfmt.Scan(&N)\n\tv := make([]int, N) // todos\n\n\tvar f [100]int\n\tvar m [100]int\n\n\t//contar machos e f\u00eameas\n\tftam := 0\n\tmtam := 0\n\tfor i := 0; i < N; i++ {\n\t\tfmt.Scan(&v[i])\n\t\tif v[i] < 0 {\n\t\t\tf[ftam] = v[i]\n\t\t\tftam++\n\t\t} else {\n\t\t\tm[mtam] = v[i]\n\t\t\tmtam++\n\t\t}\n\t}\n\n\t// contar casais\n\tvar casada [100]bool // impedir que case dnovo\n\n\tfor j := 0; j < mtam; j++ {\n\n\t\tfor k := 0; k < ftam; k++ {\n\t\t\tif casada[k] == false && m[j] == (-1*f[k]) {\n\t\t\t\tcasal++\n\t\t\t\tcasada[k] = true\n\t\t\t\tbreak\n\t\t\t} else {\n\t\t\t\tcasada[k] = false\n\t\t\t}\n\t\t}\n\t}\n\n\tfmt.Printf(\"%v\\n\", casal)\n\n}\n",
+            "lines": "46"
         }
     ]
 }

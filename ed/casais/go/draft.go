@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	var N int
-	casal, femeas, machos := 0, 0, 0
+	casal := 0
 	fmt.Scan(&N)
 	v := make([]int, N) // todos
 
@@ -17,11 +17,9 @@ func main() {
 	for i := 0; i < N; i++ {
 		fmt.Scan(&v[i])
 		if v[i] < 0 {
-			femeas++
 			f[ftam] = v[i]
 			ftam++
 		} else {
-			machos++
 			m[mtam] = v[i]
 			mtam++
 		}
@@ -38,8 +36,8 @@ func main() {
 				casada[k] = true
 				break
 			} else {
-                casada[k] = false
-            }
+				casada[k] = false
+			}
 		}
 	}
 

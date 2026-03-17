@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_14-17-31",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var Q int\n    fmt.Scan(&Q)\n\n    var D rune\n    fmt.Scan(&D)\n\n    x := make([]int, Q) //direita e esquerda\n    y := make([]int, Q)\n\n    for i:=0; i < Q; i++{\n        fmt.Scan(&x[i], &y[i])\n    }\n    \n    if D =='R'{\n        for i:=0; i < Q; i++{\n            fmt.Printf(\"%v %v\\n\", x[i]+1, y[i])\n        }\n    } else if D =='L'{\n        for i:=0; i < Q; i++{\n            fmt.Printf(\"%v %v\\n\", x[i]-1, y[i])\n        }\n    } else if D =='U'{\n        for i:=0; i < Q; i++{\n            fmt.Printf(\"%v %v\\n\", x[i], y[i]-1)\n        }\n    } else if D =='D'{\n        for i:=0; i < Q; i++{\n            fmt.Printf(\"%v %v\\n\", x[i]+1, y[i]+1)\n        }\n    } \n\n}\n",
+            "lines": "35"
+        }
+    ]
+}

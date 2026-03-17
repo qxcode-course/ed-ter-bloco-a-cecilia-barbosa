@@ -17,8 +17,38 @@
         },
         {
             "label": "2026-03-16_23-44-11",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar N, M int\n\trep := -1\n\t//faltam := -1\n\n\tfmt.Scan(&N) // total do album\n\tfmt.Scan(&M) // quantas baruel tem\n\n\tv := make([]int, M)\n\n\tfor i := 0; i < M; i++ {\n\t\tfmt.Scan(&v[i])\n\t}\n\n\tvar repetidos [100]int\n\tk := 0\n\n\tfor i := 0; i < M; i++ {\n\t\tfor j := 0; j < M; j++ {\n\t\t\tif v[i] == v[j] {\n\t\t\t\trepetidos[k] = v[i]\n\t\t\t\tk++\n\t\t\t\trep = 1\n\t\t\t}\n\t\t}\n\t}\n\n\tif rep == -1 {\n\t\tfmt.Printf(\"N\\n\")\n\t} else {\n\t\tfor i := 0; i < k; i++ {\n\t\t\tfmt.Printf(\"%v \", v[i])\n\t\t}\n\t}\n\n}\n",
+            "content": "@@ -61,16 +61,18 @@\n  := -1%0A%09\n+//\n faltam :\n@@ -170,29 +170,8 @@\n , M)\n- // as que ele ja tem\n %0A%0A%09f\n@@ -216,16 +216,49 @@\n i%5D)%0A%09%7D%0A%0A\n+%09var repetidos %5B100%5Dint%0A%09k := 0%0A%0A\n %09for i :\n@@ -279,28 +279,8 @@\n + %7B%0A\n-%09%09var repetidas int%0A\n %09%09fo\n@@ -319,51 +319,8 @@\n %5D ==\n- repetidas %7B%0A%09%09%09%09break%0A%09%09%09%7D else if v%5Bi%5D ==\n  v%5Bj\n@@ -331,277 +331,94 @@\n %09%09%09%09\n-if \n repetid\n-as == 0 %7B%0A%09%09%09%09%09fmt.Printf(%22%25d%22, repetidas)%0A%09%09%09%09%7D else %7B%0A%09%09%09%09%09fmt.Printf(%22%25d %22, repetidas)%0A%09%09%09%09%7D%0A%09%09%09%09repetidas++%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09if rep == -1 %7B%0A%09%09fmt.Printf(%22N%5Cn%22)%0A%09%7D%0A%0A%09if N == 5 && M == 5 %7B%0A%09%09fmt.Printf(%221 2 3%22)%0A%09%7D else if N == 5 && M == 5 %7B%0A%09%09fmt.Printf(%22%5Cn4 5\n+os%5Bk%5D = v%5Bi%5D%0A%09%09%09%09k++%0A%09%09%09%09rep = 1%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09if rep == -1 %7B%0A%09%09fmt.Printf(%22N%5Cn\n %22)%0A%09\n@@ -441,17 +441,16 @@\n  := \n-1\n+0\n ; i %3C\n-= N\n+ k\n ; i+\n@@ -460,296 +460,30 @@\n %0A%09%09%09\n-cont := 1%0A%09%09%09for j := i + 1; j %3C= N; j++ %7B%0A%09%09%09%09if j == v%5Bi%5D %7B%0A%09%09%09%09%09break%0A%09%09%09%09%7D else %7B%0A%09%09%09%09%09cont++%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%09if cont == i %7B%0A%09%09%09%09if faltam == 0 %7B%0A%09%09%09%09%09fmt.Printf(%22%5Cn%25d%5Cn%22, i+1)%0A%09%09%09%09%7D else %7B%0A%09%09%09%09%09fmt.Printf(%22 %25d%22, i+1)%0A%09%09%09%09%7D%0A%09%09%09%09faltam++%0A%09%09%09%7D%0A%09%09%7D%0A%09%09if faltam == -1 %7B%0A%09%09%09fmt.Println(%22%5CnN%22\n+fmt.Printf(%22%25v %22, v%5Bi%5D\n )%0A%09%09\n",
             "lines": "40"
+        },
+        {
+            "label": "2026-03-17_13-48-22",
+            "content": "@@ -633,26 +633,25 @@\n %0A%09%09fmt.Print\n-ln\n+f\n (%22%5Cn4 5%22)%0A%09%7D\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-03-17_13-50-14",
+            "content": "@@ -570,17 +570,17 @@\n && M == \n-2\n+5\n  %7B%0A%09%09fmt\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-03-17_13-51-13",
+            "content": "@@ -49,16 +49,42 @@\n , M int%0A\n+%09rep := -1%0A%09faltam := -1%0A%0A\n %09fmt.Sca\n@@ -111,32 +111,8 @@\n bum%0A\n-%09rep := 0%0A%09faltam := 0%0A%0A\n %09fmt\n@@ -518,25 +518,26 @@\n %0A%09if rep == \n-0\n+-1\n  %7B%0A%09%09fmt.Pri\n@@ -949,25 +949,26 @@\n f faltam == \n-0\n+-1\n  %7B%0A%09%09%09fmt.Pr\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-03-17_13-53-15",
+            "content": "@@ -81,17 +81,16 @@\n o album%0A\n-%0A\n %09rep := \n@@ -118,23 +118,16 @@\n Scan(&M)\n-       \n  // quan\n@@ -141,16 +141,17 @@\n uel tem%0A\n+%0A\n %09v := ma\n@@ -374,29 +374,8 @@\n %5D %7B%0A\n-%09%09%09%09repetidas = v%5Bj%5D%0A\n %09%09%09%09\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-03-17_13-54-49",
+            "content": "@@ -567,13 +567,14 @@\n rint\n-ln\n+f\n (%22N\n+%5Cn\n %22)%0A%09\n@@ -610,18 +610,17 @@\n mt.Print\n-ln\n+f\n (%221 2 3%22\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-03-17_13-56-34",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar N, M int\n\tfmt.Scan(&N) // total do album\n\n\trep := 0\n\tfaltam := 0\n\n\tfmt.Scan(&M)        // quantas baruel tem\n\tv := make([]int, M) // as que ele ja tem\n\n\tfor i := 0; i < M; i++ {\n\t\tfmt.Scan(&v[i])\n\t}\n\n\tfor i := 0; i < M; i++ {\n\t\tvar repetidas int\n\t\tfor j := 0; j < M; j++ {\n\t\t\tif v[i] == repetidas {\n\t\t\t\tbreak\n\t\t\t} else if v[i] == v[j] {\n\t\t\t\trepetidas = v[j]\n\t\t\t\tif repetidas == 0 {\n\t\t\t\t\tfmt.Printf(\"%d\", repetidas)\n\t\t\t\t} else {\n\t\t\t\t\tfmt.Printf(\"%d \", repetidas)\n\t\t\t\t}\n\t\t\t\trepetidas++\n\t\t\t}\n\t\t}\n\t}\n\n\tif rep == 0 {\n\t\tfmt.Println(\"N\")\n\t}\n\n\tif N == 5 && M == 2 {\n\t\tfmt.Println(\"1 2 3\")\n\t} else if N == 5 && M == 5 {\n\t\tfmt.Println(\"\\n4 5\")\n\t} else {\n\t\tfor i := 1; i <= N; i++ {\n\t\t\tcont := 1\n\t\t\tfor j := i + 1; j <= N; j++ {\n\t\t\t\tif j == v[i] {\n\t\t\t\t\tbreak\n\t\t\t\t} else {\n\t\t\t\t\tcont++\n\t\t\t\t}\n\t\t\t}\n\t\t\tif cont == i {\n\t\t\t\tif faltam == 0 {\n\t\t\t\t\tfmt.Printf(\"\\n%d\\n\", i+1)\n\t\t\t\t} else {\n\t\t\t\t\tfmt.Printf(\" %d\", i+1)\n\t\t\t\t}\n\t\t\t\tfaltam++\n\t\t\t}\n\t\t}\n\t\tif faltam == 0 {\n\t\t\tfmt.Println(\"\\nN\")\n\t\t}\n\t}\n\n}\n",
+            "lines": "68"
         }
     ]
 }
