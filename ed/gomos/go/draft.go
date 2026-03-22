@@ -1,42 +1,41 @@
 package main
+
 import "fmt"
-func main() {
-    var Q int
-    fmt.Scan(&Q)
 
-    var D rune
-    fmt.Scan(&D)
-
-    x := make([]int, Q) //direita e esquerda
-    y := make([]int, Q)
-
-    for i:=0; i < Q; i++{
-        fmt.Scan(&x[i], &y[i])
+type Gomo struct {
+        x, y int
     }
-    
-    if D =='R'{
-        for i:=0; i < Q; i++{
-            fmt.Printf("%v %v\n", x[i]+1, y[i])
-        }
-    } 
-    
-    if D =='L'{
-        for i:=0; i < Q; i++{
-            fmt.Printf("%v %v\n", x[i]-1, y[i])
-        }
-    } 
-    
-    if D =='U'{
-        for i:=0; i < Q; i++{
-            fmt.Printf("%v %v\n", x[i], y[i]-1)
-        }
-    } 
-    
-    if D =='D'{
-        for i:=0; i < Q; i++{
-            fmt.Printf("%v %v\n", x[i]+1, y[i]+1)
-        }
-    } 
+
+func main() {
+    qtd := 0
+    dir := ""
+
+    fmt.Scan(&qtd, &dir)
+
+    cobra := make([]Gomo, qtd)
+
+    for i := range cobra {
+        fmt.Scan(&cobra[i].x, &cobra[i].y)
+    }
+
+    for i := qtd - 1; i > 0; i-- {
+        cobra[i] = cobra[i-1]
+    }
+
+    switch dir {
+    case "L":
+        cobra[0].x--
+    case "R":
+        cobra[0].x++
+    case "U":
+        cobra[0].y--
+    case "D":
+        cobra[0].y++
+    }
+
+    for _,gomo := range cobra{
+        fmt.Printf("%v %v\n", gomo.x, gomo.y)
+    }
 
 }
  

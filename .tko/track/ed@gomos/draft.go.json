@@ -2,8 +2,18 @@
     "patches": [
         {
             "label": "2026-03-17_14-17-31",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var Q int\n    fmt.Scan(&Q)\n\n    var D rune\n    fmt.Scan(&D)\n\n    x := make([]int, Q) //direita e esquerda\n    y := make([]int, Q)\n\n    for i:=0; i < Q; i++{\n        fmt.Scan(&x[i], &y[i])\n    }\n    \n    if D =='R'{\n        for i:=0; i < Q; i++{\n            fmt.Printf(\"%v %v\\n\", x[i]+1, y[i])\n        }\n    } else if D =='L'{\n        for i:=0; i < Q; i++{\n            fmt.Printf(\"%v %v\\n\", x[i]-1, y[i])\n        }\n    } else if D =='U'{\n        for i:=0; i < Q; i++{\n            fmt.Printf(\"%v %v\\n\", x[i], y[i]-1)\n        }\n    } else if D =='D'{\n        for i:=0; i < Q; i++{\n            fmt.Printf(\"%v %v\\n\", x[i]+1, y[i]+1)\n        }\n    } \n\n}\n",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,129 +23,137 @@\n mt%22%0A\n-%0Atype Gomo struct %7B%0A        x, y int%0A    %7D%0A%0Afunc main() %7B%0A    qtd := 0%0A    dir := %22%22%0A%0A    fmt.Scan(&qtd, &dir)%0A%0A    cobra\n+func main() %7B%0A    var Q int%0A    fmt.Scan(&Q)%0A%0A    var D rune%0A    fmt.Scan(&D)%0A%0A    x := make(%5B%5Dint, Q) //direita e esquerda%0A    y\n  := \n@@ -163,17 +163,14 @@\n e(%5B%5D\n-Gomo, qtd\n+int, Q\n )%0A%0A \n@@ -181,24 +181,23 @@\n or i\n- \n :=\n- range cobra \n+0; i %3C Q; i++\n %7B%0A  \n@@ -216,39 +216,27 @@\n an(&\n-cobra\n+x\n %5Bi%5D\n-.x\n , &\n-cobra\n+y\n %5Bi%5D\n-.y\n )%0A    %7D%0A\n %0A   \n@@ -235,273 +235,390 @@\n   %7D%0A\n+    \n %0A    \n-for i := qtd - 1; i %3E 0; i-- %7B%0A        cobra%5Bi%5D = cobra%5Bi-1%5D%0A\n+if D =='R'%7B%0A        for i:=0; i %3C Q; i++%7B%0A            fmt.Printf(%22%25v %25v%5Cn%22, x%5Bi%5D+1, y%5Bi%5D)%0A  \n     \n+  \n %7D%0A\n-%0A    switch dir %7B%0A    case %22L%22:%0A        cobra%5B0%5D.x--%0A    case %22R%22:%0A        cobra%5B0%5D.x\n+    %7D else if D =='L'%7B%0A        for i:=0; i %3C Q; i++%7B%0A            fmt.Printf(%22%25v %25v%5Cn%22, x%5Bi%5D-1, y%5Bi%5D)%0A        %7D%0A    %7D else if D =='U'%7B%0A        for i:=0; i %3C Q; i\n ++\n+%7B\n %0A    \n-case %22U%22:%0A        cobra%5B0%5D.y--%0A    case %22D%22:%0A        cobra%5B0%5D.y++\n+        fmt.Printf(%22%25v %25v%5Cn%22, x%5Bi%5D, y%5Bi%5D-1)%0A        %7D%0A    %7D else if D =='D'%7B\n %0A    \n-%7D%0A%0A\n     for\n-_,gomo := range cobra\n+ i:=0; i %3C Q; i++\n %7B%0A  \n@@ -615,32 +615,36 @@\n Q; i++%7B%0A        \n+    \n fmt.Printf(%22%25v %25\n@@ -653,30 +653,40 @@\n n%22, \n-gomo.x, gomo.y)%0A    %7D\n+x%5Bi%5D+1, y%5Bi%5D+1)%0A        %7D%0A    %7D \n %0A%0A%7D%0A\n- \n",
             "lines": "35"
+        },
+        {
+            "label": "2026-03-22_19-02-49",
+            "content": "@@ -484,17 +484,16 @@\n %0A    for\n- \n _,gomo :\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-22_19-04-51",
+            "content": "package main\n\nimport \"fmt\"\n\ntype Gomo struct {\n        x, y int\n    }\n\nfunc main() {\n    qtd := 0\n    dir := \"\"\n\n    fmt.Scan(&qtd, &dir)\n\n    cobra := make([]Gomo, qtd)\n\n    for i := range cobra {\n        fmt.Scan(&cobra[i].x, &cobra[i].y)\n    }\n\n    for i := qtd - 1; i > 0; i-- {\n        cobra[i] = cobra[i-1]\n    }\n\n    switch dir {\n    case \"L\":\n        cobra[0].x--\n    case \"R\":\n        cobra[0].x++\n    case \"U\":\n        cobra[0].y--\n    case \"D\":\n        cobra[0].y++\n    }\n\n    for _,gomo := range cobra{\n        fmt.Printf(\"%v %v\\n\", gomo.x, gomo.y)\n    }\n\n}\n ",
+            "lines": "41"
         }
     ]
 }

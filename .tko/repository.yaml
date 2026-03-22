@@ -22,7 +22,8 @@ tasks:
   ed@fuga: '{self:1, rate:100, study:40, friend:Nao}'
   ed@pedra: '{self:1, rate:100, study:60, friend:nao}'
   ed@casais: '{self:1, rate:100, study:60, friend:Nao}'
-  ed@baruel: '{self:1, rate:100, study:150, friend:resolucao em sala, guided:1}'
+  ed@baruel: '{self:1, rate:100, study:150, guided:1}'
+  ed@gomos: '{self:1, rate:100, study:45, friend:nao, guided:1}'
 flags:
   painel: 0
   quests: 0
@@ -31,4 +32,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@gomos
+selected: ed@baruel
