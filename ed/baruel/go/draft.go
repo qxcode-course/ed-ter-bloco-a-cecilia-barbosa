@@ -3,66 +3,43 @@ package main
 import "fmt"
 
 func main() {
-	var N, M int
-	fmt.Scan(&N) // total do album
+	var qtd_album, qtd_possui int
+	fmt.Scan(&qtd_album, &qtd_possui)
 
-	rep := 0
-	faltam := 0
-
-	fmt.Scan(&M)        // quantas baruel tem
-	v := make([]int, M) // as que ele ja tem
-
-	for i := 0; i < M; i++ {
-		fmt.Scan(&v[i])
+	figurinhas := make([]int, qtd_possui)
+	for i := range figurinhas {
+		fmt.Scan(&figurinhas[i])
 	}
 
-	for i := 0; i < M; i++ {
-		var repetidas int
-		for j := 0; j < M; j++ {
-			if v[i] == repetidas {
-				break
-			} else if v[i] == v[j] {
-				repetidas = v[j]
-				if repetidas == 0 {
-					fmt.Printf("%d", repetidas)
-				} else {
-					fmt.Printf("%d ", repetidas)
-				}
-				repetidas++
-			}
+	unicos := make(map[int]bool)
+	repetidos := make([]int, 0, qtd_possui)
+
+	for _, figura := range figurinhas {
+		if unicos[figura] {
+			repetidos = append(repetidos, figura)
+		} else {
+			unicos[figura] = true
 		}
 	}
 
-	if rep == 0 {
+	saida := fmt.Sprintf("%v", repetidos)
+	if saida == "[]" {
 		fmt.Println("N")
-	}
-
-	if N == 5 && M == 2 {
-		fmt.Println("1 2 3")
-	} else if N == 5 && M == 5 {
-		fmt.Println("\n4 5")
 	} else {
-		for i := 1; i <= N; i++ {
-			cont := 1
-			for j := i + 1; j <= N; j++ {
-				if j == v[i] {
-					break
-				} else {
-					cont++
-				}
-			}
-			if cont == i {
-				if faltam == 0 {
-					fmt.Printf("\n%d\n", i+1)
-				} else {
-					fmt.Printf(" %d", i+1)
-				}
-				faltam++
-			}
-		}
-		if faltam == 0 {
-			fmt.Println("\nN")
+		fmt.Println(saida[1 : len(saida)-1])
+	}
+
+	faltantes := make([]int, 0, qtd_album)
+	for i := 1; i <= qtd_album; i++ {
+		if !unicos[i] {
+			faltantes = append(faltantes, i)
 		}
 	}
 
+	saida_f := fmt.Sprintf("%v", faltantes)
+	if saida_f == "[]" {
+		fmt.Println("N")
+	} else {
+		fmt.Println(saida_f[1 : len(saida_f)-1])
+	}
 }
