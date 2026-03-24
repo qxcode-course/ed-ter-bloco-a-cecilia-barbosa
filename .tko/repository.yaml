@@ -13,9 +13,7 @@ sources:
   quests: null
   tasks: null
 expanded:
-- sandbox@sandbox:00_rascunhos
-- ed@main-quest
-- ed@revisão
+- ed@map_set
 tasks:
   ed@pintando: '{self:1, rate:100, study:20, friend:Nao}'
   ed@mumia: '{self:1, rate:100, study:20, friend:Nao}'
@@ -25,11 +23,11 @@ tasks:
   ed@baruel: '{self:1, rate:100, study:150, guided:1}'
   ed@gomos: '{self:1, rate:100, study:45, friend:nao, guided:1}'
 flags:
-  painel: 0
-  quests: 0
-  tracks: 0
+  panel: 1
+  inbox: 1
+  show_panel: 1
   tasks: 0
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@baruel
+selected: ed@princesa
