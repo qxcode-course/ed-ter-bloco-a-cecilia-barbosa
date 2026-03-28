@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-28_21-32-47",
+            "content": "@@ -481,17 +481,17 @@\n  sairam%5B\n-j\n+i\n %5D %7B%0A%09%09%09%09\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-28_21-33-20",
+            "content": "@@ -335,16 +335,18 @@\n %5D)%0A%09%7D%0A%0A%09\n+//\n ficaram \n@@ -394,75 +394,105 @@\n t, 0\n-, qtd_inicial)%0A%0A%09for _, sairo := range id\n+)%0A%0A%09for i := 0; i %3C qtd_inicial; i++ %7B%0A%09%09for j := 0; j %3C left; j++\n  %7B%0A\n+%09\n %09%09if \n-!ficaram%5Bsairo\n+id%5Bi%5D != sairam%5Bj\n %5D %7B%0A\n+%09\n %09%09%09o\n@@ -516,15 +516,16 @@\n em, \n-sairo\n+id%5Bi%5D\n )%0A\n+%09\n %09%09%7D \n@@ -538,33 +538,27 @@\n %0A%09%09%09\n-ficaram%5Bsairo%5D = true%0A%09%09%7D\n+%09continue%0A%09%09%09%7D%0A%09%09%7D%0A\n %0A%09%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-28_21-42-42",
+            "content": "@@ -605,9 +605,9 @@\n da)-\n-2\n+1\n %5D)%0A%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-28_21-43-19",
+            "content": "@@ -522,12 +522,11 @@\n %5D = \n-fals\n+tru\n e%0A%09%09\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-28_21-43-43",
+            "content": "@@ -587,17 +587,17 @@\n n(saida%5B\n-2\n+1\n  : len(s\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-28_21-43-56",
+            "content": "@@ -587,17 +587,17 @@\n n(saida%5B\n-1\n+2\n  : len(s\n@@ -606,26 +606,10 @@\n da)-\n-1%5D)%0A%09fmt.Print(%22 %22\n+2%5D\n )%0A%0A%7D\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-28_21-44-35",
+            "content": "@@ -557,16 +557,17 @@\n intf(%22%25v\n+ \n %22, ordem\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-28_21-44-45",
+            "content": "@@ -577,16 +577,18 @@\n mt.Print\n+ln\n (saida%5B1\n@@ -615,18 +615,16 @@\n mt.Print\n-ln\n (%22 %22)%0A%0A%7D\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-28_21-45-00",
+            "content": "@@ -427,27 +427,27 @@\n = range \n-sairam\n+id\n  %7B%0A%09%09\n+if !\n ficaram%5B\n@@ -457,60 +457,64 @@\n ro%5D \n-= true%0A%09%7D%0A%0A%09for _, nova := range id\n+%7B%0A%09%09%09ordem = append(ordem, sairo)%0A%09%09%7D else\n  %7B%0A%09%09\n-if !\n+%09\n ficaram%5B\n nova\n@@ -513,46 +513,22 @@\n ram%5B\n-nova%5D %7B%0A%09%09%09ordem = append(ordem, nova)\n+sairo%5D = false\n %0A%09%09%7D\n@@ -602,12 +602,30 @@\n ida)-1%5D)\n+%0A%09fmt.Println(%22 %22)\n %0A%0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-28_21-49-14",
+            "content": "@@ -285,137 +285,33 @@\n eft)\n- // id das pessoas que sa%C3%ADram%0A%09for i := range sairam %7B     // range serve para percorrer todo o vetor sem condi%C3%A7%C3%B5es ou incremento\n+%0A%09for i := range sairam %7B\n %0A%09%09f\n@@ -335,26 +335,23 @@\n %5D)%0A%09%7D%0A%0A%09\n-idExcluido\n+ficaram\n  := make\n@@ -368,59 +368,8 @@\n ool)\n-     // guardar identifica%C3%A7%C3%A3o das que sa%C3%ADram em map\n %0A%09or\n@@ -406,23 +406,8 @@\n ial)\n- // ordem final\n %0A%0A%09f\n@@ -439,449 +439,195 @@\n am %7B\n- // identifica todas que sairam e guarda%0A%09%09idExcluido%5Bsairo%5D = true%0A%09%7D%0A%0A%09for _, nova := range id %7B%0A%09%09if !idExcluido%5Bnova%5D %7B // guarda tudo que for difente do que esta excluido em ordem%0A%09%09%09ordem = append(ordem, nova) // altera o tamanho de ordem para o tamanho e valor de nova%0A%09%09%7D%0A%09%7D%0A%0A%09saida := fmt.Sprintf(%22%25v%22, ordem)  // guarda em sa%C3%ADda os valores de ordem%0A%09fmt.Print(saida%5B1 : len(saida)-1%5D) // len serve pra excluir os %5D%0A%09fmt.Println(%22 %22)\n+%0A%09%09ficaram%5Bsairo%5D = true%0A%09%7D%0A%0A%09for _, nova := range id %7B%0A%09%09if !ficaram%5Bnova%5D %7B%0A%09%09%09ordem = append(ordem, nova)%0A%09%09%7D%0A%09%7D%0A%0A%09saida := fmt.Sprintf(%22%25v%22, ordem)%0A%09fmt.Print(saida%5B1 : len(saida)-1%5D)%0A\n %0A%7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-28_22-04-21",
+            "content": "@@ -832,59 +832,63 @@\n // a\n-diciona o valor presente em nova e ajusta o tamanho\n+ltera o tamanho de ordem para o tamanho e valor de nova\n %0A%09%09%7D\n@@ -1014,13 +1014,8 @@\n len \n-aqui \n serv\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-28_22-07-55",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tqtd_inicial := 0\n\tfmt.Scan(&qtd_inicial)\n\n\tid := make([]int, qtd_inicial) // identificadores das pessoas\n\tfor i := range id {\n\t\tfmt.Scan(&id[i]) // unico tar\n\t}\n\n\tleft := 0 // quantas pessoas sa\u00edram\n\tfmt.Scan(&left)\n\n\tsairam := make([]int, left) // id das pessoas que sa\u00edram\n\tfor i := range sairam {     // range serve para percorrer todo o vetor sem condi\u00e7\u00f5es ou incremento\n\t\tfmt.Scan(&sairam[i])\n\t}\n\n\tidExcluido := make(map[int]bool)     // guardar identifica\u00e7\u00e3o das que sa\u00edram em map\n\tordem := make([]int, 0, qtd_inicial) // ordem final\n\n\tfor _, sairo := range sairam { // identifica todas que sairam e guarda\n\t\tidExcluido[sairo] = true\n\t}\n\n\tfor _, nova := range id {\n\t\tif !idExcluido[nova] { // guarda tudo que for difente do que esta excluido em ordem\n\t\t\tordem = append(ordem, nova) // adiciona o valor presente em nova e ajusta o tamanho\n\t\t}\n\t}\n\n\tsaida := fmt.Sprintf(\"%v\", ordem)  // guarda em sa\u00edda os valores de ordem\n\tfmt.Print(saida[1 : len(saida)-1]) // len aqui serve pra excluir os ]\n\tfmt.Println(\" \")\n}\n",
+            "lines": "38"
+        }
+    ]
+}
