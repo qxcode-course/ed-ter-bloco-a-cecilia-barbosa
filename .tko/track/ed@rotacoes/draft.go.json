@@ -1,0 +1,99 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-29_00-19-25",
+            "content": "@@ -164,16 +164,80 @@\n i%5D)%0A%09%7D%0A%0A\n+%09rotValor := make(%5B%5Dint, 0, rot)%0A%09novoV := make(%5B%5Dint, 0, tamT)%0A\n %09%0A%09if ro\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-29_00-19-35",
+            "content": "@@ -104,17 +104,16 @@\n %5Dint, 0,\n- \n tamT)%0A%0A%09\n@@ -220,87 +220,26 @@\n tor)\n-  // guarda em sa%C3%ADda os valores de ordem%0A%09    fmt.Print(saida%5B1 : len(saida)-1%5D\n+%0A%09%09fmt.Print(saida\n )%0A%09%7D\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-29_00-21-51",
+            "content": "@@ -279,16 +279,20 @@\n t(saida%5B\n+1 : \n len(said\n@@ -293,16 +293,18 @@\n n(saida)\n+-1\n %5D)%0A%09%7D el\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-29_00-24-22",
+            "content": "@@ -165,16 +165,18 @@\n i%5D)%0A%09%7D%0A%0A\n+%09%0A\n %09if rot \n@@ -217,16 +217,17 @@\n , vetor)\n+ \n  // guar\n@@ -259,17 +259,20 @@\n  ordem%0A%09\n-%09\n+    \n fmt.Prin\n@@ -278,16 +278,28 @@\n nt(saida\n+%5Blen(saida)%5D\n )%0A%09%7D els\n@@ -305,11 +305,10 @@\n se %7B\n+%09\n %0A\n-%0A%09%7D\n %0A%7D%0A\n+%7D\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-29_00-24-37",
+            "content": "@@ -101,16 +101,19 @@\n e(%5B%5Dint,\n+ 0,\n  tamT)%0A%0A\n@@ -215,16 +215,55 @@\n , vetor)\n+ // guarda em sa%C3%ADda os valores de ordem\n %0A%09%09fmt.P\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-29_00-26-00",
+            "content": "@@ -117,30 +117,28 @@\n %09for\n+ _,\n  i := \n-0; i %3C tamT; i++\n+range vetor\n  %7B%0A%09\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-29_00-27-20",
+            "content": "@@ -207,12 +207,10 @@\n tf(%22\n- \n %25v\n- \n %22, v\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-29_00-27-41",
+            "content": "@@ -207,10 +207,12 @@\n tf(%22\n+ \n %25v\n+ \n %22, v\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-29_00-28-08",
+            "content": "@@ -185,79 +185,41 @@\n %7B%0A%09%09\n-fmt.Printf(%22%5B%22)%0A%09%09for _, i := range vetor %7B%0A%09%09%09\n+saida := \n fmt.\n-P\n+Sp\n rintf(%22\n- \n %25v%22, \n-i)%0A%09%09%7D\n+vetor)\n %0A%09%09f\n@@ -230,14 +230,14 @@\n rint\n-ln(%22%5D%22\n+(saida\n )%0A%09%7D\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-29_00-31-21",
+            "content": "@@ -268,17 +268,16 @@\n rintln(%22\n- \n %5D%22)%0A%09%7D e\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-29_00-31-32",
+            "content": "@@ -287,172 +287,8 @@\n e %7B%0A\n-%09%09for i := 1; i %3C= rot; i++ %7B%0A%09%09%09vetor%5Bi-1%5D = vetor%5Blen(vetor)-i%5D%0A%09%09%7D%0A%0A%09%09fmt.Printf(%22%5B%22)%0A%09%09for _, i := range vetor %7B%0A%09%09%09fmt.Printf(%22 %25v%22, i)%0A%09%09%7D%0A%09%09fmt.Println(%22 %5D%22)\n %0A%09%7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-29_00-55-10",
+            "content": "@@ -317,16 +317,8 @@\n + %7B%0A\n-%09%09%09j:=0%0A\n %09%09%09v\n@@ -322,17 +322,19 @@\n %09%09vetor%5B\n-j\n+i-1\n %5D = veto\n@@ -353,15 +353,8 @@\n -i%5D%0A\n-%09%09%09j++%0A\n %09%09%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-29_00-55-49",
+            "content": "@@ -352,17 +352,17 @@\n (vetor)-\n-1\n+i\n %5D%0A%09%09%09j++\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-29_00-55-56",
+            "content": "@@ -317,20 +317,18 @@\n + %7B%0A%09%09%09j\n- \n :=\n- \n 0%0A%09%09%09vet\n@@ -352,17 +352,17 @@\n (vetor)-\n-i\n+1\n %5D%0A%09%09%09j++\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-29_00-56-49",
+            "content": "@@ -353,17 +353,17 @@\n n(vetor)\n-+\n+-\n i%5D%0A%09%09%09j+\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-29_00-56-56",
+            "content": "@@ -357,10 +357,10 @@\n tor)\n--2\n++i\n %5D%0A%09%09\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-29_00-57-03",
+            "content": "@@ -354,17 +354,17 @@\n (vetor)-\n-i\n+2\n %5D%0A%09%09%09j++\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-29_00-57-14",
+            "content": "@@ -354,17 +354,17 @@\n (vetor)-\n-1\n+i\n %5D%0A%09%09%09j++\n@@ -364,17 +364,16 @@\n %0A%09%09%09j++%0A\n-%0A\n %09%09%7D%0A%0A%09%09f\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-29_00-58-33",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\ttamT := 0\n\trot := 0\n\tfmt.Scan(&tamT, &rot)\n\n\tvetor := make([]int, tamT)\n\n\tfor i := 0; i < tamT; i++ {\n\t\tfmt.Scan(&vetor[i])\n\t}\n\n\tif rot == 0 {\n\t\tfmt.Printf(\"[\")\n\t\tfor _, i := range vetor {\n\t\t\tfmt.Printf(\" %v\", i)\n\t\t}\n\t\tfmt.Println(\" ]\")\n\t} else {\n\t\tfor i := 1; i <= rot; i++ {\n\t\t\tj := 0\n\t\t\tvetor[j] = vetor[len(vetor)-1]\n\t\t\tj++\n\n\t\t}\n\n\t\tfmt.Printf(\"[\")\n\t\tfor _, i := range vetor {\n\t\t\tfmt.Printf(\" %v\", i)\n\t\t}\n\t\tfmt.Println(\" ]\")\n\t}\n}\n",
+            "lines": "36"
+        }
+    ]
+}

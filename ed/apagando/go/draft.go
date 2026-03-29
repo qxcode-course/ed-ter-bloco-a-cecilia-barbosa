@@ -34,5 +34,5 @@ func main() {
 
 	saida := fmt.Sprintf("%v", ordem)  // guarda em saída os valores de ordem
 	fmt.Print(saida[1 : len(saida)-1]) // len aqui serve pra excluir os ]
-	fmt.Println(" ")
+	fmt.Println(" ")  
 }

@@ -1,0 +1,26 @@
+2026-03-29 00:19:25, EXEC, v:1, k:ed@rotacoes, mode:FULL, size:25, fail:COMP
+2026-03-29 00:19:35, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:23
+2026-03-29 00:21:51, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:23
+2026-03-29 00:24:18, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-03-29 00:24:22, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:23
+2026-03-29 00:24:38, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:22
+2026-03-29 00:26:00, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:22
+2026-03-29 00:27:20, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:22
+2026-03-29 00:27:41, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:22
+2026-03-29 00:28:08, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:22
+2026-03-29 00:31:21, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:25
+2026-03-29 00:31:32, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:20, size:25
+2026-03-29 00:55:10, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:33
+2026-03-29 00:55:49, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:35
+2026-03-29 00:55:56, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:20, size:35
+2026-03-29 00:56:49, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:35
+2026-03-29 00:56:56, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:35
+2026-03-29 00:57:03, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:20, size:35
+2026-03-29 00:57:14, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:35
+2026-03-29 00:57:19, EXEC, v:1, k:ed@rotacoes, mode:FREE
+2026-03-29 00:58:33, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:20, size:36
+2026-03-29 00:59:28, MOVE, v:1, k:ed@rotacoes, mode:BACK
+2026-03-29 00:59:40, MOVE, v:1, k:ed@manipulacao, mode:DOWN
+2026-03-29 01:00:32, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-29 01:00:34, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:0, size:105
+2026-03-29 01:01:29, MOVE, v:1, k:ed@manipulacao, mode:BACK
