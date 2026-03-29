@@ -92,8 +92,48 @@
         },
         {
             "label": "2026-03-29_00-58-33",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\ttamT := 0\n\trot := 0\n\tfmt.Scan(&tamT, &rot)\n\n\tvetor := make([]int, tamT)\n\n\tfor i := 0; i < tamT; i++ {\n\t\tfmt.Scan(&vetor[i])\n\t}\n\n\tif rot == 0 {\n\t\tfmt.Printf(\"[\")\n\t\tfor _, i := range vetor {\n\t\t\tfmt.Printf(\" %v\", i)\n\t\t}\n\t\tfmt.Println(\" ]\")\n\t} else {\n\t\tfor i := 1; i <= rot; i++ {\n\t\t\tj := 0\n\t\t\tvetor[j] = vetor[len(vetor)-1]\n\t\t\tj++\n\n\t\t}\n\n\t\tfmt.Printf(\"[\")\n\t\tfor _, i := range vetor {\n\t\t\tfmt.Printf(\" %v\", i)\n\t\t}\n\t\tfmt.Println(\" ]\")\n\t}\n}\n",
+            "content": "@@ -166,154 +166,8 @@\n )%0A%09%7D\n-%0A%09//ajuda da Sophia Muniz%0A%09rotacao := rot %25 tamT%0A%09if rotacao %3C 0 %7B%0A%09%09rotacao += tamT%0A%09%7D%0A%09// foi essa l%C3%B3gica%0A%0A%09vet_rotacionado := make(%5B%5Dint, tamT)\n %0A%0A%09i\n@@ -298,33 +298,19 @@\n  := \n-tamT - rotacao\n+1\n ; i %3C= \n-tamT\n+rot\n ; i+\n@@ -320,158 +320,56 @@\n %0A%09%09%09\n-vet_rotacionado = append(vet_rotacionado, vetor%5Bi%5D)%0A%09%09%7D%0A%09%09for i := 0; i %3C tamT - rotacao; i++ %7B%0A%09%09%09vet_rotacionado = append(vet_rotacionado, vetor%5Bi%5D)\n+j := 0%0A%09%09%09vetor%5Bj%5D = vetor%5Blen(vetor)-1%5D%0A%09%09%09j++%0A\n %0A%09%09%7D\n",
             "lines": "36"
+        },
+        {
+            "label": "2026-03-29_19-39-45",
+            "content": "@@ -306,11 +306,8 @@\n int,\n- 0,\n  tam\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-29_19-40-18",
+            "content": "@@ -557,17 +557,19 @@\n i %3C tamT\n--\n+ - \n rotacao;\n@@ -676,28 +676,18 @@\n ange vet\n-_rotacionad\n o\n+r\n  %7B%0A%09%09%09fm\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-29_19-40-49",
+            "content": "@@ -458,24 +458,25 @@\n rotacao; i %3C\n+=\n  tamT; i++ %7B\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-29_19-42-25",
+            "content": "@@ -305,32 +305,152 @@\n %5Dint, 0, tamT)%0A%0A\n+%09if rot == 0 %7B%0A%09%09fmt.Printf(%22%5B%22)%0A%09%09for _, i := range vetor %7B%0A%09%09%09fmt.Printf(%22 %25v%22, i)%0A%09%09%7D%0A%09%09fmt.Println(%22 %5D%22)%0A%09%7D else %7B%0A%09\n %09for i := tamT -\n@@ -467,32 +467,33 @@\n i %3C tamT; i++ %7B%0A\n+%09\n %09%09vet_rotacionad\n@@ -530,19 +530,21 @@\n tor%5Bi%5D)%0A\n+%09\n %09%7D%0A\n+%09\n %09for i :\n@@ -574,16 +574,17 @@\n i++ %7B%0A%09%09\n+%09\n vet_rota\n@@ -631,12 +631,14 @@\n i%5D)%0A\n+%09\n %09%7D%0A%0A\n+%09\n %09fmt\n@@ -650,16 +650,17 @@\n tf(%22%5B%22)%0A\n+%09\n %09for _, \n@@ -686,24 +686,25 @@\n cionado %7B%0A%09%09\n+%09\n fmt.Printf(%22\n@@ -712,19 +712,21 @@\n %25v%22, i)%0A\n+%09\n %09%7D%0A\n+%09\n %09fmt.Pri\n@@ -737,11 +737,12 @@\n (%22 %5D%22)%0A%09\n+%7D\n %0A%7D%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-29_19-44-09",
+            "content": "@@ -214,142 +214,26 @@\n tamT\n- // usa o resto para se preocupar apenas com as que sobraram,%0A%09if rotacao %3C 0 %7B      //nao as que dao loop completo e ja volta do zero\n+%0A%09if rotacao %3C 0 %7B\n %0A%09%09r\n@@ -273,37 +273,26 @@\n gica\n- que ela me ajudou%0A%0A%09vetFinal\n+%0A%0A%09vet_rotacionado\n  := \n@@ -294,32 +294,35 @@\n o := make(%5B%5Dint,\n+ 0,\n  tamT)%0A%0A%09for i :\n@@ -358,22 +358,26 @@\n ++ %7B\n- //\n %0A%09%09vet\n-Final\n+_rotacionado\n  = a\n@@ -377,37 +377,44 @@\n ado = append(vet\n-Final\n+_rotacionado\n , vetor%5Bi%5D)%0A%09%7D%0A%09\n@@ -454,21 +454,28 @@\n  %7B%0A%09%09vet\n-Final\n+_rotacionado\n  = appen\n@@ -479,21 +479,28 @@\n pend(vet\n-Final\n+_rotacionado\n , vetor%5B\n@@ -550,13 +550,20 @@\n  vet\n-Final\n+_rotacionado\n  %7B%0A%09\n@@ -606,11 +606,12 @@\n n(%22 %5D%22)%0A\n+%09\n %0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-29_19-52-01",
+            "content": "@@ -433,11 +433,8 @@\n int,\n- 0,\n  tam\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-29_19-52-09",
+            "content": "@@ -442,26 +442,8 @@\n amT)\n- // slice dinamico\n %0A%0A%09f\n@@ -488,41 +488,8 @@\n %7B //\n- coloca os rotacionados no inicio\n %0A%09%09v\n@@ -568,40 +568,8 @@\n ++ %7B\n- // coloca os primeiros no final\n %0A%09%09v\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-29_19-55-51",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\ttamT := 0\n\trot := 0\n\tfmt.Scan(&tamT, &rot)\n\n\tvetor := make([]int, tamT)\n\n\tfor i := 0; i < tamT; i++ {\n\t\tfmt.Scan(&vetor[i])\n\t}\n\t//ajuda da Sophia Muniz\n\trotacao := rot % tamT // usa o resto para se preocupar apenas com as que sobraram,\n\tif rotacao < 0 {      //nao as que dao loop completo e ja volta do zero\n\t\trotacao += tamT\n\t}\n\t// foi essa l\u00f3gica que ela me ajudou\n\n\tvetFinal := make([]int, 0, tamT) // slice dinamico\n\n\tfor i := tamT - rotacao; i < tamT; i++ { // coloca os rotacionados no inicio\n\t\tvetFinal = append(vetFinal, vetor[i])\n\t}\n\tfor i := 0; i < tamT-rotacao; i++ { // coloca os primeiros no final\n\t\tvetFinal = append(vetFinal, vetor[i])\n\t}\n\n\tfmt.Printf(\"[\")\n\tfor _, i := range vetFinal {\n\t\tfmt.Printf(\" %v\", i)\n\t}\n\tfmt.Println(\" ]\")\n\n}\n",
+            "lines": "37"
         }
     ]
 }
