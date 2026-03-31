@@ -12,8 +12,7 @@ sources:
   writeable: false
   quests: null
   tasks: null
-expanded:
-- ed@map_set
+expanded: []
 tasks:
   ed@pintando: '{self:1, rate:100, study:20, friend:Nao}'
   ed@mumia: '{self:1, rate:100, study:20, friend:Nao}'
@@ -23,7 +22,7 @@ tasks:
   ed@baruel: '{self:1, rate:100, study:150, guided:1}'
   ed@gomos: '{self:1, rate:100, study:45, friend:nao, guided:1}'
   ed@apagando: '{self:1, rate:100, study:90, concept:1}'
-  ed@buscas: '{rate:22}'
+  ed@buscas: '{self:1, rate:100, study:60, concept:1}'
   ed@rotacoes: '{self:1, rate:100, study:90, friend:Sophia}'
 flags:
   panel: 1
@@ -32,4 +31,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@princesa
+selected: ed@rec
