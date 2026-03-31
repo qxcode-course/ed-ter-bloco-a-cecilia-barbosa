@@ -18,7 +18,7 @@ func main() {
 	busca := ""
 	result := make([]int, nBuscas)
 
-	for i := 0; i < nBuscas; i++ {
+	for i := 0; i < nBuscas; i++ { 
 		fmt.Scanln(&busca)
 		result[i] = matriz[busca]
 	}

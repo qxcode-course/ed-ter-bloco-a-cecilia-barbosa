@@ -10,3 +10,9 @@
 2026-03-31 13:39:18, EXEC, v:1, k:ed@buscas, mode:FULL, rate:22, size:29
 2026-03-31 13:40:47, EXEC, v:1, k:ed@buscas, mode:FULL, rate:22, size:29
 2026-03-31 13:41:12, MOVE, v:1, k:ed@buscas, mode:BACK
+2026-03-31 13:42:02, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-03-31 13:42:04, MOVE, v:1, k:ed@buscas, mode:BACK
+2026-03-31 13:42:08, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-31 13:56:17, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-31 13:56:20, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-31 14:29:49, MOVE, v:1, k:ed@princesa, mode:BACK

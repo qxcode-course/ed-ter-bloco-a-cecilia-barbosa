@@ -23,6 +23,7 @@ tasks:
   ed@baruel: '{self:1, rate:100, study:150, guided:1}'
   ed@gomos: '{self:1, rate:100, study:45, friend:nao, guided:1}'
   ed@apagando: '{self:1, rate:100, study:90, concept:1}'
+  ed@buscas: '{rate:22}'
   ed@rotacoes: '{self:1, rate:100, study:90, friend:Sophia}'
 flags:
   panel: 1
@@ -31,4 +32,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@buscas
+selected: ed@princesa
