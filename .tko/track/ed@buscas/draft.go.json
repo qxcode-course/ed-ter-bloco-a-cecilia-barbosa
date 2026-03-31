@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-31_13-05-49",
+            "content": "@@ -398,20 +398,23 @@\n = range \n-busc\n+consult\n a%7B%0A%09%09mat\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-31_13-06-23",
+            "content": "@@ -132,41 +132,8 @@\n as)%0A\n-%09matriz := make(map%5Bstring%5Dint)%0A%0A\n %09for\n@@ -194,32 +194,8 @@\n i%5D)%0A\n-%09%09matriz%5Bconsulta%5Bi%5D%5D++%0A\n %09%7D%0A%0A\n@@ -252,41 +252,8 @@\n as)%0A\n-%09result := make(%5B%5Dint, nBuscas)%0A%0A\n %09for\n@@ -309,37 +309,164 @@\n %5D)%0A%09\n-%09result%5Bi%5D = matriz%5Bbusca%5Bi%5D%5D\n+%7D%0A%0A%09matriz := make(map%5Bstring%5Dint)%0A%09result := make(%5B%5Dint, 0, nBuscas)%0A%0A%09for _, cont := range busca%7B%0A%09%09matriz%5Bcont%5D++%0A%09%09result = append(result, matriz%5Bcont%5D)\n %0A%09%7D%0A\n@@ -472,18 +472,16 @@\n %0A%0A%09saida\n-_f\n  := fmt.\n@@ -520,18 +520,16 @@\n ln(saida\n-_f\n %5B1 : len\n@@ -538,10 +538,8 @@\n aida\n-_f\n )-1%5D\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-31_13-30-46",
+            "content": "@@ -285,10 +285,31 @@\n  := \n-%22%22\n+make(%5B%5Dstring, nBuscas)\n %0A%09re\n@@ -389,16 +389,19 @@\n n(&busca\n+%5Bi%5D\n )%0A%09%09resu\n@@ -420,16 +420,19 @@\n iz%5Bbusca\n+%5Bi%5D\n %5D%0A%09%7D%0A%0A%09s\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-31_13-39-18",
+            "content": "@@ -101,18 +101,42 @@\n ulta := \n-%22%22\n+make(%5B%5Dstring, nConsultas)\n %0A%09matriz\n@@ -218,16 +218,19 @@\n consulta\n+%5Bi%5D\n )%0A%09%09matr\n@@ -240,16 +240,19 @@\n consulta\n+%5Bi%5D\n %5D++%0A%09%7D%0A%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-31_13-40-47",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tnConsultas, nBuscas := 0, 0\n\n\tfmt.Scan(&nConsultas)\n\tconsulta := \"\"\n\tmatriz := make(map[string]int)\n\n\tfor i := 0; i < nConsultas; i++ {\n\t\tfmt.Scanln(&consulta)\n\t\tmatriz[consulta]++\n\t}\n\n\tfmt.Scan(&nBuscas)\n\tbusca := \"\"\n\tresult := make([]int, nBuscas)\n\n\tfor i := 0; i < nBuscas; i++ {\n\t\tfmt.Scanln(&busca)\n\t\tresult[i] = matriz[busca]\n\t}\n\n\tsaida_f := fmt.Sprintf(\"%v\", result)\n\tfmt.Println(saida_f[1 : len(saida_f)-1])\n\n}\n",
+            "lines": "29"
+        }
+    ]
+}

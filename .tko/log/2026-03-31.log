@@ -1,3 +1,12 @@
 2026-03-31 02:30:38, MOVE, v:1, k:ed@buscas, mode:DOWN
 2026-03-31 02:46:16, MOVE, v:1, k:ed@buscas, mode:PICK
 2026-03-31 02:46:18, MOVE, v:1, k:ed@buscas, mode:BACK
+2026-03-31 13:05:46, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-03-31 13:05:49, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:31
+2026-03-31 13:06:23, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:31
+2026-03-31 13:30:46, EXEC, v:1, k:ed@buscas, mode:FULL, rate:22, size:29
+2026-03-31 13:36:31, MOVE, v:1, k:ed@buscas, mode:BACK
+2026-03-31 13:39:17, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-03-31 13:39:18, EXEC, v:1, k:ed@buscas, mode:FULL, rate:22, size:29
+2026-03-31 13:40:47, EXEC, v:1, k:ed@buscas, mode:FULL, rate:22, size:29
+2026-03-31 13:41:12, MOVE, v:1, k:ed@buscas, mode:BACK
