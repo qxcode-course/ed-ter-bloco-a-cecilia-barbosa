@@ -10,9 +10,8 @@ func mdc(a, b int) int {
 	} else if b == 0 {
 		return a
 	} else {
-		
+		return mdc(b, a%b)
 	}
-	return 0
 }
 
 func main() {
