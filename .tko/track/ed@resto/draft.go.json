@@ -1,0 +1,79 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-03_02-35-27",
+            "content": "@@ -71,17 +71,24 @@\n %09return \n-0\n+rec(num)\n %0A%7D%0A%0Afunc\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-03_02-35-41",
+            "content": "@@ -49,191 +49,24 @@\n t %7B%0A\n-    for %7B%0A        if num %3E 0 %7B%0A        div := num / 2%0A        resto := num %25 2%0A        fmt.Printf(%22%25v %25v%22, div, resto)%0A        num = div%0A%09    %7D else %7B%0A            break%0A        %7D%0A    \n+%09if num %3E 0 %7B%0A%0A%09\n %7D%0A%09r\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-03_02-40-54",
+            "content": "@@ -49,17 +49,26 @@\n t %7B%0A\n-%09\n+    \n for %7B%0A\n-%09%09\n+        \n if n\n@@ -76,19 +76,24 @@\n m %3E 0 %7B%0A\n-%09%09%09\n+        \n div := n\n@@ -99,19 +99,24 @@\n num / 2%0A\n-%09%09%09\n+        \n resto :=\n@@ -124,19 +124,24 @@\n num %25 2%0A\n-%09%09%09\n+        \n fmt.Prin\n@@ -145,17 +145,16 @@\n rint\n-ln(%22%25d %25d\n+f(%22%25v %25v\n %22, d\n@@ -164,19 +164,24 @@\n  resto)%0A\n-%09%09%09\n+        \n num = di\n@@ -183,17 +183,20 @@\n  = div%0A%09\n-%09\n+    \n %7D else %7B\n@@ -200,22 +200,40 @@\n e %7B%0A\n-%09%09%09break%0A%09%09%7D%0A%09\n+            break%0A        %7D%0A    \n %7D%0A%09r\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-03_02-41-17",
+            "content": "@@ -121,18 +121,17 @@\n rint\n-f\n+ln\n (%22%25d %25d\n-%5Cn\n %22, d\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-03_02-42-39",
+            "content": "@@ -38,16 +38,20 @@\n num int)\n+ int\n  %7B%0A%09for \n@@ -182,16 +182,26 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%09return 0%0A\n %7D%0A%0Afunc \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-03_02-42-59",
+            "content": "@@ -145,16 +145,17 @@\n %0A%09%09%09\n-rec(num)\n+num = div\n %0A%09%09%7D\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-03_02-44-46",
+            "content": "@@ -145,19 +145,19 @@\n %0A%09%09%09rec(\n-div\n+num\n )%0A%09%09%7D el\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-03_02-45-09",
+            "content": "@@ -41,16 +41,24 @@\n  int) %7B%0A\n+%09for %7B%0A%09\n %09if num \n@@ -63,16 +63,17 @@\n m %3E 0 %7B%0A\n+%09\n %09%09div :=\n@@ -83,16 +83,17 @@\n m / 2%0A%09%09\n+%09\n resto :=\n@@ -101,16 +101,17 @@\n num %25 2%0A\n+%09\n %09%09fmt.Pr\n@@ -140,16 +140,17 @@\n esto)%0A%09%09\n+%09\n rec(div)\n@@ -150,16 +150,40 @@\n ec(div)%0A\n+%09%09%7D else %7B%0A%09%09%09break%0A%09%09%7D%0A\n %09%7D%0A%7D%0A%0Afu\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-03_02-45-32",
+            "content": "@@ -41,16 +41,31 @@\n  int) %7B%0A\n+%09if num %3E 0 %7B%0A%09\n %09div := \n@@ -72,16 +72,17 @@\n num / 2%0A\n+%09\n %09resto :\n@@ -91,16 +91,17 @@\n num %25 2%0A\n+%09\n %09fmt.Pri\n@@ -127,16 +127,17 @@\n  resto)%0A\n+%09\n %09rec(div\n@@ -138,16 +138,19 @@\n ec(div)%0A\n+%09%7D%0A\n %7D%0A%0Afunc \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-03_02-46-27",
+            "content": "@@ -45,35 +45,8 @@\n ) %7B%0A\n-%09if num == 0 %7B%0A%09%09return%0A%09%7D%0A\n %09div\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-03_02-48-45",
+            "content": "@@ -107,21 +107,8 @@\n  2%0A%09\n-rec(div)%0A    \n fmt.\n@@ -137,16 +137,26 @@\n  resto)%0A\n+%09rec(div)%0A\n %7D%0A%0Afunc \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-03_02-50-57",
+            "content": "@@ -68,28 +68,13 @@\n turn\n- \n %0A%09%7D\n- else %7B%0A        \n+%0A%09\n div \n@@ -85,20 +85,16 @@\n um / 2%0A%09\n-    \n resto :=\n@@ -103,20 +103,16 @@\n um %25 2%0A%09\n-    \n rec(div)\n@@ -116,20 +116,16 @@\n iv)%0A    \n-  \n-  \n fmt.Prin\n@@ -154,14 +154,8 @@\n to)%0A\n-    %7D%0A\n %7D%0A%0Af\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-03_02-54-12",
+            "content": "@@ -160,12 +160,12 @@\n f(%22%25\n-v %25v\n+d %25d\n %5Cn%22,\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-03_03-00-26",
+            "content": "@@ -201,19 +201,19 @@\n in() %7B%0A%09\n-num\n+val\n  := 0%0A%09f\n@@ -225,21 +225,21 @@\n an(&\n-num\n+val\n )%0A%09rec(\n-num\n+val\n )%0A%7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-03_03-01-22",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc rec(num int) {\n\tif num == 0 {\n\t\treturn \n\t} else {\n        div := num / 2\n\t    resto := num % 2\n\t    rec(div)\n        fmt.Printf(\"%v %v\\n\", div, resto)\n    }\n}\n\nfunc main() {\n\tnum := 0\n\tfmt.Scan(&num)\n\trec(num)\n}\n",
+            "lines": "20"
+        }
+    ]
+}

@@ -21,3 +21,10 @@
 2026-04-01 14:10:39, EXEC, v:1, k:ed@mdc, mode:FULL, rate:100
 2026-04-01 14:10:55, EXEC, v:1, k:ed@mdc, mode:FULL, rate:100
 2026-04-01 14:10:56, MOVE, v:1, k:ed@mdc, mode:BACK
+2026-04-01 14:21:27, MOVE, v:1, k:ed@queimada, mode:DOWN
+2026-04-01 14:26:55, MOVE, v:1, k:ed@queimada, mode:PICK
+2026-04-01 14:26:56, EXEC, v:1, k:ed@queimada, mode:FULL, size:46, fail:COMP
+2026-04-01 14:27:35, MOVE, v:1, k:ed@queimada, mode:BACK
+2026-04-01 14:29:46, MOVE, v:1, k:ed@queimada, mode:PICK
+2026-04-01 14:29:48, EXEC, v:1, k:ed@queimada, mode:FULL, size:49, fail:COMP
+2026-04-01 14:29:49, EXEC, v:1, k:ed@queimada, mode:FULL, fail:COMP
