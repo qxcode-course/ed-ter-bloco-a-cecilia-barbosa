@@ -9,7 +9,7 @@ func eh_primo(x int, div int) bool {
 		return false
 	}
 
-	if div >= x {
+	if div == x {
 		return true
 	}
 

@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 )
-
+    
 func EhVazio(vet []int) bool {
 	return fmt.Sprint(vet) == "[]"
 }

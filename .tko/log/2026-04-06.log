@@ -48,3 +48,21 @@
 2026-04-06 20:27:31, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:100, size:56
 2026-04-06 20:27:48, MOVE, v:1, k:ed@vetequals, mode:BACK
 2026-04-06 20:28:22, SELF, v:1, k:ed@vetequals, self:1, rate:100, study:32, friend:Juliana Barbosa
+2026-04-06 20:41:18, MOVE, v:1, k:ed@eh_primo, mode:PICK
+2026-04-06 20:41:19, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:100, size:32
+2026-04-06 20:42:23, MOVE, v:1, k:ed@eh_primo, mode:BACK
+2026-04-06 20:42:40, SELF, v:1, k:ed@eh_primo, self:1, rate:100, study:38
+2026-04-06 20:42:40, MOVE, v:1, k:ed@eh_primo, mode:PICK
+2026-04-06 20:42:42, MOVE, v:1, k:ed@eh_primo, mode:BACK
+2026-04-06 20:43:20, SELF, v:1, k:ed@mdc, self:1, rate:100, study:10, friend:Anna Rayca e Juliana
+2026-04-06 20:43:20, MOVE, v:1, k:ed@mdc, mode:PICK
+2026-04-06 20:43:22, MOVE, v:1, k:ed@mdc, mode:BACK
+2026-04-06 20:43:27, SELF, v:1, k:ed@mdc, self:1, rate:100, study:10, friend:Anna Rayca e Juliana
+2026-04-06 20:43:49, SELF, v:1, k:ed@resto, self:1, rate:100, study:30, concept:1
+2026-04-06 20:43:49, MOVE, v:1, k:ed@resto, mode:PICK
+2026-04-06 20:43:50, MOVE, v:1, k:ed@resto, mode:BACK
+2026-04-06 20:44:16, SELF, v:1, k:ed@triangulo, self:1, rate:100, study:45
+2026-04-06 20:44:16, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-04-06 20:44:18, MOVE, v:1, k:ed@triangulo, mode:BACK
+2026-04-06 20:44:53, SELF, v:1, k:ed@vetequals, self:1, rate:100, study:32, friend:Juliana Barbosa
+2026-04-06 22:09:40, SELF, v:1, k:ed@eh_primo, self:1, rate:100, study:40
