@@ -6,23 +6,22 @@ import (
 	"os"
 )
 
-func is_value(grid [][]rune, l, c int, value rune) bool {
-	nl := len(grid)
-	nc := len(grid[0])
-	if c<0 || c >= nc || {
-
-	}
-}
-
-
 func burnTrees(grid [][]rune, l, c int) {
-	if !is_value(grid, l, c,'#'){
+	numL := len(grid)
+	numC := len(grid[0])
 
+	if c < 0 || c >= numC || l < 0 || l >= numL { // se estiver fora da matriz, retorne
+		return
 	}
-	// se estiver fora da matriz, retorne
-	// se o elemento atual não for uma arvore, retorne
-	// queime a arvore colocando o caractere 'o' na posição atual
-	// chame a recursão para todos os 4 vizinhos
+	if grid[l][c] != '#' { // se o elemento atual não for uma arvore, retorne
+		return
+	}
+
+	grid[l][c] = 'o'        // queime a arvore colocando o caractere 'o' na posição atual
+	burnTrees(grid, l, c+1) // chame a recursão para todos os 4 vizinhos
+	burnTrees(grid, l, c-1)
+	burnTrees(grid, l+1, c)
+	burnTrees(grid, l-1, c)
 }
 
 func main() {
