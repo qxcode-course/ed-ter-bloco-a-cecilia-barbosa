@@ -81,3 +81,12 @@
 2026-04-06 22:52:52, EXEC, v:1, k:ed@queimada, mode:FULL, rate:100
 2026-04-06 22:52:53, MOVE, v:1, k:ed@queimada, mode:BACK
 2026-04-06 22:53:13, SELF, v:1, k:ed@queimada, self:1, rate:100, study:40, guided:1
+2026-04-06 22:57:52, MOVE, v:1, k:ed@labirinto, mode:DOWN
+2026-04-06 22:57:53, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-04-06 22:59:00, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:66
+2026-04-06 23:06:26, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-04-06 23:06:38, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-04-06 23:15:34, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:87
+2026-04-06 23:17:46, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:89
+2026-04-06 23:33:42, EXEC, v:1, k:ed@treinando, mode:FULL, size:97, fail:COMP
+2026-04-06 23:33:59, EXEC, v:1, k:ed@treinando, mode:FULL, size:96, fail:COMP

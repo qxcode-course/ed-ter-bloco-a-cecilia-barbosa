@@ -8,11 +8,23 @@ import (
 	"strings"
 )
 
-func tostr(vet []int) string {
+// formata [3, 4, 5]
+func tostr(vet []int) {
 	_ = vet
-	return ""
+	var i int
+	if len(vet) == i {
+		fmt.Print("]\n")
+		return
+	}
+
+	if len(vet) < i {
+		fmt.Printf("%v, ")
+	}
+
+	i++
 }
 
+// formata ao inverso[5, 4, 3]
 func tostrrev(vet []int) string {
 	_ = vet
 	return ""
