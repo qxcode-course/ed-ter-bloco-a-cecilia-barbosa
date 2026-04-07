@@ -18,39 +18,70 @@ func imprime(vet []int) string {
 	return saida + imprime(vet[1:])
 }
 
-//sai com parentese
+// sai com parentese
 func tostr(vet []int) string {
 	_ = vet
 	if len(vet) == 0 {
 		return "[]"
 	}
+
 	return "[" + imprime(vet) + "]"
+}
+
+func imprimeRev(vet []int) string {
+	if len(vet) == 1 {
+		return fmt.Sprintf("%v", vet[0])
+	}
+
+	ultimo := len(vet) - 1
+	atual := fmt.Sprintf("%v, ", vet[ultimo])
+
+	return atual + imprimeRev(vet[:ultimo])
 }
 
 // formata ao inverso[5, 4, 3]
 func tostrrev(vet []int) string {
-	_ = vet
+	if len(vet) == 0 {
+		return "[]"
+	}
+	return "[" + imprimeRev(vet) + "]"
+}
 
-	
-
-	return "[" + tostrrev(vet) + "]"
+func reverso(vet []int, i int, f int) {
+	if i > f {
+		return
+	}
+	vet[i], vet[f] = vet[f], vet[i]
+	reverso(vet, i+1, i-1)
 }
 
 // reverse: inverte os elementos do slice
 func reverse(vet []int) {
 	_ = vet
+	reverso(vet, 0, len(vet)-1)
 }
 
 // sum: soma dos elementos do slice
 func sum(vet []int) int {
 	_ = vet
-	return 0
+	if len(vet) == 0 {
+		return 0
+	}
+
+	primeiro := vet[0]
+	resto := vet[1:]
+	return primeiro + sum(resto)
 }
 
 // mult: produto dos elementos do slice
 func mult(vet []int) int {
-	_ = vet
-	return 0
+	if len(vet) == 0 {
+		return 1
+	}
+
+	primeiro := vet[0]
+	resto := vet[1:]
+	return primeiro * mult(resto)
 }
 
 // min: retorna o índice e valor do menor valor
