@@ -8,26 +8,32 @@ import (
 	"strings"
 )
 
-// formata [3, 4, 5]
-func tostr(vet []int) {
+// imprime vetor
+func imprime(vet []int) string {
+	if len(vet) == 1 {
+		return fmt.Sprintf("%v", vet[0])
+	}
+
+	saida := fmt.Sprintf("%v, ", vet[0])
+	return saida + imprime(vet[1:])
+}
+
+//sai com parentese
+func tostr(vet []int) string {
 	_ = vet
-	var i int
-	if len(vet) == i {
-		fmt.Print("]\n")
-		return
+	if len(vet) == 0 {
+		return "[]"
 	}
-
-	if len(vet) < i {
-		fmt.Printf("%v, ")
-	}
-
-	i++
+	return "[" + imprime(vet) + "]"
 }
 
 // formata ao inverso[5, 4, 3]
 func tostrrev(vet []int) string {
 	_ = vet
-	return ""
+
+	
+
+	return "[" + tostrrev(vet) + "]"
 }
 
 // reverse: inverte os elementos do slice
