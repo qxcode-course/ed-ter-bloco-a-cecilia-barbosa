@@ -9,34 +9,25 @@ func ri(inf, sup int) float64 {
 	return float64(rand.Intn(sup-inf+1) + inf)
 }
 
-func arvere(pen *Pen, dist float64) {
-	if dist < 10 {
-		if ri(0, 50) == 0 {
-			pen.SetRGB(250, 0, 0)
-			pen.FillCircle(10)
-		}
-		return
+func embua(pen *Pen, dist float64) {
+	if dist < 1 {
+		return // acaba recursao
 	}
-	ang_dir := ri(10, 40)
-	ang_esq := ri(10, 40)
-
-	pen.SetLineWidth(dist / 5)
-	pen.SetRGB(0, 0, 0)
-	pen.Walk(dist)
-	pen.Right(ang_dir)
-	arvere(pen, dist*(ri(80, 85)/100))
-	pen.Left(ang_dir + ang_esq)
-	arvere(pen, dist*(ri(80, 85)/100))
-	pen.Right(ang_esq)
-	pen.SetRGB(0, 0, 0)
-	pen.Walk(-dist)
+	//r, g, b := rand.Float64(), rand.Float64(), rand.Float64()
+	//pen.SetRGB(r, g, b)
+	pen.SetLineWidth(dist / 30)
+	pen.Walk(dist) // anda quatidade
+	dist *= 0.97
+	pen.Right(90)    // gira em 90 graus
+	embua(pen, dist) // recursao
 }
 
 func main() {
-	pen := NewPen(600, 500)
-	pen.SetHeading(90)
-	pen.SetPosition(300, 500)
-	arvere(pen, 80)
+	pen := NewPen(500, 500)   // criar o tamanho da imagem
+	pen.SetRGB(134, 0, 0)     // cor
+	pen.SetPosition(100, 100) // onde a caenta vai comecar
+	embua(pen, 300)
+
 	pen.SavePNG("tree.png")
 	fmt.Println("PNG file created successfully.")
 }
