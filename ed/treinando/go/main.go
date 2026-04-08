@@ -89,8 +89,25 @@ func mult(vet []int) int {
 // var rec func(v []int) (int, int)
 // para fazer uma recursão que retorna valor e índice
 func min(vet []int) int {
-	_ = vet
-	return 0
+    if len(vet) == 0 {
+        return -1
+    }
+
+    var rec func(i int, idxMenor int) int
+    
+    rec = func(i int, idxMenor int) int {
+        if i == len(vet) {
+            return idxMenor
+        }
+
+        if vet[i] < vet[idxMenor] {
+            return rec(i+1, i)
+        }
+        
+        return rec(i+1, idxMenor)
+    }
+
+    return rec(0, 0)
 }
 
 func main() {
