@@ -9,25 +9,25 @@ func ri(inf, sup int) float64 {
 	return float64(rand.Intn(sup-inf+1) + inf)
 }
 
-func embua(pen *Pen, dist float64) {
+func espiralColorido(pen *Pen, dist float64) {
 	if dist < 1 {
 		return // acaba recursao
 	}
 	//r, g, b := rand.Float64(), rand.Float64(), rand.Float64()
-	//pen.SetRGB(r, g, b)
-	pen.SetLineWidth(dist / 30)
+	pen.SetRGB(ri(0, 255), ri(0, 255), ri(0, 255))
 	pen.Walk(dist) // anda quatidade
-	dist *= 0.97
 	pen.Right(90)    // gira em 90 graus
-	embua(pen, dist) // recursao
+	espiralColorido(pen, dist-7) // recursao
 }
 
 func main() {
-	pen := NewPen(500, 500)   // criar o tamanho da imagem
-	pen.SetRGB(134, 0, 0)     // cor
-	pen.SetPosition(100, 100) // onde a caenta vai comecar
-	embua(pen, 300)
+	pen := NewPen(500, 500)  
+	pen.SetPosition(0, 0) // fazer o quadrado
+	pen.FillSquare(500, 500)
+	pen.SetRGB(0, 0, 0)     // cor
+	pen.SetPosition(0, 0) // onde a caenta vai comecar
+	espiralColorido(pen, 500)
 
-	pen.SavePNG("tree.png")
+	pen.SavePNG("espiralColorido.png")
 	fmt.Println("PNG file created successfully.")
 }
