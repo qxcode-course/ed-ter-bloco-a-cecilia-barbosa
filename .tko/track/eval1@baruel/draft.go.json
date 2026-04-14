@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_14-36-54",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tqtd_album := 0\n\tfmt.Scan(&qtd_album)\n\n\tqtd_fig := 0\n\tfmt.Scan(&qtd_fig)\n\n\tbaruel := make([]int, qtd_fig)\n\n\tfor i := 0; i < len(baruel); i++ {\n\t\tfmt.Scan(&baruel[i])\n\t}\n\n    unicas := make(map[int]bool)\n    repetidas := make([]int, 0, qtd_fig)\n\n    for rep := range baruel {\n        if unicas[rep]{\n            repetidas = append(repetidas, )\n        } else {\n            unicas[rep] = false\n        }\n    }\n\n}\n",
+            "lines": "29"
+        }
+    ]
+}

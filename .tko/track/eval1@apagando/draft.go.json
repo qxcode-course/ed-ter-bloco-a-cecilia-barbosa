@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_13-43-53",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,594 +37,6 @@\n ) %7B%0A\n-%09qtd_pessoas := 0%0A%09fmt.Scan(&qtd_pessoas)%0A%0A%09fila := make(%5B%5Dint, qtd_pessoas)%0A%0A%09for i := 0; i %3C qtd_pessoas; i++ %7B%0A%09%09fmt.Scan(fila%5Bi%5D)%0A%09%7D%0A%0A%09qtd_sairam := 0%0A%09fmt.Scan(&qtd_sairam)%0A%0A%09sairam := make(%5B%5Dint, qtd_sairam)%0A%09for i := 0; i %3C qtd_sairam; i++ %7B%0A%09%09fmt.Scan(sairam%5Bi%5D)%0A%09%7D%0A%0A%09temp := make(map%5Bint%5Dbool)%0A%09ordem := make(%5B%5Dint, 0, qtd_pessoas)%0A%0A%09for _, left := range sairam %7B%0A%09%09if temp%5Bleft%5D %7B%0A%09%09%09temp%5Bleft%5D = false%0A%09%09%7D%0A%09%7D%0A%0A%09for _, pessoas := range fila %7B%0A%09%09if temp%5Bpessoas%5D%7B%0A%09%09%09ordem = append(ordem, qtd_pessoas)%0A%09%09%7D%0A%09%7D%0A%0A%0A%09for i := 0; i %3C len(ordem); i++ %7B%0A%09%09fmt.Printf(%22%25v%22, ordem%5Bi%5D)%0A%09%7D%0A%0A\n %7D%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-04-14_13-59-50",
+            "content": "@@ -533,16 +533,20 @@\n (ordem, \n+qtd_\n pessoas)\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-14_14-20-20",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tqtd_pessoas := 0\n\tfmt.Scan(&qtd_pessoas)\n\n\tfila := make([]int, qtd_pessoas)\n\n\tfor i := 0; i < qtd_pessoas; i++ {\n\t\tfmt.Scan(fila[i])\n\t}\n\n\tqtd_sairam := 0\n\tfmt.Scan(&qtd_sairam)\n\n\tsairam := make([]int, qtd_sairam)\n\tfor i := 0; i < qtd_sairam; i++ {\n\t\tfmt.Scan(sairam[i])\n\t}\n\n\ttemp := make(map[int]bool)\n\tordem := make([]int, 0, qtd_pessoas)\n\n\tfor _, left := range sairam {\n\t\tif temp[left] {\n\t\t\ttemp[left] = false\n\t\t}\n\t}\n\n\tfor _, pessoas := range fila {\n\t\tif temp[pessoas]{\n\t\t\tordem = append(ordem, pessoas)\n\t\t}\n\t}\n\n\n\tfor i := 0; i < len(ordem); i++ {\n\t\tfmt.Printf(\"%v\", ordem[i])\n\t}\n\n}\n",
+            "lines": "43"
+        }
+    ]
+}
