@@ -9,25 +9,32 @@ func ri(inf, sup int) float64 {
 	return float64(rand.Intn(sup-inf+1) + inf)
 }
 
-func espiralColorido(pen *Pen, dist float64) {
-	if dist < 1 {
-		return // acaba recursao
+func arvore(pen *Pen, dist float64) {
+	if dist < 11{
+		return
 	}
-	//r, g, b := rand.Float64(), rand.Float64(), rand.Float64()
-	pen.SetRGB(ri(0, 255), ri(0, 255), ri(0, 255))
-	pen.Walk(dist) // anda quatidade
-	pen.Right(90)    // gira em 90 graus
-	espiralColorido(pen, dist-7) // recursao
+	angulo := 21.2
+	fator := 0.778
+
+	pen.Walk(dist)
+	pen.Right(angulo)
+	arvore(pen, dist*fator)
+	pen.Left(2 * angulo)
+	arvore(pen, dist*fator)
+
+	pen.Right(angulo)
+	pen.Walk(-dist)
 }
 
 func main() {
-	pen := NewPen(500, 500)  
-	pen.SetPosition(0, 0) // fazer o quadrado
-	pen.FillSquare(500, 500)
-	pen.SetRGB(0, 0, 0)     // cor
-	pen.SetPosition(0, 0) // onde a caenta vai comecar
-	espiralColorido(pen, 500)
+	pen := NewPen(750, 900)
+	pen.SetHeading(90)
+	pen.SetPosition(0, 0)
+	pen.FillSquare(800, 1000)
+	pen.SetPosition(375, 860)
+	pen.SetRGB(255, 255, 255)
+	arvore(pen, 160)
 
-	pen.SavePNG("espiralColorido.png")
+	pen.SavePNG("arvore.png")
 	fmt.Println("PNG file created successfully.")
 }
