@@ -517,3 +517,8 @@
 2026-04-14 14:57:21, EXEC, v:1, k:eval1@apagando, mode:FULL, rate:0, size:39
 2026-04-14 14:57:51, EXEC, v:1, k:eval1@apagando, mode:FULL, rate:0, size:39
 2026-04-14 14:58:01, EXEC, v:1, k:eval1@apagando, mode:FULL, rate:0
+2026-04-14 14:58:54, MOVE, v:1, k:eval1@apagando, mode:BACK
+2026-04-14 14:59:12, SELF, v:1, k:eval1@triangulo, self:1, rate:100, study:20
+2026-04-14 14:59:20, SELF, v:1, k:eval1@queimada, self:1, rate:100, study:40
+2026-04-14 14:58:01, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-14 14:58:01, MOVE, v:1, k:eval1@apagando, mode:EDIT
