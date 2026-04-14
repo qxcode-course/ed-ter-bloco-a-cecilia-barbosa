@@ -12,7 +12,7 @@ func burnTrees(grid [][]rune, l, c int) {
 	nC := len(grid[0])
 
 	// se estiver fora da matriz, retorne
-	if l < 0 && l > nL && c < 0 && c > nC{
+	if l < 0 || l > nL-1 || c < 0 || c > nC-1{
 		return
 	}
 
@@ -25,10 +25,10 @@ func burnTrees(grid [][]rune, l, c int) {
 	grid[l][c] = 'o'
 
 	// chame a recursão para todos os 4 vizinhos
-	burnTrees(grid, l+1, c)
 	burnTrees(grid, l-1, c)
-	burnTrees(grid, l, c+1)
+	burnTrees(grid, l+1, c)
 	burnTrees(grid, l, c-1)
+	burnTrees(grid, l, c+1)
 }
 
 func main() {

@@ -12,8 +12,28 @@
         },
         {
             "label": "2026-04-14_14-20-20",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tqtd_pessoas := 0\n\tfmt.Scan(&qtd_pessoas)\n\n\tfila := make([]int, qtd_pessoas)\n\n\tfor i := 0; i < qtd_pessoas; i++ {\n\t\tfmt.Scan(fila[i])\n\t}\n\n\tqtd_sairam := 0\n\tfmt.Scan(&qtd_sairam)\n\n\tsairam := make([]int, qtd_sairam)\n\tfor i := 0; i < qtd_sairam; i++ {\n\t\tfmt.Scan(sairam[i])\n\t}\n\n\ttemp := make(map[int]bool)\n\tordem := make([]int, 0, qtd_pessoas)\n\n\tfor _, left := range sairam {\n\t\tif temp[left] {\n\t\t\ttemp[left] = false\n\t\t}\n\t}\n\n\tfor _, pessoas := range fila {\n\t\tif temp[pessoas]{\n\t\t\tordem = append(ordem, pessoas)\n\t\t}\n\t}\n\n\n\tfor i := 0; i < len(ordem); i++ {\n\t\tfmt.Printf(\"%v\", ordem[i])\n\t}\n\n}\n",
+            "content": "@@ -376,17 +376,95 @@\n essoas)%0A\n-%09\n+%0A%09for _, left := range sairam %7B%0A%09%09if temp%5Bleft%5D %7B%0A%09%09%09temp%5Bleft%5D = false%0A%09%09%7D%0A%09%7D%0A\n %0A%09for _,\n",
             "lines": "43"
+        },
+        {
+            "label": "2026-04-14_14-50-45",
+            "content": "@@ -412,16 +412,19 @@\n ila %7B%0A%09%09\n+if \n temp%5Bpes\n@@ -432,65 +432,8 @@\n oas%5D\n- = true%0A%09%7D%0A%0A%0A%09for _, nova := range fila%7B%0A%09%09if !temp%5Bnova%5D\n %7B%0A%09%09\n@@ -459,12 +459,15 @@\n em, \n-nova\n+pessoas\n )%0A%09%09\n@@ -476,26 +476,75 @@\n %09%7D%0A%0A\n+%0A\n %09f\n-mt.Println(ordem)\n+or i := 0; i %3C len(ordem); i++ %7B%0A%09%09fmt.Printf(%22%25v%22, ordem%5Bi%5D)%0A%09%7D%0A\n %0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-14_14-55-51",
+            "content": "@@ -433,24 +433,25 @@\n  = true%0A%09%7D%0A%0A\n+%0A\n %09for _, nova\n@@ -529,69 +529,24 @@\n %0A%0A%09f\n-or i :=0; i %3C len(ordem); i++%7B%0A%09%09fmt.Printf(%22%25v%22, ordem%5Bi%5D)%0A%09%7D\n+mt.Println(ordem)\n %0A%7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-14_14-57-21",
+            "content": "@@ -432,12 +432,11 @@\n %5D = \n-fals\n+tru\n e%0A%09%7D\n@@ -470,16 +470,17 @@\n a%7B%0A%09%09if \n+!\n temp%5Bnov\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-14_14-57-51",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tqtd_pessoas := 0\n\tfmt.Scan(&qtd_pessoas)\n\n\tfila := make([]int, qtd_pessoas)\n\n\tfor i := 0; i < qtd_pessoas; i++ {\n\t\tfmt.Scan(fila[i])\n\t}\n\n\tqtd_sairam := 0\n\tfmt.Scan(&qtd_sairam)\n\n\tsairam := make([]int, qtd_sairam)\n\tfor i := 0; i < qtd_sairam; i++ {\n\t\tfmt.Scan(sairam[i])\n\t}\n\n\ttemp := make(map[int]bool)\n\tordem := make([]int, 0, qtd_pessoas)\n\t\n\tfor _, pessoas := range fila {\n\t\ttemp[pessoas] = false\n\t}\n\n\tfor _, nova := range fila{\n\t\tif temp[nova]{\n\t\t\tordem = append(ordem, nova)\n\t\t}\n\t}\n\n\tfor i :=0; i < len(ordem); i++{\n\t\tfmt.Printf(\"%v\", ordem[i])\n\t}\n}\n",
+            "lines": "39"
         }
     ]
 }

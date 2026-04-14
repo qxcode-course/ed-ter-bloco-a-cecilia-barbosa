@@ -24,14 +24,16 @@ func main() {
 	ordem := make([]int, 0, qtd_pessoas)
 	
 	for _, pessoas := range fila {
-		if temp[pessoas]{
-			ordem = append(ordem, pessoas)
+		temp[pessoas] = false
+	}
+
+	for _, nova := range fila{
+		if temp[nova]{
+			ordem = append(ordem, nova)
 		}
 	}
 
-
-	for i := 0; i < len(ordem); i++ {
-		fmt.Printf("%v", ordem[i])
+	for i :=0; i < len(ordem); i++{
+		fmt.Printf("%v ", ordem[i])
 	}
-
 }
