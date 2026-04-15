@@ -32,8 +32,23 @@
         },
         {
             "label": "2026-04-14_14-57-51",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tqtd_pessoas := 0\n\tfmt.Scan(&qtd_pessoas)\n\n\tfila := make([]int, qtd_pessoas)\n\n\tfor i := 0; i < qtd_pessoas; i++ {\n\t\tfmt.Scan(fila[i])\n\t}\n\n\tqtd_sairam := 0\n\tfmt.Scan(&qtd_sairam)\n\n\tsairam := make([]int, qtd_sairam)\n\tfor i := 0; i < qtd_sairam; i++ {\n\t\tfmt.Scan(sairam[i])\n\t}\n\n\ttemp := make(map[int]bool)\n\tordem := make([]int, 0, qtd_pessoas)\n\t\n\tfor _, pessoas := range fila {\n\t\ttemp[pessoas] = false\n\t}\n\n\tfor _, nova := range fila{\n\t\tif temp[nova]{\n\t\t\tordem = append(ordem, nova)\n\t\t}\n\t}\n\n\tfor i :=0; i < len(ordem); i++{\n\t\tfmt.Printf(\"%v\", ordem[i])\n\t}\n}\n",
+            "content": "@@ -571,17 +571,16 @@\n intf(%22%25v\n- \n %22, ordem\n",
             "lines": "39"
+        },
+        {
+            "label": "2026-04-14_21-55-00",
+            "content": "@@ -432,11 +432,12 @@\n %5D = \n-tru\n+fals\n e%0A%09%7D\n@@ -475,9 +475,8 @@\n %09if \n-!\n temp\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-14_21-55-19",
+            "content": "@@ -172,16 +172,18 @@\n %5Bi%5D)%0A%09%7D%0A\n+%0A%09\n qtd_sair\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-14_21-55-59",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tqtd_pessoas := 0\n\tfmt.Scan(&qtd_pessoas)\n\n\tfila := make([]int, qtd_pessoas)\n\n\tfor i := 0; i < qtd_pessoas; i++ {\n\t\tfmt.Scan(fila[i])\n\t}\nqtd_sairam := 0\n\tfmt.Scan(&qtd_sairam)\n\n\tsairam := make([]int, qtd_sairam)\n\tfor i := 0; i < qtd_sairam; i++ {\n\t\tfmt.Scan(sairam[i])\n\t}\n\n\ttemp := make(map[int]bool)\n\tordem := make([]int, 0, qtd_pessoas)\n\t\n\tfor _, pessoas := range fila {\n\t\ttemp[pessoas] = true\n\t}\n\n\tfor _, nova := range fila{\n\t\tif !temp[nova]{\n\t\t\tordem = append(ordem, nova)\n\t\t}\n\t}\n\n\tfor i :=0; i < len(ordem); i++{\n\t\tfmt.Printf(\"%v \", ordem[i])\n\t}\n}\n",
+            "lines": "38"
         }
     ]
 }

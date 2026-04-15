@@ -1502,7 +1502,517 @@
         },
         {
             "label": "2026-04-14_01-40-07",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc ri(inf, sup int) float64 {\n\treturn float64(rand.Intn(sup-inf+1) + inf)\n}\n\nfunc arvore(pen *Pen, dist float64) {\n\tif dist < 11{\n\t\treturn\n\t}\n\tangulo := 21.2\n\tfator := 0.778\n\n\tpen.Walk(dist)\n\tpen.Right(angulo)\n\tarvore(pen, dist*fator)\n\tpen.Left(2 * angulo)\n\tarvore(pen, dist*fator)\n\n\tpen.Right(angulo)\n\tpen.Walk(-dist)\n}\n\nfunc main() {\n\tpen := NewPen(750, 900)\n\tpen.SetHeading(90)\n\tpen.SetPosition(0, 0)\n\tpen.FillSquare(800, 1000)\n\tpen.SetPosition(375, 860)\n\tpen.SetRGB(255, 255, 255)\n\tarvore(pen, 160)\n\n\tpen.SavePNG(\"arvore.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "content": "@@ -540,16 +540,17 @@\n e(pen, 1\n+6\n 0)%0A%0A%09pen\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-14_23-29-44",
+            "content": "@@ -539,17 +539,17 @@\n re(pen, \n-5\n+1\n 0)%0A%0A%09pen\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-14_23-29-59",
+            "content": "@@ -539,17 +539,17 @@\n re(pen, \n-7\n+5\n 0)%0A%0A%09pen\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-14_23-30-30",
+            "content": "@@ -199,11 +199,11 @@\n := 2\n-5.0\n+1.2\n %0A%09fa\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-14_23-31-42",
+            "content": "@@ -195,17 +195,17 @@\n ulo := 2\n-3\n+5\n .0%0A%09fato\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-14_23-31-57",
+            "content": "@@ -211,16 +211,17 @@\n or := 0.\n+7\n 78%0A%0A%09pen\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-14_23-32-05",
+            "content": "@@ -211,18 +211,18 @@\n or := 0.\n+7\n 8\n-0\n %0A%0A%09pen.W\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-14_23-32-13",
+            "content": "@@ -219,36 +219,8 @@\n 80%0A%0A\n-%09pen.SetLineWidth(dist*0.9)%0A\n %09pen\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-14_23-33-02",
+            "content": "@@ -240,17 +240,17 @@\n (dist*0.\n-1\n+9\n )%0A%09pen.W\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-33-09",
+            "content": "@@ -244,10 +244,9 @@\n t*0.\n-05\n+1\n )%0A%09p\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-33-19",
+            "content": "@@ -237,17 +237,20 @@\n dth(dist\n-/\n+*0.0\n 5)%0A%09pen.\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-33-33",
+            "content": "@@ -238,18 +238,17 @@\n th(dist/\n-10\n+5\n )%0A%09pen.W\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-33-39",
+            "content": "@@ -239,17 +239,17 @@\n h(dist/1\n-2\n+0\n )%0A%09pen.W\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-33-50",
+            "content": "@@ -239,17 +239,17 @@\n h(dist/1\n-5\n+2\n )%0A%09pen.W\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-33-58",
+            "content": "@@ -212,17 +212,17 @@\n r := 0.8\n-1\n+0\n %0A%0A%09pen.S\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-34-16",
+            "content": "@@ -168,17 +168,17 @@\n dist %3C 1\n-0\n+1\n %7B%0A%09%09retu\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-34-24",
+            "content": "@@ -195,17 +195,17 @@\n ulo := 2\n-5\n+3\n .0%0A%09fato\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-34-34",
+            "content": "@@ -242,10 +242,10 @@\n ist/\n-20\n+15\n )%0A%09p\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-35-11",
+            "content": "@@ -239,17 +239,17 @@\n h(dist/2\n-5\n+0\n )%0A%09pen.W\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-35-27",
+            "content": "@@ -422,14 +422,14 @@\n Pen(\n-4\n+7\n 50, \n-6\n+9\n 00)%0A\n@@ -519,15 +519,15 @@\n ion(\n-225, 54\n+375, 86\n 0)%0A%09\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-37-39",
+            "content": "@@ -423,17 +423,17 @@\n en(450, \n-5\n+6\n 00)%0A%09pen\n@@ -520,17 +520,17 @@\n on(225, \n-4\n+5\n 40)%0A%09pen\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-37-52",
+            "content": "@@ -423,18 +423,18 @@\n en(450, \n-4\n 5\n+0\n 0)%0A%09pen.\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-38-26",
+            "content": "@@ -423,14 +423,14 @@\n en(4\n-0\n+5\n 0, 4\n-0\n+5\n 0)%0A%09\n@@ -520,14 +520,14 @@\n on(2\n-00, 38\n+25, 44\n 0)%0A%09\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-39-06",
+            "content": "@@ -566,17 +566,17 @@\n e(pen, 7\n-5\n+0\n )%0A%0A%09pen.\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-39-22",
+            "content": "@@ -168,17 +168,17 @@\n dist %3C 1\n-1\n+0\n %7B%0A%09%09retu\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-40-00",
+            "content": "@@ -168,17 +168,17 @@\n dist %3C 1\n-2\n+1\n %7B%0A%09%09retu\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-40-19",
+            "content": "@@ -168,17 +168,17 @@\n dist %3C 1\n-1\n+2\n %7B%0A%09%09retu\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-40-29",
+            "content": "@@ -242,10 +242,10 @@\n ist/\n-30\n+25\n )%0A%09p\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-40-57",
+            "content": "@@ -487,22 +487,23 @@\n lSquare(\n-4\n+8\n 00, \n-4\n+10\n 00)%0A%09pen\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-41-46",
+            "content": "@@ -419,17 +419,17 @@\n NewPen(4\n-5\n+0\n 0, 400)%0A\n@@ -515,18 +515,18 @@\n sition(2\n-25\n+00\n , 380)%0A%09\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-42-07",
+            "content": "@@ -488,17 +488,17 @@\n Square(4\n-5\n+0\n 0, 400)%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-42-24",
+            "content": "@@ -123,21 +123,22 @@\n %7D%0A%0Afunc \n-penta\n+arvore\n (pen *Pe\n@@ -198,10 +198,10 @@\n  := \n-7\n 2\n+5\n .0%0A%09\n@@ -219,23 +219,8 @@\n 81%0A%0A\n-%09for range 5%7B%0A%09\n %09pen\n@@ -242,17 +242,16 @@\n ist/30)%0A\n-%09\n %09pen.Wal\n@@ -262,36 +262,8 @@\n st)%0A\n-%09%09pen.Right(angulo)%0A%09%7D%0A%0A%09/*%0A\n %09pen\n@@ -389,10 +389,8 @@\n ist)\n-*/\n %0A%7D%0A%0A\n@@ -552,21 +552,22 @@\n , 255)%0A%09\n-penta\n+arvore\n (pen, 75\n@@ -587,17 +587,14 @@\n NG(%22\n-pentagono\n+arvore\n .png\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_23-53-04",
+            "content": "@@ -203,10 +203,8 @@\n .0%0A%09\n-//\n fato\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-14_23-53-09",
+            "content": "@@ -570,10 +570,10 @@\n 25, \n-20\n+38\n 0)%0A%09\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-14_23-53-44",
+            "content": "@@ -299,31 +299,8 @@\n lo)%0A\n-%09%09pen.Left(2 * angulo)%0A\n %09%7D%0A%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-14_23-54-04",
+            "content": "@@ -306,16 +306,20 @@\n en.Left(\n+2 * \n angulo)%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-14_23-54-13",
+            "content": "@@ -306,17 +306,16 @@\n en.Left(\n--\n angulo)%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-14_23-54-25",
+            "content": "@@ -199,16 +199,18 @@\n = 72.0%0A%09\n+//\n fator :=\n@@ -216,10 +216,10 @@\n = 0.\n-70\n+81\n %0A%0A%09f\n@@ -297,33 +297,8 @@\n gulo\n-*fator)%0A%09%09penta(pen, dist\n )%0A%09%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-14_23-57-19",
+            "content": "@@ -329,16 +329,17 @@\n en.Left(\n+-\n angulo)%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-14_23-57-38",
+            "content": "@@ -291,16 +291,22 @@\n t(angulo\n+*fator\n )%0A%09%09pent\n@@ -320,35 +320,31 @@\n dist\n-*fator\n )%0A%09\n-%7D%0A\n %09pen.\n-Walk(-dist)\n+Left(angulo)%0A%09%7D\n %0A%0A%09/\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-14_23-58-21",
+            "content": "@@ -210,17 +210,18 @@\n or := 0.\n-4\n+70\n %0A%0A%09for r\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-14_23-59-09",
+            "content": "@@ -166,18 +166,18 @@\n  dist %3C \n-20\n+11\n %7B%0A%09%09retu\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-14_23-59-32",
+            "content": "@@ -301,57 +301,16 @@\n %09pen\n-.Walk(dist)%0A%09%09penta(pen, dist*fator)%0A%09%09pen.Walk(-\n+ta(pen, \n dist\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-15_00-01-55",
+            "content": "@@ -233,10 +233,8 @@\n %7B%0A%09%09\n-//\n pen.\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-02-10",
+            "content": "@@ -294,16 +294,33 @@\n angulo)%0A\n+%09%09pen.Walk(dist)%0A\n %09%09penta(\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-02-53",
+            "content": "@@ -210,17 +210,17 @@\n or := 0.\n-2\n+4\n %0A%0A%09for r\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-03-24",
+            "content": "@@ -217,24 +217,8 @@\n .2%0A%0A\n-%09pen.Walk(dist)%0A\n %09for\n@@ -257,16 +257,33 @@\n ist/30)%0A\n+%09%09pen.Walk(dist)%0A\n %09%09pen.Ri\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-03-58",
+            "content": "@@ -297,31 +297,8 @@\n lo)%0A\n-%09%09pen.Walk(dist*fator)%0A\n %09%09pe\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-05-12",
+            "content": "@@ -210,17 +210,17 @@\n or := 0.\n-4\n+2\n %0A%0A%09pen.W\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-05-20",
+            "content": "@@ -214,18 +214,16 @@\n = 0.4%0A%0A%09\n-//\n pen.Walk\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-05-47",
+            "content": "@@ -214,16 +214,18 @@\n = 0.4%0A%0A%09\n+//\n pen.Walk\n@@ -242,17 +242,17 @@\n r range \n-4\n+5\n %7B%0A%09%09//pe\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-05-56",
+            "content": "@@ -193,18 +193,18 @@\n gulo := \n-90\n+72\n .0%0A%09fato\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-06-19",
+            "content": "@@ -197,10 +197,10 @@\n  := \n-72\n+90\n .0%0A%09\n@@ -240,16 +240,17 @@\n r range \n+4\n %7B%0A%09%09//pe\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-07-06",
+            "content": "@@ -240,17 +240,16 @@\n r range \n-5\n %7B%0A%09%09//pe\n@@ -700,11 +700,10 @@\n en, \n-120\n+75\n )%0A%0A%09\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-07-32",
+            "content": "@@ -556,14 +556,14 @@\n Pen(\n+4\n 5\n-0\n 0, \n-5\n+4\n 00)%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-08-06",
+            "content": "@@ -621,22 +621,22 @@\n lSquare(\n+4\n 5\n-0\n 0, \n-5\n+4\n 00)%0A%09pen\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-08-25",
+            "content": "@@ -649,18 +649,18 @@\n sition(2\n-00\n+25\n , 200)%0A%09\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-08-51",
+            "content": "@@ -653,17 +653,17 @@\n on(200, \n-1\n+2\n 00)%0A%09pen\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-08-58",
+            "content": "@@ -653,17 +653,17 @@\n on(200, \n-4\n+1\n 00)%0A%09pen\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-09-04",
+            "content": "@@ -649,17 +649,17 @@\n sition(2\n-5\n+0\n 0, 400)%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-09-13",
+            "content": "@@ -211,17 +211,16 @@\n r := 0.4\n-5\n %0A%0A%09pen.W\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-09-30",
+            "content": "@@ -214,14 +214,13 @@\n = 0.\n+4\n 5%0A%0A%09\n-//\n pen.\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-09-43",
+            "content": "@@ -214,16 +214,18 @@\n = 0.5%0A%0A%09\n+//\n pen.Walk\n@@ -229,11 +229,12 @@\n alk(\n-1.0\n+dist\n )%0A%09f\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-09-56",
+            "content": "@@ -223,20 +223,19 @@\n en.Walk(\n-dist\n+1.0\n )%0A%09for r\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-10-03",
+            "content": "@@ -166,17 +166,17 @@\n  dist %3C \n-1\n+2\n 0%7B%0A%09%09ret\n@@ -214,10 +214,9 @@\n = 0.\n-42\n+5\n %0A%0A%09p\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-11-14",
+            "content": "@@ -166,17 +166,18 @@\n  dist %3C \n-5\n+10\n %7B%0A%09%09retu\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-11-23",
+            "content": "@@ -245,16 +245,18 @@\n ge 5%7B%0A%09%09\n+//\n pen.SetL\n@@ -269,17 +269,17 @@\n th(dist/\n-1\n+3\n 0)%0A%09%09pen\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-11-43",
+            "content": "@@ -271,9 +271,9 @@\n ist/\n-3\n+1\n 0)%0A%09\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-12-09",
+            "content": "@@ -217,29 +217,8 @@\n 42%0A%0A\n-%09pen.SetRGB(0, 0, 0)%0A\n %09pen\n@@ -247,36 +247,8 @@\n  5%7B%0A\n-%09%09pen.SetRGB(255, 255, 255)%0A\n %09%09pe\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-14-31",
+            "content": "@@ -298,10 +298,8 @@\n )%0A%09%09\n-//\n pen.\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-04-15_00-14-43",
+            "content": "@@ -213,16 +213,53 @@\n = 0.42%0A%0A\n+%09pen.SetRGB(0, 0, 0)%0A%09pen.Walk(dist)%0A\n %09for ran\n@@ -290,24 +290,26 @@\n 255, 255)%0A%09%09\n+//\n pen.SetLineW\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-04-15_00-15-11",
+            "content": "@@ -227,16 +227,44 @@\n ange 5%7B%0A\n+%09%09pen.SetRGB(255, 255, 255)%0A\n %09%09pen.Se\n@@ -279,17 +279,17 @@\n th(dist/\n-2\n+3\n 0)%0A%09%09pen\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-15_00-15-25",
+            "content": "@@ -233,10 +233,8 @@\n %7B%0A%09%09\n-//\n pen.\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-15-42",
+            "content": "@@ -292,16 +292,22 @@\n alk(dist\n+*fator\n )%0A%09%09pent\n@@ -345,12 +345,35 @@\n dist\n-)%0A%09%7D\n+*fator)%0A%09%7D%0A%09pen.Walk(-dist)\n %0A%0A%09/\n@@ -536,22 +536,22 @@\n  NewPen(\n-8\n+5\n 00, \n-8\n+5\n 00)%0A%09pen\n@@ -609,19 +609,18 @@\n are(\n-8\n+5\n 00, \n-8\n+5\n 00)%0A\n-%0A\n %09pen\n@@ -632,18 +632,18 @@\n osition(\n-40\n+25\n 0, 400)%0A\n@@ -681,18 +681,18 @@\n ta(pen, \n+1\n 2\n-0\n 0)%0A%0A%09pen\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-18-45",
+            "content": "@@ -210,17 +210,17 @@\n r := 0.4\n-5\n+2\n %0A%0A%09for r\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-19-09",
+            "content": "@@ -166,17 +166,17 @@\n  dist %3C \n-7\n+5\n %7B%0A%09%09retu\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-19-19",
+            "content": "@@ -166,18 +166,17 @@\n  dist %3C \n-20\n+7\n %7B%0A%09%09retu\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-19-26",
+            "content": "@@ -166,17 +166,17 @@\n  dist %3C \n-1\n+2\n 0%7B%0A%09%09ret\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-19-40",
+            "content": "@@ -212,12 +212,12 @@\n  := \n-2\n 0.\n-0\n+45\n %0A%0A%09f\n@@ -312,17 +312,17 @@\n en, dist\n--\n+*\n fator)%0A%09\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-20-19",
+            "content": "@@ -212,11 +212,12 @@\n  := \n+2\n 0.\n-3\n+0\n %0A%0A%09f\n@@ -304,33 +304,33 @@\n %09penta(pen, dist\n-*\n+-\n fator)%0A%09%09pen.Wal\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-20-45",
+            "content": "@@ -229,16 +229,18 @@\n ge 5%7B%0A%09%09\n+//\n pen.SetL\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-20-53",
+            "content": "@@ -251,17 +251,17 @@\n th(dist/\n-1\n+2\n 0)%0A%09%09pen\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-21-05",
+            "content": "@@ -251,17 +251,17 @@\n th(dist/\n-4\n+1\n 0)%0A%09%09pen\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-21-12",
+            "content": "@@ -251,17 +251,17 @@\n th(dist/\n-5\n+4\n 0)%0A%09%09pen\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-21-18",
+            "content": "@@ -246,17 +246,23 @@\n neWidth(\n-5\n+dist/50\n )%0A%09%09pen.\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-21-32",
+            "content": "@@ -246,17 +246,17 @@\n neWidth(\n-4\n+5\n )%0A%09%09pen.\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-21-38",
+            "content": "@@ -246,17 +246,17 @@\n neWidth(\n-1\n+4\n )%0A%09%09pen.\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-21-44",
+            "content": "@@ -250,11 +250,9 @@\n dth(\n-0.9\n+1\n )%0A%09%09\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-21-54",
+            "content": "@@ -248,17 +248,17 @@\n Width(0.\n-8\n+9\n )%0A%09%09pen.\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-22-03",
+            "content": "@@ -166,17 +166,18 @@\n  dist %3C \n-5\n+10\n %7B%0A%09%09retu\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-22-13",
+            "content": "@@ -166,17 +166,17 @@\n  dist %3C \n-3\n+5\n %7B%0A%09%09retu\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-22-27",
+            "content": "@@ -166,17 +166,17 @@\n  dist %3C \n-2\n+3\n %7B%0A%09%09retu\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-22-35",
+            "content": "@@ -166,17 +166,17 @@\n  dist %3C \n-1\n+2\n %7B%0A%09%09retu\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-22-42",
+            "content": "@@ -332,16 +332,151 @@\n dist)%0A%09%7D\n+%0A%0A%09/*%0A%09pen.Right(angulo)%0A%09arvore(pen, dist*fator)%0A%09pen.Left(2 * angulo)%0A%09arvore(pen, dist*fator)%0A%0A%09pen.Right(angulo)%0A%09pen.Walk(-dist)*/\n %0A%7D%0A%0Afunc\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_00-23-31",
+            "content": "@@ -247,17 +247,17 @@\n Width(0.\n-5\n+8\n )%0A%09%09pen.\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-15_00-23-59",
+            "content": "@@ -512,17 +512,17 @@\n a(pen, 2\n-2\n+0\n 0)%0A%0A%09pen\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-15_00-26-03",
+            "content": "@@ -512,17 +512,17 @@\n a(pen, 2\n-8\n+2\n 0)%0A%0A%09pen\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-15_00-26-16",
+            "content": "@@ -468,17 +468,17 @@\n n(400, 4\n-2\n+0\n 0)%0A%09pen.\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-15_00-26-34",
+            "content": "@@ -488,21 +488,21 @@\n RGB(\n-184, 21\n+255, 25\n 5, 2\n-33\n+55\n )%0A%09p\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-15_00-33-12",
+            "content": "@@ -515,10 +515,10 @@\n en, \n-30\n+28\n 0)%0A%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-15_00-33-50",
+            "content": "@@ -515,10 +515,10 @@\n en, \n-28\n+30\n 0)%0A%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-15_00-36-48",
+            "content": "@@ -485,18 +485,18 @@\n SetRGB(1\n-21\n+84\n , 215, 2\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-15_00-37-03",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc ri(inf, sup int) float64 {\n\treturn float64(rand.Intn(sup-inf+1) + inf)\n}\n\nfunc penta(pen *Pen, dist float64) {\n\tif dist < 1{\n\t\treturn\n\t}\n\tangulo := 72.0\n\tfator := 0.3\n\n\tfor range 5{\n\t\tpen.SetLineWidth(0.5)\n\t\tpen.Right(angulo)\n\t\tpen.Walk(dist)\n\t\tpenta(pen, dist*fator)\n\t\tpen.Walk(-dist)\n\t}\n}\n\nfunc main() {\n\tpen := NewPen(800, 800)\n\tpen.SetHeading(90)\n\tpen.SetPosition(0, 0)\n\tpen.FillSquare(800, 800)\n\n\tpen.SetPosition(400, 420)\n\tpen.SetRGB(121, 215, 233)\n\tpenta(pen, 280)\n\n\tpen.SavePNG(\"pentagono.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
             "lines": "40"
         }
     ]

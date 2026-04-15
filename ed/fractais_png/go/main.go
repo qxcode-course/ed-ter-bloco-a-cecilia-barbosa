@@ -9,32 +9,32 @@ func ri(inf, sup int) float64 {
 	return float64(rand.Intn(sup-inf+1) + inf)
 }
 
-func arvore(pen *Pen, dist float64) {
-	if dist < 11{
+func penta(pen *Pen, dist float64) {
+	if dist < 1{
 		return
 	}
-	angulo := 21.2
-	fator := 0.778
+	angulo := 72.0
+	fator := 0.3
 
-	pen.Walk(dist)
-	pen.Right(angulo)
-	arvore(pen, dist*fator)
-	pen.Left(2 * angulo)
-	arvore(pen, dist*fator)
-
-	pen.Right(angulo)
-	pen.Walk(-dist)
+	for range 5{
+		pen.SetLineWidth(0.5)
+		pen.Right(angulo)
+		pen.Walk(dist)
+		penta(pen, dist*fator)
+		pen.Walk(-dist)
+	}
 }
 
 func main() {
-	pen := NewPen(750, 900)
+	pen := NewPen(800, 800)
 	pen.SetHeading(90)
 	pen.SetPosition(0, 0)
-	pen.FillSquare(800, 1000)
-	pen.SetPosition(375, 860)
-	pen.SetRGB(255, 255, 255)
-	arvore(pen, 160)
+	pen.FillSquare(800, 800)
 
-	pen.SavePNG("arvore.png")
+	pen.SetPosition(400, 420)
+	pen.SetRGB(100, 215, 233)
+	penta(pen, 280)
+
+	pen.SavePNG("pentagono.png")
 	fmt.Println("PNG file created successfully.")
 }
