@@ -1,0 +1,114 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-25_22-17-11",
+            "content": "@@ -357,18 +357,19 @@\n eio%0A%09%09%7D%0A\n-%0A\n %09\n+%7D%0A\n %09return \n@@ -379,36 +379,100 @@\n se, \n-meio%0A%09%7D%0A%09return false, 0%0A%7D  \n+0 %0A%7D  %0A// verifica se o numero existe%0A// busca por um contador esse numero e solta a posi%C3%A7ao\n %0A%0Afu\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-25_22-28-34",
+            "content": "@@ -356,16 +356,38 @@\n meio%0A%09%09%7D\n+%0A%0A%09%09return false, meio\n %0A%09%7D%0A%09ret\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-25_22-29-54",
+            "content": "@@ -195,570 +195,198 @@\n im %7B\n- // vai repetir ate nao pode mais se fechar%0A%09%09meio := (inicio+fim) / 2 // divide em dois pra binariedade%0A%0A%09%09if slice%5Bmeio%5D %3E value %7B // se o nuemro do meio for maior que valro, %0A%09%09%09fim = meio - 1 //fim vai pro inicio%0A%09%09%7D else if  slice%5Bmeio%5D %3C value %7B // se o numero do meio for menor que valor,%0A%09%09%09inicio = meio + 1 // inicio vai pro fim%0A%09%09%7D else if slice%5Bmeio%5D != value %7B%0A%09%09%09return false, meio%0A%09%09%7D else %7B%0A%09%09%09return true, meio // fim do loop retorna o numero achado%0A%09%09%7D%0A%09%7D%0A%09return false, 0%0A%7D  %0A// nao existe, retorna onde deveria estar, vai retornar false, meio\n+%0A%09%09meio := (inicio+fim) / 2%0A%0A%09%09if slice%5Bmeio%5D %3E value %7B%0A%09%09%09fim = meio - 1%0A%09%09%7D else if  slice%5Bmeio%5D %3C value %7B%0A%09%09%09inicio = meio + 1%0A%09%09%7D else %7B%0A%09%09%09return true, meio%0A%09%09%7D%0A%09%7D%0A%09return false, 0%0A%7D  %0A\n %0Afun\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-25_22-36-16",
+            "content": "@@ -538,60 +538,39 @@\n %09%09%7D \n-%0A%0A%09%09for temp := range slice %7B%0A%09%09%09if temp == meio\n+else if slice%5Bmeio%5D != value\n  %7B%0A\n-%09\n %09%09%09r\n@@ -579,19 +579,20 @@\n urn \n-tru\n+fals\n e, meio%0A\n %09%09%09%7D\n@@ -587,17 +587,16 @@\n e, meio%0A\n-%09\n %09%09%7D else\n@@ -598,17 +598,16 @@\n  else %7B%0A\n-%09\n %09%09%09retur\n@@ -612,29 +612,61 @@\n urn \n-fals\n+tru\n e, meio\n-%0A%09%09%09%7D\n+ // fim do loop retorna o numero achado\n %0A%09%09%7D\n- \n %0A%09%7D%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-25_22-40-11",
+            "content": "@@ -534,23 +534,68 @@\n fim%0A%09%09%7D \n-else\n+%0A%0A%09%09for temp := range slice %7B%0A%09%09%09if temp == meio\n  %7B%0A\n+%09\n %09%09%09retur\n@@ -610,51 +610,53 @@\n meio\n- // fim do loop retorna o numero achado\n+%0A%09%09%09%7D else %7B%0A%09%09%09%09return false, meio%0A%09%09%09%7D\n %0A%09%09%7D\n+ \n %0A%09%7D%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-04-25_22-40-56",
+            "content": "@@ -543,64 +543,8 @@\n lse \n-if slice%5Bmeio%5D == value %7B%0A%09%09%09return false, meio%0A%09%09%7Delse \n %7B%0A%09%09\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-25_22-44-39",
+            "content": "@@ -188,12 +188,10 @@\n icio\n- \n %3C=\n- \n fim \n@@ -383,16 +383,20 @@\n  = meio \n+- 1 \n //fim va\n@@ -412,32 +412,33 @@\n cio%0A%09%09%7D else if \n+ \n slice%5Bmeio%5D %3C va\n@@ -562,16 +562,17 @@\n == value\n+ \n %7B%0A%09%09%09ret\n@@ -587,20 +587,19 @@\n e, meio%0A\n+\n %09%09%7D\n- \n else %7B%0A%09\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-25_22-48-04",
+            "content": "@@ -384,18 +384,16 @@\n m = meio\n--1\n  //fim v\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-25_22-48-15",
+            "content": "@@ -567,22 +567,8 @@\n ue%7B%0A\n-%09%09%09meio = fim%0A\n %09%09%09r\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-25_22-49-52",
+            "content": "@@ -566,26 +566,26 @@\n lue%7B%0A%09%09%09\n-fim = meio\n+meio = fim\n %0A%09%09%09retu\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-25_22-50-19",
+            "content": "@@ -577,16 +577,38 @@\n  = meio%0A\n+%09%09%09return false, meio%0A\n %09%09%7D else\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-25_22-50-31",
+            "content": "@@ -529,16 +529,64 @@\n pro fim%0A\n+%09%09%7D else if slice%5Bmeio%5D == value%7B%0A%09%09%09fim = meio%0A\n %09%09%7D else\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-25_22-50-41",
+            "content": "@@ -384,16 +384,18 @@\n m = meio\n+-1\n  //fim v\n@@ -407,17 +407,16 @@\n o inicio\n- \n %0A%09%09%7D els\n@@ -544,57 +544,8 @@\n e %7B%0A\n-%09%09%09if inicio == fim%7B%0A%09%09%09%09return false, meio%0A%09%09%09%7D%0A\n %09%09%09r\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-25_22-59-33",
+            "content": "@@ -186,16 +186,17 @@\n inicio %3C\n+=\n  fim %7B /\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-25_23-01-24",
+            "content": "@@ -538,16 +538,65 @@\n  else %7B%0A\n+%09%09%09if inicio == fim%7B%0A%09%09%09%09return false, meio%0A%09%09%09%7D%0A\n %09%09%09retur\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-25_23-01-43",
+            "content": "@@ -542,57 +542,8 @@\n e %7B%0A\n-%09%09%09if inicio == fim%7B%0A%09%09%09%09return false, meio%0A%09%09%09%7D%0A\n %09%09%09r\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-25_23-01-53",
+            "content": "@@ -603,20 +603,18 @@\n n true, \n-inic\n+me\n io // fi\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-25_23-03-42",
+            "content": "@@ -603,18 +603,20 @@\n n true, \n-me\n+inic\n io // fi\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-25_23-03-51",
+            "content": "@@ -581,20 +581,17 @@\n se, \n-inic\n+me\n io%0A%09%09%09%7D\n- \n %0A%09%09%09\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-25_23-04-01",
+            "content": "@@ -538,16 +538,68 @@\n  else %7B%0A\n+%09%09%09if inicio == fim%7B%0A%09%09%09%09return false, inicio%0A%09%09%09%7D %0A\n %09%09%09retur\n@@ -672,22 +672,17 @@\n  false, \n-inicio\n+0\n %0A%7D  %0A// \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-25_23-08-37",
+            "content": "@@ -186,17 +186,16 @@\n inicio %3C\n-=\n  fim %7B /\n@@ -388,12 +388,8 @@\n eio \n-- 1 \n //fi\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-25_23-09-25",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc BetterSearch(slice []int, value int) (bool, int) {\n\t_, _ = slice, value\n\tinicio, fim := 0, len(slice)-1\n\n\tfor inicio <= fim { // vai repetir ate nao pode mais se fechar\n\t\tmeio := (inicio+fim) / 2 // divide em dois pra binariedade\n\n\t\tif slice[meio] > value { // se o nuemro do meio for maior que valro, \n\t\t\tfim = meio - 1 //fim vai pro inicio \n\t\t} else if slice[meio] < value { // se o numero do meio for menor que valor,\n\t\t\tinicio = meio + 1 // inicio vai pro fim\n\t\t} else {\n\t\t\treturn true, meio // fim do loop retorna o numero achado\n\t\t}\n\t}\n\treturn false, inicio\n}  \n// nao existe, retorna onde deveria estar, vai retornar false, meio\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tslice := []int{}\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tfound, result := BetterSearch(slice, value)\n\tif found {\n\t\tfmt.Println(\"V\", result)\n\t} else {\n\t\tfmt.Println(\"F\", result)\n\t}\n}\n",
+            "lines": "46"
+        }
+    ]
+}

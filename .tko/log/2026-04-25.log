@@ -1,0 +1,61 @@
+2026-04-25 21:27:37, MOVE, v:1, k:ed@bettersearch, mode:DOWN
+2026-04-25 21:27:37, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 21:27:37, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 21:32:16, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 21:33:31, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-04-25 21:33:22, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 21:42:05, MOVE, v:1, k:ed@bettersearch, mode:BACK
+2026-04-25 21:41:49, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 21:42:22, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-04-25 21:47:52, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 21:54:52, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 21:58:54, MOVE, v:1, k:ed@bettersearch, mode:BACK
+2026-04-25 22:06:04, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 22:12:04, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-04-25 22:11:55, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 22:17:11, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:63, size:48
+2026-04-25 22:17:05, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 22:17:10, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 22:20:56, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:63
+2026-04-25 22:20:55, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 22:22:15, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 22:27:10, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 22:28:35, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:36, size:48
+2026-04-25 22:29:54, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:63, size:46
+2026-04-25 22:32:18, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 22:29:54, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 22:36:16, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:63, size:48
+2026-04-25 22:36:36, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:63
+2026-04-25 22:37:16, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 22:36:36, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 22:40:11, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:27, size:52
+2026-04-25 22:40:56, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:63, size:46
+2026-04-25 22:40:47, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 22:40:56, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 22:44:39, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:18, size:48
+2026-04-25 22:45:34, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 22:44:39, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 22:48:04, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:9, size:48
+2026-04-25 22:48:15, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:18, size:48
+2026-04-25 22:49:52, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:18, size:49
+2026-04-25 22:50:19, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:18, size:49
+2026-04-25 22:50:31, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:9, size:48
+2026-04-25 22:50:41, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:63, size:46
+2026-04-25 22:50:39, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 22:50:40, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 22:55:39, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 22:59:33, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:36, size:49
+2026-04-25 23:01:24, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:45, size:49
+2026-04-25 23:01:43, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:45, size:46
+2026-04-25 23:01:53, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:45, size:49
+2026-04-25 23:01:52, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 23:01:52, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 23:03:42, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:36, size:49
+2026-04-25 23:03:51, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:45, size:49
+2026-04-25 23:04:01, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:45, size:49
+2026-04-25 23:04:17, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 23:04:01, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 23:08:37, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:72, size:46
+2026-04-25 23:09:25, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:100, size:46
+2026-04-25 23:09:30, MOVE, v:1, k:ed@bettersearch, mode:BACK
+2026-04-25 23:10:55, SELF, v:1, k:ed@bettersearch, self:1, rate:100, study:100, friend:Juliana Souza, problem:1

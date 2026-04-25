@@ -22,12 +22,13 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@rec
+- ed@vector
 flags:
-  inbox: inbox
+  inbox: all
   panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@fractais_png
+selected: ed@bettersearch
+selected_index: 7
