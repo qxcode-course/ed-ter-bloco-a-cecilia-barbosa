@@ -107,7 +107,17 @@
         },
         {
             "label": "2026-04-25_23-09-25",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc BetterSearch(slice []int, value int) (bool, int) {\n\t_, _ = slice, value\n\tinicio, fim := 0, len(slice)-1\n\n\tfor inicio <= fim { // vai repetir ate nao pode mais se fechar\n\t\tmeio := (inicio+fim) / 2 // divide em dois pra binariedade\n\n\t\tif slice[meio] > value { // se o nuemro do meio for maior que valro, \n\t\t\tfim = meio - 1 //fim vai pro inicio \n\t\t} else if slice[meio] < value { // se o numero do meio for menor que valor,\n\t\t\tinicio = meio + 1 // inicio vai pro fim\n\t\t} else {\n\t\t\treturn true, meio // fim do loop retorna o numero achado\n\t\t}\n\t}\n\treturn false, inicio\n}  \n// nao existe, retorna onde deveria estar, vai retornar false, meio\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tslice := []int{}\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tfound, result := BetterSearch(slice, value)\n\tif found {\n\t\tfmt.Println(\"V\", result)\n\t} else {\n\t\tfmt.Println(\"F\", result)\n\t}\n}\n",
+            "content": "@@ -629,16 +629,86 @@\n se, \n-fim%0A%7D  %0A\n+inicio%0A%7D  %0A// nao existe, retorna onde deveria estar, vai retornar false, meio\n %0Afun\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-25_23-24-26",
+            "content": "@@ -625,22 +625,19 @@\n  false, \n-inicio\n+fim\n %0A%7D  %0A%0Afu\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-25_23-24-35",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc BetterSearch(slice []int, value int) (bool, int) {\n\t_, _ = slice, value\n\tinicio, fim := 0, len(slice)-1\n\n\tfor inicio <= fim { // vai repetir ate nao pode mais se fechar\n\t\tmeio := (inicio+fim) / 2 // divide em dois pra binariedade\n\n\t\tif slice[meio] > value { // se o nuemro do meio for maior que valro, \n\t\t\tfim = meio - 1 //fim vai pro inicio \n\t\t} else if slice[meio] < value { // se o numero do meio for menor que valor,\n\t\t\tinicio = meio + 1 // inicio vai pro fim\n\t\t} else {\n\t\t\treturn true, meio // fim do loop retorna o numero achado\n\t\t}\n\t}\n\treturn false, inicio\n}  \n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tslice := []int{}\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tfound, result := BetterSearch(slice, value)\n\tif found {\n\t\tfmt.Println(\"V\", result)\n\t} else {\n\t\tfmt.Println(\"F\", result)\n\t}\n}\n",
             "lines": "46"
         }
     ]

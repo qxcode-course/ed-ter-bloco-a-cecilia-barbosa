@@ -59,3 +59,9 @@
 2026-04-25 23:09:25, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:100, size:46
 2026-04-25 23:09:30, MOVE, v:1, k:ed@bettersearch, mode:BACK
 2026-04-25 23:10:55, SELF, v:1, k:ed@bettersearch, self:1, rate:100, study:100, friend:Juliana Souza, problem:1
+2026-04-25 23:12:55, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 23:24:14, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-04-25 23:24:26, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:45, size:46
+2026-04-25 23:24:35, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:100, size:46
+2026-04-25 23:24:33, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-25 23:24:34, MOVE, v:1, k:ed@bettersearch, mode:EDIT

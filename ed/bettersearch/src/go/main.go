@@ -25,7 +25,7 @@ func BetterSearch(slice []int, value int) (bool, int) {
 	}
 	return false, inicio
 }  
-// nao existe, retorna onde deveria estar, vai retornar false, meio
+
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
