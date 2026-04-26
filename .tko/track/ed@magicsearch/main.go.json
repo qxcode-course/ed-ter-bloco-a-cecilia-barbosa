@@ -1,0 +1,109 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-26_01-23-20",
+            "content": "@@ -172,16 +172,8 @@\n %09for\n- i := 0;\n  ini\n@@ -186,43 +186,53 @@\n  fim\n-; i++%7B%0A%09%09if slice%5Bi%5D != slice%5Bi+1%5D%7B\n+ %7B // vai repetir ate nao pode mais se fechar\n %0A%09%09m\n@@ -592,16 +592,19 @@\n ado%0A%09%09%7D%0A\n+%09%7D%0A\n %09return \n@@ -611,18 +611,16 @@\n inicio%0A%7D\n-%0A%7D\n %0A%0Afunc m\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-26_01-33-05",
+            "content": "@@ -195,17 +195,16 @@\n fim; i++\n- \n %7B%0A%09%09if s\n@@ -224,20 +224,18 @@\n ice%5Bi+1%5D\n- \n %7B%0A\n-%09\n %09%09meio :\n@@ -243,19 +243,17 @@\n  (inicio\n- + \n++\n fim) / 2\n@@ -288,17 +288,16 @@\n iedade%0A%0A\n-%09\n %09%09if sli\n@@ -358,18 +358,18 @@\n e valro,\n+ \n %0A\n-%09\n %09%09%09fim =\n@@ -398,20 +398,20 @@\n o inicio\n+ \n %0A%09%09\n-%09\n %7D else i\n@@ -481,17 +481,16 @@\n lor,%0A%09%09%09\n-%09\n inicio =\n@@ -521,17 +521,16 @@\n pro fim%0A\n-%09\n %09%09%7D else\n@@ -535,17 +535,16 @@\n se %7B%0A%09%09%09\n-%09\n return m\n@@ -591,17 +591,8 @@\n do%0A%09\n-%09%09%7D%0A%0A%09%09%7D%0A\n %09%7D%0A%09\n@@ -606,16 +606,18 @@\n inicio%0A%7D\n+%0A%7D\n %0A%0Afunc m\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-26_01-34-16",
+            "content": "@@ -168,16 +168,24 @@\n -1%0A%0A%09for\n+ i := 0;\n  inicio \n@@ -190,19 +190,55 @@\n o %3C= fim\n- %7B%0A\n+; i++ %7B%0A%09%09if slice%5Bi%5D != slice%5Bi+1%5D %7B%0A%09\n %09%09meio :\n@@ -293,16 +293,17 @@\n iedade%0A%0A\n+%09\n %09%09if sli\n@@ -365,16 +365,17 @@\n  valro,%0A\n+%09\n %09%09%09fim =\n@@ -407,16 +407,17 @@\n nicio%0A%09%09\n+%09\n %7D else i\n@@ -487,16 +487,17 @@\n lor,%0A%09%09%09\n+%09\n inicio =\n@@ -528,16 +528,17 @@\n pro fim%0A\n+%09\n %09%09%7D else\n@@ -543,16 +543,17 @@\n se %7B%0A%09%09%09\n+%09\n return m\n@@ -597,19 +597,24 @@\n chado%0A%09%09\n+%09\n %7D%0A%0A\n+%09%09%7D%0A\n %09%7D%0A%09retu\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-26_01-35-10",
+            "content": "@@ -168,10 +168,8 @@\n -1%0A%0A\n-%09%0A\n %09for\n@@ -269,62 +269,8 @@\n eio%5D\n- == value %7B%0A%09%09%09inicio = meio+1%0A%09%09%7D else if slice%5Bmeio%5D\n  %3E v\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-26_01-52-23",
+            "content": "@@ -623,18 +623,16 @@\n n inicio\n--1\n %0A%7D%0A%0Afunc\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-26_01-52-45",
+            "content": "@@ -539,16 +539,82 @@\n  fim%0A%09%09%7D\n+ else %7B%0A%09%09%09return meio // fim do loop retorna o numero achado%0A%09%09%7D%0A\n %0A%09%7D%0A%09ret\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-26_01-53-32",
+            "content": "@@ -557,16 +557,18 @@\n n inicio\n+-1\n %0A%7D%0A%0Afunc\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-26_01-54-19",
+            "content": "@@ -302,19 +302,21 @@\n o+1%0A%09%09%7D \n-%0A%09%09\n+else \n if slice\n@@ -423,14 +423,13 @@\n %09%09%7D \n-%0A%09%09%0A%09%09\n+else \n if s\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-26_01-54-51",
+            "content": "@@ -421,13 +421,14 @@\n %09%09%7D \n-else \n+%0A%09%09%0A%09%09\n if s\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-26_01-55-02",
+            "content": "@@ -538,34 +538,8 @@\n fim%0A\n-%09%09%7D else %7B%0A%09%09%09return meio%0A\n %09%09%7D%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-26_01-55-26",
+            "content": "@@ -298,29 +298,27 @@\n  meio+1%0A%09%09%7D \n-else \n+%0A%09%09\n if slice%5Bmei\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-26_01-56-55",
+            "content": "@@ -179,16 +179,17 @@\n inicio %3C\n+=\n  fim %7B%0A%09\n@@ -540,16 +540,41 @@\n fim%0A%09%09%7D \n+else %7B%0A%09%09%09return meio%0A%09%09%7D\n %0A%09%7D%0A%09ret\n@@ -583,18 +583,16 @@\n n inicio\n--1\n %0A%7D%0A%0Afunc\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-26_01-57-09",
+            "content": "@@ -179,17 +179,16 @@\n inicio %3C\n-=\n  fim %7B%0A%09\n@@ -538,16 +538,17 @@\n  fim%0A%09%09%7D\n+ \n %0A%09%7D%0A%09ret\n@@ -557,16 +557,18 @@\n n inicio\n+-1\n %0A%7D%0A%0Afunc\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-26_01-57-29",
+            "content": "@@ -557,18 +557,16 @@\n n inicio\n--1\n %0A%7D%0A%0Afunc\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-26_01-57-35",
+            "content": "@@ -548,73 +548,23 @@\n %09%7D%0A%09\n-if inicio == value%7B%0A%09%09return inicio-1%0A%09%7Delse %7B%0A%09%09return inicio%0A%09%7D\n+return inicio-1\n %0A%7D%0A%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-26_02-04-31",
+            "content": "@@ -558,9 +558,9 @@\n cio \n-!\n+=\n = va\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-26_02-04-39",
+            "content": "@@ -554,17 +554,17 @@\n  inicio \n-=\n+!\n = value%7B\n@@ -579,16 +579,18 @@\n n inicio\n+-1\n %0A%09%7Delse \n@@ -606,18 +606,16 @@\n n inicio\n--1\n %0A%09%7D%0A%7D%0A%0Af\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-26_02-07-44",
+            "content": "@@ -551,23 +551,14 @@\n %09if \n-slice%5B\n inicio\n--1%5D\n  == \n@@ -579,18 +579,16 @@\n n inicio\n--1\n %0A%09%7Delse \n@@ -604,16 +604,18 @@\n n inicio\n+-1\n %0A%09%7D%0A%7D%0A%0Af\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-26_02-10-47",
+            "content": "@@ -548,27 +548,10 @@\n %09%7D%0A%09\n- %0A%09if inicio %3E 0 &&\n+if\n  sli\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-26_02-18-16",
+            "content": "@@ -301,44 +301,8 @@\n io+1\n- // empurra ate o ultimo encontrado \n %0A%09%09%7D\n@@ -593,65 +593,8 @@\n lue%7B\n- // diminui 1 pq ele empurra ate quando encontra o ultimo\n %0A%09%09r\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-26_02-29-42",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc MagicSearch(slice []int, value int) int {\n\t_, _ = slice, value\n\tinicio, fim := 0, len(slice)-1\n\n\t\n\tfor inicio <= fim {\n\t\tmeio := (inicio + fim) / 2 // divide em dois pra binariedade\n\n\t\tif slice[meio] == value {\n\t\t\tinicio = meio+1 // empurra ate o ultimo encontrado \n\t\t} else if slice[meio] > value { // se o nuemro do meio for maior que valro,\n\t\t\tfim = meio - 1 //fim vai pro inicio\n\t\t} else if slice[meio] < value { // se o numero do meio for menor que valor,\n\t\t\tinicio = meio + 1 // inicio vai pro fim\n\t\t}\n\t}\n\t \n\tif inicio > 0 && slice[inicio-1] == value{ // diminui 1 pq ele empurra ate quando encontra o ultimo\n\t\treturn inicio-1\n\t}else {\n\t\treturn inicio\n\t}\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Fields(scanner.Text())\n\tslice := make([]int, 0, 1)\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tresult := MagicSearch(slice, value)\n\tfmt.Println(result)\n}\n",
+            "lines": "49"
+        }
+    ]
+}

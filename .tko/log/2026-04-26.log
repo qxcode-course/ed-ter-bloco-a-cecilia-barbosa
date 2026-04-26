@@ -1,0 +1,48 @@
+2026-04-26 01:18:45, MOVE, v:1, k:ed@magicsearch, mode:DOWN
+2026-04-26 01:19:50, MOVE, v:1, k:ed@magicsearch, mode:PICK
+2026-04-26 01:18:45, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-26 01:18:45, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-26 01:23:11, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-26 01:23:20, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:80, size:43
+2026-04-26 01:23:20, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-26 01:33:05, EXEC, v:1, k:ed@magicsearch, mode:FULL, size:44, fail:COMP
+2026-04-26 01:33:03, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-26 01:34:16, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:10, size:46
+2026-04-26 01:35:10, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:80, size:44
+2026-04-26 01:36:21, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:80
+2026-04-26 01:36:44, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-26 01:36:21, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-26 01:46:04, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-26 01:52:23, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:50, size:47
+2026-04-26 01:52:45, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:50, size:47
+2026-04-26 01:52:44, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-26 01:52:45, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-26 01:53:32, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:50, size:44
+2026-04-26 01:54:19, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:50, size:44
+2026-04-26 01:54:51, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:50, size:47
+2026-04-26 01:55:02, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:50, size:45
+2026-04-26 01:55:26, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:80, size:47
+2026-04-26 01:56:55, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:50, size:46
+2026-04-26 01:57:09, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:10, size:44
+2026-04-26 01:57:29, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:50, size:44
+2026-04-26 01:57:35, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:50, size:44
+2026-04-26 01:57:35, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-26 01:57:35, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-26 02:02:41, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-26 02:04:31, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:50, size:48
+2026-04-26 02:04:39, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:50, size:48
+2026-04-26 02:07:44, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:50, size:48
+2026-04-26 02:07:43, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-26 02:07:44, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-26 02:10:47, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:0, size:48
+2026-04-26 02:10:47, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-26 02:10:47, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-26 02:15:49, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:0
+2026-04-26 02:18:16, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:100, size:49
+2026-04-26 02:18:15, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-26 02:18:15, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-26 02:19:27, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-26 02:26:56, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-26 02:29:42, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:100, size:49
+2026-04-26 02:29:47, MOVE, v:1, k:ed@magicsearch, mode:BACK
+2026-04-26 02:32:12, SELF, v:1, k:ed@magicsearch, self:1, rate:100, study:70, friend:Juliana Souza, problem:1
