@@ -8,38 +8,59 @@ import (
 	"strings"
 )
 
-type MyList struct {
-	data []int
+type MyList struct { // é a struct que vai ser usada pro slice la do inicio da main nascer
+	data []int // slice de inteiros
 }
 
-type Iterator struct {
+func NewMyList(values []int) *MyList { // funciona como construtor
+	return &MyList{ // cria uma lista nova com os valores que já existiam
+		data: values} // aí retorna a nova struct que sera modificada
+} 
+
+
+type Iterator struct { // guarda a posição atual durante a execução, só caminha
+	data  []int // dados
+	index int // ponto de começo e parada
+}
+
+
+func (l *MyList) Iterator() *Iterator { // pertence ao tipo mylist e devolve o endereço do iteratpr
+	return &Iterator{
+		data:  l.data, // dado do tipo my list
+		index: -1} // -1 pra começar do 0
+}
+
+func (i *Iterator) HasNext() bool { // checa se há outro
+	return i.index < len(i.data)-1   // retorna true essa condição for verdade
+}
+
+func (i *Iterator) Next() int {
+	if i.index == len(i.data) { // verifica se chegou no final
+		panic(fmt.Errorf("No more elements"))
+	}
+	i.index += 1 // se nao chegar no final, acrescenta
+	return i.data[i.index] // retorna elemento atual
+}
+
+type ReverseIterator struct {
 	data  []int
 	index int
 }
 
-func NewMyList(values []int) *MyList {
-	return &MyList{data: values}
+func (l *MyList) ReverseIterator() *ReverseIterator {
+	return &ReverseIterator{
+		data:  l.data,
+		index: len(l.data)}
 }
 
-func (l *MyList) Iterator() *Iterator {
-	return &Iterator{data: l.data, index: -1}
+func (i *ReverseIterator) HasNext() bool {
+	return i.index > 0 // true se a condição, false se nao for
 }
 
-func (i *Iterator) HasNext() bool {
-	return i.index < len(i.data)-1
-}
+func (i *ReverseIterator) Next() int {
+    i.index -= 1
 
-func (i *Iterator) Next() int {
-	if i.index == len(i.data) {
-		panic(fmt.Errorf("No more elements"))
-	}
-	i.index += 1
 	return i.data[i.index]
-}
-
-func ReverseIterator(list []int) bool {
-	_ = list
-	return false
 }
 
 func main() {
@@ -68,11 +89,11 @@ func main() {
 			}
 			fmt.Println("]")
 		case "reverse":
-			// fmt.Print("[ ")
-			// for it := mylist.ReverseIterator(); it.HasNext(); {
-			// 	fmt.Printf("%v ", it.Next())
-			// }
-			// fmt.Println("]")
+			fmt.Print("[ ")
+			for it := mylist.ReverseIterator(); it.HasNext(); {
+			fmt.Printf("%v ", it.Next())
+			}
+			fmt.Println("]")
 		case "cyclic":
 			// qtd, _ := strconv.Atoi(args[1])
 			// fmt.Print("[ ")
