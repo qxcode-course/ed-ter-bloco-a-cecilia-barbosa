@@ -42,7 +42,7 @@ func (i *Iterator) Next() int {
 	return i.data[i.index] // retorna elemento atual
 }
 
-type ReverseIterator struct {
+type ReverseIterator struct { // guarda posição e dado durante a execução
 	data  []int
 	index int
 }
@@ -50,16 +50,39 @@ type ReverseIterator struct {
 func (l *MyList) ReverseIterator() *ReverseIterator {
 	return &ReverseIterator{
 		data:  l.data,
-		index: len(l.data)}
+		index: len(l.data)} // começa do ultimo
 }
 
 func (i *ReverseIterator) HasNext() bool {
 	return i.index > 0 // true se a condição, false se nao for
 }
 
-func (i *ReverseIterator) Next() int {
-    i.index -= 1
+func (i *ReverseIterator) Next() int { 
+    i.index -= 1 // decresce
+	return i.data[i.index]
+}
 
+type CyclicIterator struct { // guarda posição e dado durante a execução
+	data  []int
+	index int
+}
+
+func (l *MyList) CyclicIterator() *CyclicIterator {
+	return &CyclicIterator{
+		data:  l.data,
+		index: -1} 
+}
+
+func (i *CyclicIterator) HasNext() bool {
+	return true // ciclico, sempre tem prximo
+}
+
+func (i *CyclicIterator) Next() int { 
+    i.index += 1 
+	
+	if i.index == len(i.data){ // chega no ultimo, volta pro primeiro
+		i.index = 0
+	}
 	return i.data[i.index]
 }
 
@@ -95,13 +118,13 @@ func main() {
 			}
 			fmt.Println("]")
 		case "cyclic":
-			// qtd, _ := strconv.Atoi(args[1])
-			// fmt.Print("[ ")
-			// it := mylist.CyclicIterator()
-			// for range qtd {
-			// 	fmt.Printf("%v ", it.Next())
-			// }
-			// fmt.Println("]")
+			 qtd, _ := strconv.Atoi(args[1])
+			 fmt.Print("[ ")
+			 it := mylist.CyclicIterator()
+			 for range qtd {
+			 	fmt.Printf("%v ", it.Next())
+			 }
+			 fmt.Println("]")
 		}
 	}
 
