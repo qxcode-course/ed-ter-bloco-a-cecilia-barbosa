@@ -22,14 +22,13 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@backtrack
-- ed@vector
+- ed@list
 flags:
-  inbox: inbox
+  inbox: all
   panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@multiset
+selected: ed@lista_d1
 selected_index: 6

@@ -7,6 +7,19 @@ import (
 	"strings"
 )
 
+type Multiset struct{
+	data []int
+	size int 
+	capacity int
+}
+
+/*func (v *Multiset) String(){
+	if v.size == 0 {
+		return "[]"
+	}
+
+}*/
+
 func Join(slice []int, sep string) string {
 	if len(slice) == 0 {
 		return ""
@@ -17,6 +30,8 @@ func Join(slice []int, sep string) string {
 	}
 	return result
 }
+
+
 
 func main() {
 	var line, cmd string
