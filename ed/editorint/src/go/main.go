@@ -32,21 +32,27 @@ func (e *Editor) KeyLeft() {
 }
 
 func (e *Editor) KeyEnter() {
+	e.line = e.line.Next()
+	e.cursor = e.line.Value.Front()
 }
 
 func (e *Editor) KeyRight() {
+	e.cursor = e.cursor.Next()
 }
 
 func (e *Editor) KeyUp() {
+
 }
 
 func (e *Editor) KeyDown() {
 }
 
 func (e *Editor) KeyBackspace() {
+	if e.cursor == e.line.Value.Front(){}
 }
 
 func (e *Editor) KeyDelete() {
+	//e.cursor = e.line.Value.Erase(e.cursor)
 }
 
 func main() {

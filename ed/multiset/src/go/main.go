@@ -5,20 +5,35 @@ import (
 	"fmt"
 	"os"
 	"strings"
+	"strconv"
 )
 
-type Multiset struct{
-	data []int
-	size int 
+type Multiset struct { //
+	data     []int
+	size     int
 	capacity int
 }
 
-/*func (v *Multiset) String(){
-	if v.size == 0 {
-		return "[]"
+func NewMultiSet(capacity int) *Multiset { // novo vetor
+	return &Multiset{
+		data:     make([]int, capacity),
+		size:     0,
+		capacity: capacity,
 	}
+}
 
+/*func (v *Multiset) Insert(value int) error {
+	if v.size < v.capacity {
+		v.data[v.size] = value
+		v.size++
+	} else {
+		
+	}
 }*/
+
+func (v *Multiset) String() string {
+	return "[" + Join(v.data[0:v.size], ", ") + "]"
+}
 
 func Join(slice []int, sep string) string {
 	if len(slice) == 0 {
@@ -31,12 +46,10 @@ func Join(slice []int, sep string) string {
 	return result
 }
 
-
-
 func main() {
 	var line, cmd string
 	scanner := bufio.NewScanner(os.Stdin)
-	// ms := NewMultiSet(0)
+	ms := NewMultiSet(0)
 
 	for scanner.Scan() {
 		fmt.Print("$")
@@ -52,19 +65,21 @@ func main() {
 		case "end":
 			return
 		case "init":
-			// value, _ := strconv.Atoi(args[1])
-			// ms = NewMultiSet(value)
+			value, _ := strconv.Atoi(args[1])
+			ms = NewMultiSet(value)
 		case "insert":
-			// for _, part := range args[1:] {
-			// 	value, _ := strconv.Atoi(part)
-			// }
+			for _, part := range args[1:] {
+				value, _ := strconv.Atoi(part)
+				ms.Insert(value)
+			}
 		case "show":
+			fmt.Println(ms.String())
 		case "erase":
-			// value, _ := strconv.Atoi(args[1])
+			//value, _ := strconv.Atoi(args[1])
 		case "contains":
-			// value, _ := strconv.Atoi(args[1])
+			//value, _ := strconv.Atoi(args[1])
 		case "count":
-			// value, _ := strconv.Atoi(args[1])
+			//value, _ := strconv.Atoi(args[1])
 		case "unique":
 		case "clear":
 		default:
