@@ -16,8 +16,8 @@ type Editor struct {
 
 func (e *Editor) InsertChar(r rune) {
 	e.cursor = e.line.Value.Insert(e.cursor, r)
-	e.cursor = e.cursor.Next()
-}
+	e.cursor = e.cursor.Next() // inseriu, vai pra proxima 
+} 
 
 func (e *Editor) KeyLeft() {
 	if e.cursor != e.line.Value.Front() { // Se o cursor não está no início da linha
@@ -26,26 +26,24 @@ func (e *Editor) KeyLeft() {
 	}
 	// Estamos no início da linha
 	if e.line != e.lines.Front() { // Se não está na primeira linha
-		e.line = e.line.Prev()        // Move para a linha anterior
+		e.line = e.line.Prev()        // Move pa ra a linha anterior
 		e.cursor = e.line.Value.End() // Move o cursor para o final da linha
-	}
+	} 
 }
 
 func (e *Editor) KeyEnter() {
-	newLine := NewList[rune]()
-
-	e.line = e.lines.Insert(e.line.Next(), newLine)
-	e.cursor = e.line.Value.Back()
-	//e.line = e.line.Next()
-	//e.cursor = e.line.Value.Front()
+	novaLinha := NewList[rune]() // nova lista de rune
+	e.lines.Insert(e.line.Next(), novaLinha)
+	e.line = e.line.Next()
+	e.cursor = e.line.Value.Front()
 }
 
-func (e *Editor) KeyRight() {
+func (e *Editor) KeyRight() { 
 	if e.cursor != e.line.Value.Back() { // Se o cursor não está no início da linha
 		e.cursor = e.cursor.Next() // Move o cursor para a direita
 		return
 	}
-	// Estamos no início da linha
+	// Estamos no início da linha 
 	if e.line != e.lines.Back() { // Se não está na primeira linha
 		e.line = e.line.Next()          // Move para a linha depois
 		e.cursor = e.line.Value.Front() // Move o cursor para o final da linha

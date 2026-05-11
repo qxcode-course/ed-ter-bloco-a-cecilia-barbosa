@@ -22,14 +22,15 @@ func NewMultiSet(capacity int) *Multiset { // novo vetor
 	}
 }
 
-/*func (v *Multiset) Insert(value int) error {
+func (v *Multiset) Insert(value int) {//error {
 	if v.size < v.capacity {
 		v.data[v.size] = value
 		v.size++
 	} else {
 		
 	}
-}*/
+	
+}
 
 func (v *Multiset) String() string {
 	return "[" + Join(v.data[0:v.size], ", ") + "]"
