@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-17_21-50-22",
+            "content": "@@ -196,34 +196,45 @@\n == rune(num)\n-+\n+ + \n '0' %7B%0A\n-%09%09%09\n+            \n return false\n@@ -241,17 +241,20 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%09\n+    \n for i :=\n@@ -326,18 +326,29 @@\n num)\n-+\n+ + \n '0' %7B%0A\n-%09%09%09\n+            \n retu\n@@ -363,17 +363,20 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%09\n+    \n return t\n@@ -469,18 +469,24 @@\n ndice %7B%0A\n-%09%09\n+        \n fmt.Prin\n@@ -694,19 +694,28 @@\n ) + '0'%0A\n-%09%09%09\n+            \n fmt.Prin\n@@ -744,33 +744,35 @@\n ist(line, indice\n-+\n+ + \n 1, lim, prox) %7B%0A\n@@ -772,30 +772,50 @@\n rox)\n- \n %7B%0A\n-%09%09%09%09return true%0A%09%09%09\n+                return true%0A            \n %7D%0A%09%09\n@@ -819,17 +819,20 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%09\n+    \n line%5Bind\n@@ -846,32 +846,8 @@\n '.'%0A\n-%09fmt.Printf(%22%25d%22, line)%0A\n %09ret\n@@ -877,156 +877,7 @@\n ) %7B%0A\n-%09limite := 0%0A%09entrada := %22%22%0A%09indice := 0%0A%0A%09fmt.Scanln(&entrada)%0A%09fmt.Scanln(&limite)%0A%0A%09linha := %5B%5Drune(entrada)%0A%0A%09dist(linha, indice, limite, limite)\n %0A%7D%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-17_22-05-37",
+            "content": "@@ -663,16 +663,38 @@\n  '0'%0A%09%09%09\n+fmt.Printf(%22%25d%22, line)\n %0A%09%09%09if d\n@@ -774,16 +774,40 @@\n %5D = '.'%0A\n+%09fmt.Printf(%22%25d%22, line)%0A\n %09return \n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-05-17_22-12-00",
+            "content": "@@ -458,21 +458,19 @@\n ntf(\n-string(\n+%22%25d%22, \n line)\n-)\n %0A%09%09r\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-17_22-12-48",
+            "content": "@@ -452,18 +452,17 @@\n mt.Print\n-ln\n+f\n (string(\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-17_22-13-40",
+            "content": "package main\n\nimport \"fmt\"\n\n//import \"fmt\"\n\nfunc condicao(line []rune, indice int, num int, lim int, prox int) bool {\n\tfor i := indice + 1; i < indice+1+prox; i++ {\n\t\tif i < len(line) && line[i] == rune(num)+'0' {\n\t\t\treturn false\n\t\t}\n\t}\n\tfor i := indice - prox; i < indice; i++ {\n\t\tif i >= 0 && line[i] == rune(num)+'0' {\n\t\t\treturn false\n\t\t}\n\t}\n\treturn true\n}\n\nfunc dist(line []rune, indice int, lim int, prox int) bool {\n\tif len(line) == indice {\n\t\tfmt.Println(string(line))\n\t\treturn true\n\t}\n\n\tif line[indice] != '.' {\n\t\treturn dist(line, indice+1, lim, prox)\n\t}\n\n\tfor i := 0; i <= lim; i++ {\n\t\tif condicao(line, indice, i, lim, prox) {\n\t\t\tline[indice] = rune(i) + '0'\n\t\t\t\n\t\t\tif dist(line, indice+1, lim, prox) {\n\t\t\t\treturn true\n\t\t\t}\n\t\t}\n\t}\n\tline[indice] = '.'\n\treturn false\n}\n\nfunc main() {\n\tlimite := 0\n\tentrada := \"\"\n\tindice := 0\n\n\tfmt.Scanln(&entrada)\n\tfmt.Scanln(&limite)\n\n\tlinha := []rune(entrada)\n\n\tdist(linha, indice, limite, limite)\n}\n",
+            "lines": "55"
+        }
+    ]
+}
