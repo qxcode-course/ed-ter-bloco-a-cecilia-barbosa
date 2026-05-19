@@ -18,14 +18,13 @@ sources:
   type: git
   writeable: false
   quests: null
-expanded:
-- ed@rec
+expanded: []
 flags:
   inbox: all
   panel: graph
-  show_panel: 'false'
+  show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@queimada
+selected: ed@dfs
 selected_index: 8
