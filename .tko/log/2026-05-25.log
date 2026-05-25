@@ -1,0 +1,18 @@
+2026-05-25 00:39:57, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-05-25 00:39:59, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-05-25 00:40:01, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-05-25 00:40:05, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:4
+2026-05-25 00:40:05, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-05-25 00:41:17, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-05-25 00:50:30, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-05-25 00:50:43, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:24
+2026-05-25 00:50:43, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-05-25 00:55:40, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-05-25 00:58:17, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:48
+2026-05-25 00:58:29, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-05-25 00:58:36, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-05-25 00:58:50, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:48
+2026-05-25 00:59:16, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0
+2026-05-25 00:59:39, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100, size:48
+2026-05-25 00:59:45, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-05-25 01:00:15, SELF, v:1, k:ed@princesa, self:1, rate:100, study:110, guided:1
