@@ -3,6 +3,8 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"os"
+	"strconv"
 	"strings"
 )
 
@@ -20,7 +22,6 @@ func NewVector(capacity int) *Vector {
 	}
 }
 
-
 func Join(slice []int, sep string) string {
 	if len(slice) == 0 {
 		return ""
@@ -33,11 +34,80 @@ func Join(slice []int, sep string) string {
 	return result.String()
 }
 
+func (v *Vector) Status() string {
+	return fmt.Sprintf("size:%d capacity:%d", v.size, v.capacity)
+}
+
+func (v *Vector) Insert(indice int, value int) error {
+	if v.size == v.capacity {
+		capNova := v.capacity * 2
+		if capNova == 0 {
+			capNova = 1
+		}
+		v.Reserve(capNova)
+	}
+
+	for i := v.size; i > indice; i-- {
+		v.data[i] = v.data[i-1]
+	}
+
+	v.data[indice] = value
+	v.size++
+	return nil
+}
+
+func (v *Vector) Show() string {
+	return "[" + Join(v.data[:v.size], ", ") + "]"
+}
+
+func (v *Vector) Clear() {
+	v.size = 0
+}
+
+func (v *Vector) Reserve(capNova int) {
+	if capNova <= v.capacity {
+		return
+	}
+	nData := make([]int, capNova)
+	for i := range v.size {
+		nData[i] = v.data[i]
+	}
+	v.data = nData
+	v.capacity = capNova
+
+}
+
+func (v *Vector) PushBack(value int) {
+	if v.size == v.capacity {
+		capNova := v.capacity * 2
+		if capNova == 0 {
+			capNova = 1
+		}
+		v.Reserve(capNova)
+	}
+	v.data[v.size] = value
+	v.size++
+}
+
+func (v *Vector) Contains(value int) bool {
+	return v.IndexOf(value) != -1
+}
+
+func (v *Vector) IndexOf(value int) int {
+	for i := range v.size {
+		if v.data[i] == value {
+			return i
+		}
+
+	}
+	return -1
+}
+
 func main() {
 	var line, cmd string
 	scanner := bufio.NewScanner(os.Stdin)
 
-	// v := NewVector(0)
+	v := NewVector(0)
 	for {
 		fmt.Print("$")
 		if !scanner.Scan() {
@@ -58,26 +128,26 @@ func main() {
 			value, _ := strconv.Atoi(parts[1])
 			v = NewVector(value)
 		case "push":
-			// for _, part := range parts[1:] {
-			// 	value, _ := strconv.Atoi(part)
-			// 	v.PushBack(value)
-			// }
+			for _, part := range parts[1:] {
+				value, _ := strconv.Atoi(part)
+				v.PushBack(value)
+			}
 		case "show":
-			// fmt.Println(v)
+			fmt.Println(v.Show())
 		case "status":
-			// fmt.Println(v.Status())
+			fmt.Println(v.Status())
 		case "pop":
 			// err := v.PopBack()
 			// if err != nil {
 			// 	fmt.Println(err)
 			// }
 		case "insert":
-			// index, _ := strconv.Atoi(parts[1])
-			// value, _ := strconv.Atoi(parts[2])
-			// err := v.Insert(index, value)
-			// if err != nil {
-			// 	fmt.Println(err)
-			// }
+			indice, _ := strconv.Atoi(parts[1])
+			value, _ := strconv.Atoi(parts[2])
+			err := v.Insert(indice, value)
+			if err != nil {
+				fmt.Println(err)
+			}
 		case "erase":
 			// index, _ := strconv.Atoi(parts[1])
 			// err := v.Erase(index)
@@ -85,18 +155,18 @@ func main() {
 			// 	fmt.Println(err)
 			// }
 		case "indexOf":
-			// value, _ := strconv.Atoi(parts[1])
-			// index := v.IndexOf(value)
-			// fmt.Println(index)
+			value, _ := strconv.Atoi(parts[1])
+			index := v.IndexOf(value)
+			fmt.Println(index)
 		case "contains":
-			// value, _ := strconv.Atoi(parts[1])
-			// if v.Contains(value) {
-			// 	fmt.Println("true")
-			// } else {
-			// 	fmt.Println("false")
-			// }
+			value, _ := strconv.Atoi(parts[1])
+			if v.Contains(value) {
+				fmt.Println("true")
+			} else {
+				fmt.Println("false")
+			}
 		case "clear":
-			// v.Clear()
+			v.Clear()
 		case "capacity":
 			// fmt.Println(v.Capacity())
 		case "get":
@@ -114,10 +184,10 @@ func main() {
 			// if err != nil {
 			// 	fmt.Println(err)
 			// }
-			// 
+			//
 		case "reserve":
-			// newCapacity, _ := strconv.Atoi(parts[1])
-			// v.Reserve(newCapacity)
+			newCapacity, _ := strconv.Atoi(parts[1])
+			v.Reserve(newCapacity)
 		case "slice":
 			// start, _ := strconv.Atoi(parts[1])
 			// end, _ := strconv.Atoi(parts[2])
