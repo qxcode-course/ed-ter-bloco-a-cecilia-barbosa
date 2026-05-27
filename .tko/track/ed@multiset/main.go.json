@@ -47,8 +47,83 @@
         },
         {
             "label": "2026-04-28_21-04-56",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n\t\"strconv\"\n)\n\ntype Multiset struct { //\n\tdata     []int\n\tsize     int\n\tcapacity int\n}\n\nfunc NewMultiSet(capacity int) *Multiset { // novo vetor\n\treturn &Multiset{\n\t\tdata:     make([]int, capacity),\n\t\tsize:     0,\n\t\tcapacity: capacity,\n\t}\n}\n\nfunc (v *Multiset) Insert(value int) {\n\tif v.size == v.capacity {\n\t} else {\n\t\tv.data[v.size+1] = value\n\t}\n}\n\nfunc (v *Multiset) String() string {\n\treturn \"[\" + Join(v.data[0:v.size], \", \") + \"]\"\n}\n\nfunc Join(slice []int, sep string) string {\n\tif len(slice) == 0 {\n\t\treturn \"\"\n\t}\n\tresult := fmt.Sprintf(\"%d\", slice[0])\n\tfor _, value := range slice[1:] {\n\t\tresult += sep + fmt.Sprintf(\"%d\", value)\n\t}\n\treturn result\n}\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\tms := NewMultiSet(0)\n\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\targs := strings.Fields(line)\n\t\tfmt.Println(line)\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = args[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\tvalue, _ := strconv.Atoi(args[1])\n\t\t\tms = NewMultiSet(value)\n\t\tcase \"insert\":\n\t\t\tfor _, part := range args[1:] {\n\t\t\t\tvalue, _ := strconv.Atoi(part)\n\t\t\t\tms.Insert(value)\n\t\t\t}\n\t\tcase \"show\":\n\t\t\tfmt.Println(ms.String())\n\t\tcase \"erase\":\n\t\t\t//value, _ := strconv.Atoi(args[1])\n\t\tcase \"contains\":\n\t\t\t//value, _ := strconv.Atoi(args[1])\n\t\tcase \"count\":\n\t\t\t//value, _ := strconv.Atoi(args[1])\n\t\tcase \"unique\":\n\t\tcase \"clear\":\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "content": "@@ -332,17 +332,8 @@\n t) %7B\n-//error %7B\n %0A%09if\n@@ -344,9 +344,10 @@\n ize \n-%3C\n+==\n  v.c\n@@ -356,16 +356,26 @@\n acity %7B%0A\n+%09%7D else %7B%0A\n %09%09v.data\n@@ -381,16 +381,18 @@\n a%5Bv.size\n++1\n %5D = valu\n@@ -398,35 +398,9 @@\n ue%0A%09\n-%09v.size++%0A%09%7D else %7B%0A%09%09%0A%09%7D%0A%09\n+%7D\n %0A%7D%0A%0A\n",
             "lines": "87"
+        },
+        {
+            "label": "2026-05-27_18-06-52",
+            "content": "@@ -47,23 +47,23 @@\n %22str\n-conv\n+ings\n %22%0A%09%22str\n-ings\n+conv\n %22%0A)%0A\n@@ -328,17 +328,16 @@\n e int) %7B\n- \n //error \n@@ -414,13 +414,16 @@\n e %7B%0A\n+%09%09\n %0A\n-\n %09%7D%0A\n+%09\n %0A\n-\n %7D%0A%0Af\n@@ -711,16 +711,16 @@\n lue)%0A%09%7D%0A\n+\n %09return \n@@ -733,94 +733,8 @@\n %0A%7D%0A%0A\n-func (v *Multiset) Show() string %7B%0A%09return %22%5B%22 + Join(v.data%5B:v.size%5D, %22, %22) + %22%5D%22%0A%7D%0A%0A\n func\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-05-27_18-07-48",
+            "content": "@@ -731,30 +731,8 @@\n %0A%7D%0A%0A\n-//  mesmo de vetbuild%0A\n func\n@@ -747,21 +747,20 @@\n tiset) S\n-tring\n+how(\n ) string\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-05-27_18-08-32",
+            "content": "@@ -415,24 +415,113 @@\n e %7B%0A%0A%09%7D%0A%0A%7D%0A%0A\n+func (v *Multiset) String() string %7B%0A%09return %22%5B%22 + Join(v.data%5B0:v.size%5D, %22, %22) + %22%5D%22%0A%7D%0A%0A\n func Join(sl\n@@ -766,33 +766,32 @@\n Multiset) String\n-(\n ) string %7B%0A%09retu\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-05-27_18-09-16",
+            "content": "@@ -294,235 +294,8 @@\n %0A%7D%0A%0A\n-//mesmos de vetbuild%0Afunc (v *Multiset) Reserve(capNova int) %7B%0A%09if capNova %3C= v.capacity %7B%0A%09%09return%0A%09%7D%0A%09nData := make(%5B%5Dint, capNova)%0A%09for i := range v.size %7B%0A%09%09nData%5Bi%5D = v.data%5Bi%5D%0A%09%7D%0A%09v.data = nData%0A%09v.capacity = capNova%0A%0A%7D%0A%0A\n func\n@@ -320,20 +320,8 @@\n ert(\n-indice int, \n valu\n@@ -327,16 +327,20 @@\n ue int) \n+%7B //\n error %7B%0A\n@@ -350,18 +350,17 @@\n  v.size \n-==\n+%3C\n  v.capac\n@@ -371,177 +371,20 @@\n %7B%0A%09%09\n-capNova := v.capacity * 2%0A%09%09if capNova == 0 %7B%0A%09%09%09capNova = 1%0A%09%09%7D%0A%09%09v.Reserve(capNova)%0A%09%7D%0A%0A%09for i := v.size; i %3E indice; i-- %7B%0A%09%09v.data%5Bi%5D = v.data%5Bi-1%5D%0A%09%7D%0A%0A%09v.data%5Bindic\n+v.data%5Bv.siz\n e%5D =\n@@ -390,16 +390,17 @@\n = value%0A\n+%09\n %09v.size+\n@@ -406,18 +406,21 @@\n ++%0A%09\n-return nil\n+%7D else %7B%0A%0A%09%7D%0A\n %0A%7D%0A%0A\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-05-27_18-10-42",
+            "content": "@@ -521,35 +521,8 @@\n %0A%7D%0A%0A\n-// quase igual de vetbuild%0A\n func\n@@ -539,24 +539,36 @@\n set) Insert(\n+indice int, \n value int) %7B\n@@ -561,24 +561,30 @@\n , value int)\n+ error\n  %7B%0A%09if v.siz\n@@ -696,100 +696,43 @@\n %0A%09%7D%0A\n-%09%0A%09v.data%5Bv.size%5D = value%0A%09v.size++%0A%0A%09for i := v.size; i %3E 0 && v.data%5Bi%5D %3C v.data%5Bi-1%5D\n+%0A%09for i := v.size; i %3E indice\n ; i--\n+ \n %7B%0A%09%09\n@@ -756,16 +756,19 @@\n a%5Bi-1%5D%0A%09\n+%7D%0A%0A\n %09v.data%5B\n@@ -772,26 +772,44 @@\n ta%5Bi\n--1%5D = v.data%5Bi%5D%0A%09%7D\n+ndice%5D = value%0A%09v.size++%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "113"
+        },
+        {
+            "label": "2026-05-27_18-19-07",
+            "content": "@@ -754,18 +754,16 @@\n = v.size\n--1\n ; i %3E 0 \n",
+            "lines": "114"
+        },
+        {
+            "label": "2026-05-27_18-19-18",
+            "content": "@@ -801,28 +801,8 @@\n --%7B%0A\n-%09%09temp := v.data%5Bi%5D%0A\n %09%09v.\n@@ -843,12 +843,17 @@\n %5D = \n-temp\n+v.data%5Bi%5D\n %0A%09%7D%0A\n",
+            "lines": "114"
+        },
+        {
+            "label": "2026-05-27_18-21-02",
+            "content": "@@ -874,256 +874,8 @@\n %0A%7D%0A%0A\n-//mesma de vetbuild%0Afunc (v *Multiset) IndexOf(value int) int %7B%0A%09for i := range v.size %7B%0A%09%09if v.data%5Bi%5D == value %7B%0A%09%09%09return i%0A%09%09%7D%0A%09%7D%0A%09return -1%0A%7D%0A// mesma de vetbuild%0Afunc (v *Multiset) Contains(value int) bool %7B%0A%09return v.IndexOf(value) != -1%0A%7D%0A%0A\n func\n@@ -1813,24 +1813,26 @@\n ntains%22:%0A%09%09%09\n+//\n value, _ := \n@@ -1857,101 +1857,8 @@\n 1%5D)%0A\n-%09%09%09if ms.Contains(value) %7B%0A%09%09%09%09fmt.Println(%22true%22)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Println(%22false%22)%0A%09%09%09%7D%0A\n %09%09ca\n",
+            "lines": "115"
+        },
+        {
+            "label": "2026-05-27_18-22-57",
+            "content": "@@ -1451,250 +1451,8 @@\n %0A%7D%0A%0A\n-// mesma de vetbuild%0Afunc (v *Multiset) Erase(indice int) error %7B%0A%09if indice %3C 0 %7C%7C indice %3E= v.size %7B%0A%09%09return fmt.Errorf(%22index out of range%22)%0A%09%7D%0A%0A%09for i := indice; i %3C v.size-1; i++ %7B%0A%09%09v.data%5Bi%5D = v.data%5Bi+1%5D%0A%09%7D%0A%0A%09v.size--%0A%09return nil%0A%7D%0A%0A\n func\n@@ -2003,24 +2003,26 @@\n %22erase%22:%0A%09%09%09\n+//\n value, _ := \n@@ -2047,59 +2047,8 @@\n 1%5D)%0A\n-%09%09%09indice := ms.IndexOf(value)%0A%09%09%09ms.Erase(indice)%0A\n %09%09ca\n",
+            "lines": "134"
+        },
+        {
+            "label": "2026-05-27_18-27-49",
+            "content": "@@ -288,25 +288,24 @@\n ty,%0A%09%7D%0A%7D%0A%0A//\n- \n mesmos de ve\n@@ -697,24 +697,25 @@\n capNova)%0A%09%7D%0A\n+%09\n %0A%09v.data%5Bv.s\n@@ -758,11 +758,9 @@\n size\n- - \n+-\n 1; i\n@@ -795,17 +795,16 @@\n -1%5D; i--\n- \n %7B%0A%09%09temp\n@@ -868,25 +868,24 @@\n emp%0A%09%7D%0A%7D%0A%0A//\n- \n mesma de vet\n@@ -1017,17 +1017,16 @@\n rn -1%0A%7D%0A\n-%0A\n // mesma\n@@ -1339,16 +1339,17 @@\n lt%0A%7D%0A%0A//\n+ \n  mesmo d\n@@ -1453,16 +1453,8 @@\n %0A%0A//\n- quase a\n  mes\n@@ -1500,24 +1500,30 @@\n (indice int)\n+ error\n  %7B%0A%09if indic\n@@ -1554,24 +1554,57 @@\n e %7B%0A%09%09return\n+ fmt.Errorf(%22index out of range%22)\n %0A%09%7D%0A%0A%09for i \n@@ -1674,16 +1674,28 @@\n .size--%0A\n+%09return nil%0A\n %7D%0A%0Afunc \n@@ -2318,75 +2318,8 @@\n ue)%0A\n-%09%09%09if indice == -1 %7B%0A%09%09%09%09fmt.Print(%22value not found%22)%0A%09%09%09%7D else %7B%0A%09\n %09%09%09m\n@@ -2334,21 +2334,16 @@\n indice)%0A\n-%09%09%09%7D%0A\n %09%09case %22\n",
+            "lines": "150"
+        },
+        {
+            "label": "2026-05-27_18-29-25",
+            "content": "@@ -2309,18 +2309,16 @@\n mt.Print\n-ln\n (%22value \n",
+            "lines": "154"
+        },
+        {
+            "label": "2026-05-27_18-29-43",
+            "content": "@@ -1654,73 +1654,8 @@\n %0A%7D%0A%0A\n-// mesma de vetbuild%0Afunc (v *Multiset) Clear() %7B%0A%09v.size = 0%0A%7D%0A%0A\n func\n@@ -2541,17 +2541,42 @@\n %0A%09%09%09\n-ms.Clear(\n+//value, _ := strconv.Atoi(args%5B1%5D\n )%0A%09%09\n",
+            "lines": "154"
+        },
+        {
+            "label": "2026-05-27_18-31-54",
+            "content": "@@ -2606,42 +2606,17 @@\n %0A%09%09%09\n-//value, _ := strconv.Atoi(args%5B1%5D\n+ms.Clear(\n )%0A%09%09\n@@ -2646,30 +2646,16 @@\n clear%22:%0A\n-%09%09%09ms.Clear()%0A\n %09%09defaul\n",
+            "lines": "159"
+        },
+        {
+            "label": "2026-05-27_18-33-17",
+            "content": "@@ -1719,148 +1719,8 @@\n %0A%7D%0A%0A\n-func (v *Multiset) Count(value int) int %7B%0A%09count := 0%0A%09for i := range v.size %7B%0A%09%09if v.data%5Bi%5D == value %7B%0A%09%09%09count++%0A%09%09%7D%0A%09%7D%0A%09return count%0A%7D%0A%0A\n func\n@@ -2598,24 +2598,26 @@\n %22count%22:%0A%09%09%09\n+//\n value, _ := \n@@ -2642,40 +2642,8 @@\n 1%5D)%0A\n-%09%09%09fmt.Println(ms.Count(value))%0A\n %09%09ca\n",
+            "lines": "160"
+        },
+        {
+            "label": "2026-05-27_18-37-31",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Multiset struct { //\n\tdata     []int\n\tsize     int\n\tcapacity int\n}\n\nfunc NewMultiSet(capacity int) *Multiset { // novo vetor\n\treturn &Multiset{\n\t\tdata:     make([]int, capacity),\n\t\tsize:     0,\n\t\tcapacity: capacity,\n\t}\n}\n\n// mesmos de vetbuild\nfunc (v *Multiset) Reserve(capNova int) {\n\tif capNova <= v.capacity {\n\t\treturn\n\t}\n\tnData := make([]int, capNova)\n\tfor i := range v.size {\n\t\tnData[i] = v.data[i]\n\t}\n\tv.data = nData\n\tv.capacity = capNova\n\n}\n\n// quase igual de vetbuild\nfunc (v *Multiset) Insert(value int) {\n\tif v.size == v.capacity {\n\t\tcapNova := v.capacity * 2\n\t\tif capNova == 0 {\n\t\t\tcapNova = 1\n\t\t}\n\t\tv.Reserve(capNova)\n\t}\n\n\tv.data[v.size] = value\n\tv.size++\n\n\tfor i := v.size - 1; i > 0 && v.data[i] < v.data[i-1]; i-- {\n\t\ttemp := v.data[i]\n\t\tv.data[i] = v.data[i-1]\n\t\tv.data[i-1] = temp\n\t}\n}\n\n// mesma de vetbuild\nfunc (v *Multiset) IndexOf(value int) int {\n\tfor i := range v.size {\n\t\tif v.data[i] == value {\n\t\t\treturn i\n\t\t}\n\t}\n\treturn -1\n}\n\n// mesma de vetbuild\nfunc (v *Multiset) Contains(value int) bool {\n\treturn v.IndexOf(value) != -1\n}\n\nfunc Join(slice []int, sep string) string {\n\tif len(slice) == 0 {\n\t\treturn \"\"\n\t}\n\tresult := fmt.Sprintf(\"%d\", slice[0])\n\tfor _, value := range slice[1:] {\n\t\tresult += sep + fmt.Sprintf(\"%d\", value)\n\t}\n\treturn result\n}\n\n// mesmo de vetbuild\nfunc (v *Multiset) String() string {\n\treturn \"[\" + Join(v.data[:v.size], \", \") + \"]\"\n}\n\n// quase a mesma de vetbuild\nfunc (v *Multiset) Erase(indice int) {\n\tif indice < 0 || indice >= v.size {\n\t\treturn\n\t}\n\n\tfor i := indice; i < v.size-1; i++ {\n\t\tv.data[i] = v.data[i+1]\n\t}\n\n\tv.size--\n}\n\n// mesma de vetbuild\nfunc (v *Multiset) Clear() {\n\tv.size = 0\n}\n\nfunc (v *Multiset) Count(value int) int {\n\tcount := 0\n\tfor i := range v.size {\n\t\tif v.data[i] == value {\n\t\t\tcount++\n\t\t}\n\t}\n\treturn count\n}\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\tms := NewMultiSet(0)\n\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\targs := strings.Fields(line)\n\t\tfmt.Println(line)\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = args[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\tvalue, _ := strconv.Atoi(args[1])\n\t\t\tms = NewMultiSet(value)\n\t\tcase \"insert\":\n\t\t\tfor _, part := range args[1:] {\n\t\t\t\tvalue, _ := strconv.Atoi(part)\n\t\t\t\tms.Insert(value)\n\t\t\t}\n\t\tcase \"show\":\n\t\t\tfmt.Println(ms.String())\n\t\tcase \"erase\":\n\t\t\tvalue, _ := strconv.Atoi(args[1])\n\t\t\tindice := ms.IndexOf(value)\n\t\t\tif indice == -1 {\n\t\t\t\tfmt.Println(\"value not found\")\n\t\t\t} else {\n\t\t\t\tms.Erase(indice)\n\t\t\t}\n\t\tcase \"contains\":\n\t\t\tvalue, _ := strconv.Atoi(args[1])\n\t\t\tif ms.Contains(value) {\n\t\t\t\tfmt.Println(\"true\")\n\t\t\t} else {\n\t\t\t\tfmt.Println(\"false\")\n\t\t\t}\n\t\tcase \"count\":\n\t\t\tvalue, _ := strconv.Atoi(args[1])\n\t\t\tfmt.Println(ms.Count(value))\n\t\tcase \"unique\":\n\t\tcase \"clear\":\n\t\t\tms.Clear()\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "171"
         }
     ]
 }
