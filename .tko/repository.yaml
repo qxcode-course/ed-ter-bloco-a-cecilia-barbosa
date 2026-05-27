@@ -20,13 +20,12 @@ sources:
   quests: null
 expanded:
 - ed@vector
-- ed@list
 flags:
   inbox: all
-  panel: graph
+  panel: skills
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@lista_d1
-selected_index: 12
+selected: ed@vetbuild
+selected_index: 5

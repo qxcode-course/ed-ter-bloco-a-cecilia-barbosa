@@ -113,3 +113,17 @@
 2026-05-26 23:42:01, MOVE, v:1, k:ed@editorint, mode:BACK
 2026-05-26 23:42:33, SELF, v:1, k:ed@editorint, self:1, friend:450, problem:1, refactor:1
 2026-05-26 23:42:53, SELF, v:1, k:ed@editorint, self:1, rate:100, study:450, problem:1, refactor:1
+2026-05-26 23:43:57, MOVE, v:1, k:ed@setbuild, mode:DOWN
+2026-05-26 23:44:02, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-26 23:44:04, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-26 23:46:47, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-05-26 23:47:29, MOVE, v:1, k:ed@setbuild, mode:BACK
+2026-05-26 23:43:57, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-26 23:43:57, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-26 23:43:57, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-26 23:43:57, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-26 23:49:46, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-05-26 23:49:47, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:45
+2026-05-26 23:49:47, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-26 23:53:33, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-26 23:58:31, MOVE, v:1, k:ed@setbuild, mode:EDIT
