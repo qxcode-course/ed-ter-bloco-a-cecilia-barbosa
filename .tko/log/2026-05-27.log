@@ -95,3 +95,13 @@
 2026-05-27 19:40:54, EXEC, v:1, k:ed@quadrado, mode:FULL, rate:100, size:25
 2026-05-27 19:40:55, MOVE, v:1, k:ed@quadrado, mode:BACK
 2026-05-27 19:42:48, SELF, v:1, k:ed@quadrado, self:1, rate:100, study:13
+2026-05-27 19:59:16, MOVE, v:1, k:ed@quadrado, mode:PICK
+2026-05-27 19:59:17, MOVE, v:1, k:ed@quadrado, mode:BACK
+2026-05-27 19:59:21, MOVE, v:1, k:ed@quadrado, mode:PICK
+2026-05-27 19:59:27, EXEC, v:1, k:ed@quadrado, mode:FULL, rate:100
+2026-05-27 19:59:35, MOVE, v:1, k:ed@quadrado, mode:BACK
+2026-05-27 19:59:45, SELF, v:1, k:ed@quadrado, self:1, rate:100, problem:1
+2026-05-27 19:59:27, MOVE, v:1, k:ed@quadrado, mode:EDIT
+2026-05-27 19:59:47, MOVE, v:1, k:ed@quadrado, mode:PICK
+2026-05-27 19:59:47, EXEC, v:1, k:ed@quadrado, mode:FULL, rate:100
+2026-05-27 19:59:49, MOVE, v:1, k:ed@quadrado, mode:BACK
