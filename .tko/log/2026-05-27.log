@@ -60,3 +60,38 @@
 2026-05-27 18:33:17, MOVE, v:1, k:ed@multiset, mode:EDIT
 2026-05-27 18:37:31, EXEC, v:1, k:ed@multiset, mode:FULL, rate:66, size:171
 2026-05-27 18:38:44, MOVE, v:1, k:ed@multiset, mode:BACK
+2026-05-27 19:13:30, MOVE, v:1, k:ed@multiset, mode:PICK
+2026-05-27 19:15:36, EXEC, v:1, k:ed@multiset, mode:FULL, rate:66, size:188
+2026-05-27 19:16:31, EXEC, v:1, k:ed@multiset, mode:FULL, rate:66, size:188
+2026-05-27 19:16:44, EXEC, v:1, k:ed@multiset, mode:FULL, rate:66, size:186
+2026-05-27 19:17:10, EXEC, v:1, k:ed@multiset, mode:FULL, rate:100, size:186
+2026-05-27 19:17:21, MOVE, v:1, k:ed@multiset, mode:BACK
+2026-05-27 19:17:45, SELF, v:1, k:ed@multiset, self:1, rate:100, study:120
+2026-05-27 19:21:19, SELF, v:1, k:ed@recursao, self:1, rate:100
+2026-05-27 19:22:12, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-05-27 19:22:14, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-05-27 19:22:32, MOVE, v:1, k:ed@binomiais, mode:DOWN
+2026-05-27 19:24:57, MOVE, v:1, k:ed@binomiais, mode:PICK
+2026-05-27 19:22:32, MOVE, v:1, k:ed@binomiais, mode:EDIT
+2026-05-27 19:22:32, MOVE, v:1, k:ed@binomiais, mode:EDIT
+2026-05-27 19:27:22, MOVE, v:1, k:ed@binomiais, mode:EDIT
+2026-05-27 19:27:53, EXEC, v:1, k:ed@binomiais, mode:FULL, rate:100, size:18
+2026-05-27 19:27:58, MOVE, v:1, k:ed@binomiais, mode:BACK
+2026-05-27 19:28:23, SELF, v:1, k:ed@binomiais, self:1, rate:100, study:10
+2026-05-27 19:29:23, SELF, v:1, k:ed@fractais_png, self:1, rate:30, friend:Juliana, problem:1
+2026-05-27 19:29:50, SELF, v:1, k:ed@fractais_png, self:1, rate:30, friend:Juliana, problem:1
+2026-05-27 19:30:02, MOVE, v:1, k:ed@quadrado, mode:DOWN
+2026-05-27 19:30:48, MOVE, v:1, k:ed@quadrado, mode:PICK
+2026-05-27 19:30:02, MOVE, v:1, k:ed@quadrado, mode:EDIT
+2026-05-27 19:30:02, MOVE, v:1, k:ed@quadrado, mode:EDIT
+2026-05-27 19:33:03, MOVE, v:1, k:ed@quadrado, mode:EDIT
+2026-05-27 19:37:24, EXEC, v:1, k:ed@quadrado, mode:FULL, size:22, fail:COMP
+2026-05-27 19:37:33, EXEC, v:1, k:ed@quadrado, mode:FULL, rate:5, size:22
+2026-05-27 19:38:00, MOVE, v:1, k:ed@quadrado, mode:EDIT
+2026-05-27 19:37:33, MOVE, v:1, k:ed@quadrado, mode:EDIT
+2026-05-27 19:38:13, EXEC, v:1, k:ed@quadrado, mode:FULL, rate:5, size:22
+2026-05-27 19:40:20, EXEC, v:1, k:ed@quadrado, mode:FULL, rate:10, size:25
+2026-05-27 19:40:35, EXEC, v:1, k:ed@quadrado, mode:FULL, rate:100, size:25
+2026-05-27 19:40:54, EXEC, v:1, k:ed@quadrado, mode:FULL, rate:100, size:25
+2026-05-27 19:40:55, MOVE, v:1, k:ed@quadrado, mode:BACK
+2026-05-27 19:42:48, SELF, v:1, k:ed@quadrado, self:1, rate:100, study:13

@@ -115,11 +115,18 @@ func (v *Multiset) Count(value int) int {
 	return count
 }
 
-func (v *Multiset) Unique () int {
+func (v *Multiset) Unique() int {
 	if v.size == 0 {
 		return 0
 	}
-	return 0
+	uni := 1
+	for i := 1; i < v.size; i++ {
+		if v.data[i] != v.data[i-1] {
+			uni++
+		}
+	}
+
+	return uni
 }
 
 func main() {
@@ -169,6 +176,7 @@ func main() {
 			value, _ := strconv.Atoi(args[1])
 			fmt.Println(ms.Count(value))
 		case "unique":
+			fmt.Println(ms.Unique())
 		case "clear":
 			ms.Clear()
 		default:

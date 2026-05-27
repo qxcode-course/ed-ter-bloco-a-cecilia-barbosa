@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-27_19-27-53",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc C(n, k int) int {\n\tif k == 0 || k == n {\n\t\treturn 1\n\t}\n\treturn C(n-1, k-1) + C(n-1, k)\n}\n\nfunc main() {\n\tn, k := 0, 0\n\n\tfmt.Scan(&n, &k)\n\n\tfmt.Println(C(n, k))\n}\n",
+            "lines": "18"
+        }
+    ]
+}
