@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-31_23-37-47",
+            "content": "@@ -47,23 +47,23 @@\n %22str\n-conv\n+ings\n %22%0A%09%22str\n-ings\n+conv\n %22%0A)%0A\n@@ -95,16 +95,25 @@\n e int   \n+         \n // Valor\n@@ -127,21 +127,33 @@\n ico%0A\n-%09\n+    \n next \n- \n *Node \n+          \n // o\n@@ -177,21 +177,30 @@\n sta%0A\n-%09\n+    \n prev \n- \n *Node \n+%09%09     \n // n\n@@ -396,17 +396,19 @@\n ist.root\n-%0A\n+ %0A%09\n %0A%09return\n@@ -487,17 +487,16 @@\n  Clear()\n- \n %7B%0A%09l.roo\n@@ -550,17 +550,16 @@\n  0%0A%7D%0A%0A//\n- \n inserind\n@@ -816,212 +816,8 @@\n sta%0A\n-func (l *LList) PushBack(value int) %7B%0A%09no := &Node%7B%0A%09%09Value: value,%0A%09%7D%0A%0A%09final := l.root.prev%0A%09no.prev = final%0A%09no.next = l.root%0A%09l.root.next = no%0A%09final.prev = no%0A%0A%09l.size++%0A%7D%0A%0A// quase a msm de vetbuild\n %0Afun\n@@ -1164,16 +1164,17 @@\n .Stdin)%0A\n+ \n %09ll := N\n@@ -1496,24 +1496,27 @@\n h_back%22:%0A%09%09%09\n+// \n for _, v := \n@@ -1527,32 +1527,35 @@\n e args%5B1:%5D %7B%0A%09%09%09\n+// \n %09num, _ := strco\n@@ -1560,32 +1560,35 @@\n conv.Atoi(v)%0A%09%09%09\n+// \n %09ll.PushBack(num\n@@ -1584,32 +1584,35 @@\n ushBack(num)%0A%09%09%09\n+// \n %7D%0A%09%09case %22push_f\n@@ -1653,16 +1653,17 @@\n :%5D %7B%0A%09%09%09\n+ \n %09num, _ \n@@ -1684,16 +1684,17 @@\n i(v)%0A%09%09%09\n+ \n %09ll.Push\n",
+            "lines": "120"
+        },
+        {
+            "label": "2026-05-31_23-42-11",
+            "content": "@@ -912,21 +912,22 @@\n l.root%0A%09\n-final\n+l.root\n .next = \n@@ -930,22 +930,21 @@\n t = no%0A%09\n-l.root\n+final\n .prev = \n",
+            "lines": "134"
+        },
+        {
+            "label": "2026-05-31_23-44-54",
+            "content": "@@ -1965,16 +1965,19 @@\n ar%22:%0A%09%09%09\n+// \n ll.Clear\n",
+            "lines": "134"
+        },
+        {
+            "label": "2026-05-31_23-46-15",
+            "content": "@@ -964,261 +964,8 @@\n %0A%7D%0A%0A\n-// remove o primeiro valor da lista se existir%0Afunc (l *LList) PopFront()%7B%0A%09if l.size == 0 %7B%0A%09%09return%0A%09%7D%0A%09primeiro := l.root.next%0A%09prox := primeiro.next%0A%09l.root.next = prox%0A%09prox.prev = l.root%0A%09l.size--%0A%7D%0A%0A%0A// remove o %C3%BAltimo valor da lista se existir%0A%0A\n // q\n@@ -1929,16 +1929,19 @@\n nt%22:%0A%09%09%09\n+// \n ll.PopFr\n",
+            "lines": "134"
+        },
+        {
+            "label": "2026-05-31_23-51-21",
+            "content": "@@ -1033,19 +1033,18 @@\n pFront()\n- \n %7B%0A\n+\n %09if l.si\n@@ -1162,24 +1162,25 @@\n l.size--%0A%7D%0A%0A\n+%0A\n // remove o \n@@ -1215,166 +1215,8 @@\n stir\n-%0Afunc (l *LList) PopBack() %7B%0A%09if l.size == 0 %7B%0A%09%09return%0A%09%7D%0A%09final := l.root.prev%0A%09pFinal := final.prev%0A%09pFinal.next = l.root%0A%09l.root.prev = pFinal%0A%09l.size--%0A%7D\n %0A%0A//\n",
+            "lines": "149"
+        },
+        {
+            "label": "2026-05-31_23-53-37",
+            "content": "@@ -2297,24 +2297,27 @@\n p_back%22:%0A%09%09%09\n+// \n ll.PopBack()\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-05-31_23-53-46",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int   // Valor \u00e9 p\u00fablico\n\tnext  *Node // o pr\u00f3ximo n\u00f3 da lista\n\tprev  *Node // n\u00f3 anterior\n}\n\ntype LList struct {\n\troot *Node\n\tsize int\n}\n\nfunc NewLList() *LList {\n\tdlist := &LList{}\n\tdlist.root = &Node{} // cria o n\u00f3\n\tdlist.root.next = dlist.root\n\tdlist.root.prev = dlist.root\n\n\treturn dlist\n}\n\nfunc (l *LList) Size() int {\n\treturn l.size\n}\n\nfunc (l *LList) Clear() {\n\tl.root.next = l.root\n\tl.root.prev = l.root\n\tl.size = 0\n}\n\n// inserindo no inicio\nfunc (l *LList) PushFront(value int) {\n\tno := &Node{\n\t\tValue: value,\n\t}\n\n\tprimeiro := l.root.next\n\tno.next = primeiro\n\tno.prev = l.root\n\tl.root.next = no\n\tprimeiro.prev = no\n\n\tl.size++\n}\n\n// adiciona um novo n\u00f3 com esse valor no fim da lista\nfunc (l *LList) PushBack(value int) {\n\tno := &Node{\n\t\tValue: value,\n\t}\n\n\tfinal := l.root.prev\n\tno.prev = final\n\tno.next = l.root\n\tfinal.next = no\n\tl.root.prev = no\n\n\tl.size++\n}\n\n// remove o primeiro valor da lista se existir\nfunc (l *LList) PopFront() {\n\tif l.size == 0 {\n\t\treturn\n\t}\n\tprimeiro := l.root.next\n\tprox := primeiro.next\n\tl.root.next = prox\n\tprox.prev = l.root\n\tl.size--\n}\n\n// remove o \u00faltimo valor da lista se existir\nfunc (l *LList) PopBack() {\n\tif l.size == 0 {\n\t\treturn\n\t}\n\tfinal := l.root.prev\n\tpFinal := final.prev\n\tpFinal.next = l.root\n\tl.root.prev = pFinal\n\tl.size--\n}\n\n// quase a msm de vetbuild\nfunc (l *LList) String() string {\n\tif l.size == 0 {\n\t\treturn \"[]\"\n\t}\n\tvar result strings.Builder\n\tno := l.root.next\n\tfmt.Fprintf(&result, \"%d\", no.Value)\n\tno = no.next\n\n\tfor i := 1; i < l.size; i++ {\n\t\tfmt.Fprintf(&result, \", %d\", no.Value)\n\t\tno = no.next\n\t}\n\treturn \"[\" + result.String() + \"]\"\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tll := NewLList()\n\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\tfmt.Println(line)\n\t\targs := strings.Fields(line)\n\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\n\t\tcmd := args[0]\n\n\t\tswitch cmd {\n\t\tcase \"show\":\n\t\t\tfmt.Println(ll.String())\n\t\tcase \"size\":\n\t\t\tfmt.Println(ll.Size())\n\t\tcase \"push_back\":\n\t\t\tfor _, v := range args[1:] {\n\t\t\t\tnum, _ := strconv.Atoi(v)\n\t\t\t\tll.PushBack(num)\n\t\t\t}\n\t\tcase \"push_front\":\n\t\t\tfor _, v := range args[1:] {\n\t\t\t\tnum, _ := strconv.Atoi(v)\n\t\t\t\tll.PushFront(num)\n\t\t\t}\n\t\tcase \"pop_back\":\n\t\t\tll.PopBack()\n\t\tcase \"pop_front\":\n\t\t\tll.PopFront()\n\t\tcase \"clear\":\n\t\t\tll.Clear()\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "158"
+        }
+    ]
+}
