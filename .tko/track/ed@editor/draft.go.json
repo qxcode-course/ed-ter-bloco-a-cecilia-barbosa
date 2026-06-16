@@ -2,8 +2,18 @@
     "patches": [
         {
             "label": "2026-06-09_01-35-16",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -41,667 +41,35 @@\n     \n-entrada := %22%22%0A    fmt.Scanln(&entrada)%0A%0A    texto := %5B%5Drune%7B%7D%0A    posicao := 0%0A%0A    for c := range entrada %7B%0A        switch c %7B%0A        case '%3E':%0A            if posicao %3C len(texto)%7B%0A                posicao++%0A            %7D%0A        case '%3C':%0A            if posicao %3E 0 %7B%0A                posicao--%0A            %7D%0A        case 'B':%0A            if posicao %3C len(texto)%7B%0A                texto = append(texto%5B:posicao-1%5D, texto%5Bposicao:%5D...)%0A                posicao--%0A            %7D%0A        case 'D':%0A            if posicao %3C len(texto)%7B%0A            texto = append(texto%5B:posicao%5D, texto%5Bposicao+1%5D...)%0A            %7D%0A        case 'R':%0A        default:%0A        %7D%0A    %7D%0A\n+fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-06-16_02-50-54",
+            "content": "@@ -572,36 +572,32 @@\n o)%7B%0A            \n-    \n texto = append(t\n@@ -627,17 +627,16 @@\n osicao+1\n-:\n %5D...)%0A  \n@@ -696,108 +696,13 @@\n   %7D%0A\n+\n     %7D%0A%0A\n-    result := string(texto%5B:posicao%5D) + %22%7C%22 + string(texto%5Bposicao:%5D)%0A    fmt.Println(result)%0A%0A\n %7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-06-16_02-54-39",
+            "content": "package main\nimport \"fmt\"\n\nfunc main() {\n    entrada := \"\"\n    fmt.Scanln(&entrada)\n\n    texto := []rune{}\n    posicao := 0\n\n    for c := range entrada {\n        switch c {\n        case '>':\n            if posicao < len(texto){\n                posicao++\n            }\n        case '<':\n            if posicao > 0 {\n                posicao--\n            }\n        case 'B':\n            if posicao < len(texto){\n                texto = append(texto[:posicao-1], texto[posicao:]...)\n                posicao--\n            }\n        case 'D':\n            if posicao < len(texto){\n                texto = append(texto[:posicao], texto[posicao+1:]...)\n            }\n        case 'R':\n        default:\n        }\n    }\n\n    result := string(texto[:posicao]) + \"|\" + string(texto[posicao:])\n    fmt.Println(result)\n\n}\n",
+            "lines": "38"
         }
     ]
 }

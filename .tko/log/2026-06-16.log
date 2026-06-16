@@ -49,3 +49,11 @@
 2026-06-16 02:35:54, MOVE, v:1, k:ed@editor, mode:PICK
 2026-06-16 02:35:56, MOVE, v:1, k:ed@editor, mode:BACK
 2026-06-16 02:35:57, MOVE, v:1, k:ed@editor, mode:PICK
+2026-06-16 02:33:57, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-16 02:33:31, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-16 02:42:17, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-06-16 02:47:18, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-06-16 02:50:54, EXEC, v:1, k:ed@editor, mode:FULL, size:35, fail:COMP
+2026-06-16 02:52:00, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-06-16 02:54:39, EXEC, v:1, k:ed@editor, mode:FULL, rate:0, size:38
+2026-06-16 02:56:23, MOVE, v:1, k:ed@editor, mode:BACK

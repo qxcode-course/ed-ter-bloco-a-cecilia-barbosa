@@ -20,16 +20,18 @@ sources:
   quests: null
 expanded:
 - ed@list
+- ed@rec
+- ed@vector
 flags:
   inbox: all
-  panel: skills
+  panel: graph
   task_graph_mode: executions
   show_time: 'true'
 audit:
-  enabled: false
+  enabled: true
   interval_seconds: null
-audit_enabled: false
+audit_enabled: true
 audit_interval_seconds: null
 lang: go
-selected: ed@lista_d1
-selected_index: 5
+selected: ed@map_set
+selected_index: 1
