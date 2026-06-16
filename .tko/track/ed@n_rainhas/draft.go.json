@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-16_01-55-35",
+            "content": "@@ -223,32 +223,34 @@\n rn false%0A%09%09%7D%0A%09%7D%0A\n+%09%0A\n %09return true%0A%7D%0A%0A\n@@ -282,18 +282,20 @@\n a, n\n- i\n+, cou\n nt\n-)\n  int\n- \n+)\n %7B%0A%09i\n@@ -309,16 +309,26 @@\n  == n %7B%0A\n+%09%09count++%0A\n %09%09fmt.Pr\n@@ -350,27 +350,13 @@\n turn\n- 1\n %0A%09%7D%0A%0A\n-%09count := 0%0A\n %09for\n@@ -441,17 +441,8 @@\n %0A%09%09%09\n-count += \n dist\n@@ -457,16 +457,23 @@\n nha+1, n\n+, count\n )%0A%09%09%09tab\n@@ -496,22 +496,8 @@\n %0A%09%7D%0A\n-%09return count%0A\n %7D%0A%0Af\n@@ -610,16 +610,19 @@\n ount := \n+0%0A%09\n dist(tab\n@@ -627,16 +627,23 @@\n ab, 0, n\n+, count\n )%0A%09fmt.P\n@@ -653,13 +653,8 @@\n tln(\n-%25d, %22\n coun\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-16_01-59-26",
+            "content": "@@ -656,18 +656,16 @@\n rint\n-f(%22%25d%5Cn%22\n+ln(%25d\n , \n+%22\n coun\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-06-16_02-00-06",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -96,16 +96,17 @@\n linha; i\n+ \n ++ %7B%0A%09%09i\n@@ -123,17 +123,16 @@\n = coluna\n- \n %7B // msm\n@@ -231,104 +231,8 @@\n %0A%09%09%7D\n-%0A%0A%09%09if difCol := tab%5Bi%5D - coluna; difCol == -(i - linha) %7B // outra diagonal%0A%09%09%09return false%0A%09%09%7D\n %0A%09%7D%0A\n@@ -380,17 +380,16 @@\n n; col++\n- \n %7B%0A%09%09if c\n@@ -412,17 +412,16 @@\n ha, col)\n- \n %7B%0A%09%09%09tab\n@@ -525,17 +525,20 @@\n ain() %7B%0A\n-%09\n+    \n n := 0%0A%09\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-06-16_02-01-21",
+            "content": "@@ -402,16 +402,35 @@\n  == n %7B%0A\n+%09%09fmt.Println(tab)%0A\n %09%09return\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-06-16_02-02-25",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc condicao(tab []int, linha, coluna int) bool {\n\tfor i := 0; i < linha; i++ {\n\t\tif tab[i] == coluna { // msm coluna\n\t\t\treturn false\n\t\t}\n\n\t\tif tab[i]-coluna == i-linha { // msm diagonal\n\t\t\treturn false\n\t\t}\n\n\t\tif difCol := tab[i] - coluna; difCol == -(i - linha) { // outra diagonal\n\t\t\treturn false\n\t\t}\n\t}\n\treturn true\n}\n\nfunc dist(tab []int, linha, n int) int {\n\tif linha == n {\n\t\treturn 1\n\t}\n\n\tcount := 0\n\tfor col := 0; col < n; col++ {\n\t\tif condicao(tab, linha, col) {\n\t\t\ttab[linha] = col\n\t\t\tcount += dist(tab, linha+1, n)\n\t\t\ttab[linha] = -1\n\t\t}\n\t}\n\treturn count\n}\n\nfunc main() {\n\tn := 0\n\tfmt.Scanln(&n)\n\n\ttab := make([]int, n)\n\tfor i := range tab {\n\t\ttab[i] = -1\n\t}\n\n\tcount := dist(tab, 0, n)\n\tfmt.Printf(\"%d\\n\", count)\n}\n",
+            "lines": "49"
+        }
+    ]
+}

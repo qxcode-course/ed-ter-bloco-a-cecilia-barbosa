@@ -7,17 +7,38 @@ import (
 
 // mostra a lista com o elemento sword destacado
 func ToStr(l *list.List, sword *list.Element) string {
-	return ""
+	str := "[ "
+
+	for i := l.Front(); i != nil; i = i.Next() {
+		valor := i.Value.(int)
+		if i == sword {
+			if valor > 0 {
+				str += fmt.Sprintf("%d> ", valor)
+			} else {
+				str += fmt.Sprintf("<%d ", valor)
+			}
+		} else {
+			str += fmt.Sprintf("%d ", valor)
+		}
+	}
+	str += "]"
+	return str
 }
 
 // move para frente na lista circular
 func Next(l *list.List, it *list.Element) *list.Element {
-	return nil
+	if it.Next() != nil {
+		return it.Next()
+	}
+	return l.Front()
 }
 
 // move para tras na lista circular
 func Prev(l *list.List, it *list.Element) *list.Element {
-	return l.Front()
+	if it.Prev() != nil {
+		return it.Prev()
+	}
+	return l.Back()
 }
 
 func main() {

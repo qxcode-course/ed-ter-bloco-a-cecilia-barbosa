@@ -19,14 +19,17 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@linear
 - ed@list
 flags:
   inbox: all
   panel: skills
-  show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
+audit:
+  enabled: false
+  interval_seconds: null
+audit_enabled: false
+audit_interval_seconds: null
 lang: go
-selected: ed@editorint
-selected_index: 8
+selected: ed@lista_d1
+selected_index: 5
