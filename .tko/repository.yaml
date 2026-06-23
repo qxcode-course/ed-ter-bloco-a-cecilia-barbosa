@@ -19,19 +19,15 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@list
-- ed@rec
-- ed@vector
+- ed@map_set
 flags:
   inbox: all
-  panel: graph
+  panel: skills
   task_graph_mode: executions
   show_time: 'true'
 audit:
   enabled: true
   interval_seconds: null
-audit_enabled: true
-audit_interval_seconds: null
 lang: go
-selected: ed@map_set
-selected_index: 1
+selected: ed@alternando
+selected_index: 9

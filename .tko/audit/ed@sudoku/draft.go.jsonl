@@ -1,0 +1,7 @@
+{"ts":1782219943,"hash":"dec82979aaeaf404af400f3004c28f70d1862531af160133c174d38521277c37","mode":"full","content":"H4sIALKEOmoC/ytITM5OTE9VyE3MzOPKzC3ILypRUErLLVHi4korzUsGi2toKlRzKQABUFwvoCgzryQnT0PJIzUnJ19HITy/KCdFUUmTq5YLAEfqmVFMAAAA"}
+{"ts":1782220054,"hash":"4da0145d79e1e207353d9c1bfaf38db5b8f97444659c9e3fcef5947630beb339","mode":"diff","ops":[{"tag":"insert","a1":2,"a2":2,"text":"\nfunc \n"}]}
+{"ts":1782220081,"hash":"e41e4fcf75326b8842f6fff275894f5865883510d3c3c5e0272a4ba35db1de74","mode":"diff","ops":[{"tag":"replace","a1":3,"a2":4,"text":"func sudoku(x int, y int) bool {\n    \n}\n"}]}
+{"ts":1782220112,"hash":"838d5c67c34716685f8af2fef75475d83ec2aed897d9cb92fee51af5f761b6a7","mode":"diff","ops":[{"tag":"replace","a1":4,"a2":5,"text":"    if coord[y][x]\n"}]}
+{"ts":1782220153,"hash":"7909b2297c26ef6bad203feab914d308415069a89a7f32f85eb6fddd9e6c75b4","mode":"diff","ops":[{"tag":"replace","a1":4,"a2":5,"text":"    if coord[y][x] != 0 {\n        \n    }\n"}]}
+{"ts":1782220174,"hash":"61fcdfd843b3be91722cae2015ee50d909e03aadcc6f3549c2543841d940b0b3","mode":"diff","ops":[{"tag":"replace","a1":5,"a2":6,"text":"\n    } else{\n\n"},{"tag":"insert","a1":7,"a2":7,"text":"\n    \n"}]}
+{"ts":1782220194,"hash":"fbf95000cfd248eb8b743d5bbf9185ac0d9de9ff73d697b2918e39690f93a1ad","mode":"diff","ops":[{"tag":"replace","a1":3,"a2":4,"text":"func sudoku(coordx int, y int) bool {\n"},{"tag":"replace","a1":10,"a2":11,"text":"    return false\n"}]}

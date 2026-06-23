@@ -1,0 +1,21 @@
+2026-06-23 12:50:26, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-06-23 12:50:34, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:40
+2026-06-23 12:50:41, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-06-23 12:53:03, MOVE, v:1, k:ed@editor, mode:PICK
+2026-06-23 12:53:05, EXEC, v:1, k:ed@editor, mode:FULL, rate:0
+2026-06-23 12:53:10, MOVE, v:1, k:ed@editor, mode:BACK
+2026-06-23 12:50:34, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-23 12:53:05, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-06-23 12:57:38, MOVE, v:1, k:ed@hex, mode:PICK
+2026-06-23 12:57:57, EXEC, v:1, k:ed@hex, mode:LOCK, rate:0, size:5
+2026-06-23 12:58:24, MOVE, v:1, k:ed@hex, mode:BACK
+2026-06-23 12:58:43, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-23 13:00:02, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-23 13:02:34, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-06-23 13:03:32, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-06-23 13:03:36, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-06-23 13:03:40, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-06-23 13:05:24, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:5
+2026-06-23 13:05:24, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-06-23 13:09:54, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-06-23 13:10:02, MOVE, v:1, k:ed@sudoku, mode:BACK
