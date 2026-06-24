@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-24_00-08-27",
+            "content": "@@ -322,18 +322,16 @@\n nesimo(n\n-um\n  int, co\n@@ -336,15 +336,12 @@\n cont\n- int, n\n+ador\n  int\n@@ -352,107 +352,24 @@\n t %7B%0A\n-%09if eh_primo(num, 2) %7B%0A%09%09cont++%0A%09%7D%0A%0A%09if cont == n %7B%0A%09%09return num%0A%09%7D%0A%0A%09return enesimo(num+1, cont, n\n+    if eh_primo(\n )%0A%7D%0A\n@@ -388,14 +388,17 @@\n  %7B%0A%09\n-x := 0\n+var x int\n %0A%09fm\n@@ -412,37 +412,30 @@\n &x)%0A\n-%0A%09result := enes\n+%09if eh_pr\n imo(\n-2, 0, x)%0A\n+x, 2) %7B%0A%09\n %09fmt\n@@ -444,22 +444,53 @@\n rint\n-f(%22%25d%22, result)\n+ln(%22true%22)%0A%09%7D else %7B%0A%09%09fmt.Println(%22false%22)%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-06-24_00-18-32",
+            "content": "@@ -541,10 +541,8 @@\n (%22%25d\n-%5Cn\n %22, r\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-24_00-18-41",
+            "content": "package main\n\nimport \"fmt\"\n\n// x: n\u00famero que est\u00e1 sendo testado\n// div: divisor que est\u00e1 sendo testado\n// Usando c\u00f3digo do eh_primo que ja fiz\nfunc eh_primo(x int, div int) bool {\n\tif x < 2 {\n\t\treturn false\n\t}\n\n\tif div == x {\n\t\treturn true\n\t}\n\n\tif x%div == 0 {\n\t\treturn false\n\t}\n\n\tdiv++\n\treturn eh_primo(x, div)\n}\n\nfunc enesimo(num int, cont int, n int) int {\n\tif eh_primo(num, 2) {\n\t\tcont++\n\t}\n\n\tif cont == n {\n\t\treturn num\n\t}\n\n\treturn enesimo(num+1, cont, n)\n}\n\nfunc main() {\n\tx := 0\n\tfmt.Scan(&x)\n\n\tresult := enesimo(2, 0, x)\n\tfmt.Printf(\"%d\\n\", result)\n}\n",
+            "lines": "43"
+        }
+    ]
+}

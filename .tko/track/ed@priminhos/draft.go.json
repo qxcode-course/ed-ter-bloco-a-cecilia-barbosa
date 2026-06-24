@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-24_00-29-12",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,562 +23,52 @@\n mt%22%0A\n-%0A// x: n%C3%BAmero que est%C3%A1 sendo testado%0A// div: divisor que est%C3%A1 sendo testado%0Afunc priminhos(x int, div int, vet %5B%5Dint, n int) %5B%5Dint %7B%0A%09if len(vet) == n %7B%0A%09%09return vet%0A%09%7D%0A%0A%09if div == x %7B%0A%09%09vet = append(vet, x)%0A%09%09return priminhos(x+1, 2, vet, n)%0A%09%7D%0A%0A%09if x %3C 2 %7B%0A%09%09return priminhos(x+1, 2, vet, n)%0A%09%7D%0A%0A%09return priminhos(x+1, 2, vet, n)%0A%7D%0A%0Afunc main() %7B%0A%09n := 0%0A%09fmt.Scan(&n)%0A%0A%09result := priminhos(2, 2, %5B%5Dint%7B%7D, n)%0A%0A%09fmt.Print(%22%5B%22)%0A%09for i := 0; i %3C len(result); i++ %7B%0A%09%09fmt.Print(result%5Bi%5D)%0A%09%09if i %3C len(result)-1 %7B%0A%09%09%09fmt.Print(%22, %22)%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Println(%22%5D\n+func main() %7B%0A    fmt.Println(%22Hello, World!\n %22)%0A%7D\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-24_00-41-41",
+            "content": "@@ -341,15 +341,13 @@\n os(x\n-, div+1\n++1, 2\n , ve\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-24_00-42-05",
+            "content": "@@ -281,21 +281,8 @@\n %3C 2 \n-%7C%7C x%25div == 0\n %7B%0A%09%09\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-24_00-44-13",
+            "content": "package main\n\nimport \"fmt\"\n\n// x: n\u00famero que est\u00e1 sendo testado\n// div: divisor que est\u00e1 sendo testado\nfunc priminhos(x int, div int, vet []int, n int) []int {\n\tif len(vet) == n {\n\t\treturn vet\n\t}\n\n\tif div == x {\n\t\tvet = append(vet, x)\n\t\treturn priminhos(x+1, 2, vet, n)\n\t}\n\n\tif x < 2 || x%div == 0{\n\t\treturn priminhos(x+1, 2, vet, n)\n\t}\n\n\treturn priminhos(x, div+1, vet, n)\n}\n\nfunc main() {\n\tn := 0\n\tfmt.Scan(&n)\n\n\tresult := priminhos(2, 2, []int{}, n)\n\n\tfmt.Print(\"[\")\n\tfor i := 0; i < len(result); i++ {\n\t\tfmt.Print(result[i])\n\t\tif i < len(result)-1 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t}\n\n\tfmt.Println(\"]\")\n}\n",
+            "lines": "39"
+        }
+    ]
+}
