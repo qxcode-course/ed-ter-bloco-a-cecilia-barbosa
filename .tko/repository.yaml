@@ -19,7 +19,7 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@rec
+- ed@backtrack
 flags:
   inbox: all
   panel: skills
@@ -29,5 +29,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@escada
-selected_index: 15
+selected: ed@permutacoes
+selected_index: 10

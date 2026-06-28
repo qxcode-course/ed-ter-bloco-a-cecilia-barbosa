@@ -1,0 +1,16 @@
+2026-06-28 18:51:29, MOVE, v:1, k:ed@santo, mode:DOWN
+2026-06-28 18:53:50, MOVE, v:1, k:ed@santo, mode:PICK
+2026-06-28 18:53:52, EXEC, v:1, k:ed@santo, mode:FULL, rate:0, size:5
+2026-06-28 18:53:52, MOVE, v:1, k:ed@santo, mode:EDIT
+2026-06-28 18:58:46, MOVE, v:1, k:ed@santo, mode:EDIT
+2026-06-28 18:59:01, EXEC, v:1, k:ed@santo, mode:FULL, size:20, fail:COMP
+2026-06-28 19:00:29, EXEC, v:1, k:ed@santo, mode:FULL, rate:0, size:20
+2026-06-28 19:00:42, EXEC, v:1, k:ed@santo, mode:FULL, rate:0, size:20
+2026-06-28 19:00:49, EXEC, v:1, k:ed@santo, mode:FULL, rate:100, size:20
+2026-06-28 19:00:57, MOVE, v:1, k:ed@santo, mode:BACK
+2026-06-28 19:01:31, SELF, v:1, k:ed@santo, self:1, rate:100, study:15
+2026-06-28 19:03:02, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-06-28 19:03:05, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:40
+2026-06-28 19:03:09, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-06-28 19:03:12, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-06-28 19:03:15, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:40
