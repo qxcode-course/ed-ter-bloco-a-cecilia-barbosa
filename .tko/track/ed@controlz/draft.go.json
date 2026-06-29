@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-29_04-34-49",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tentrada := \"\"\n\tfmt.Scanln(&entrada)\n\n\ttexto := []rune{}\n\tposicao := 0\n\t// REFAZENDO\n\tfor _, c := range entrada {\n\t\tswitch c {\n\t\tcase '>':\n\t\t\tif posicao < len(texto) {\n\t\t\t\tposicao++\n\t\t\t}\n\t\tcase '<':\n\t\t\tif posicao > 0 {\n\t\t\t\tposicao--\n\t\t\t}\n\t\tcase 'B':\n\t\t\tif posicao > 0 {\n\t\t\t\tvar temp []rune\n\t\t\t\tfor i := 0; i < posicao-1; i++ {\n\t\t\t\t\ttemp = append(temp, texto[i])\n\t\t\t\t}\n\n\t\t\t\tfor i := posicao; i < len(texto); i++ {\n\t\t\t\t\ttemp = append(temp, texto[i])\n\t\t\t\t}\n\n\t\t\t\ttexto = temp\n\t\t\t\tposicao--\n\t\t\t}\n\t\tcase 'D':\n\t\t\tif posicao < len(texto) {\n\t\t\t\tvar temp []rune\n\t\t\t\tfor i := 0; i < posicao; i++ {\n\t\t\t\t\ttemp = append(temp, texto[i])\n\t\t\t\t}\n\t\t\t\t//pula\n\t\t\t\tfor i := posicao + 1; i < len(texto); i++ {\n\t\t\t\t\ttemp = append(temp, texto[i])\n\t\t\t\t}\n\t\t\t\ttexto = temp\n\t\t\t}\n\t\tcase 'R':\n\t\t\tvar temp []rune\n\t\t\tfor i := 0; i < posicao; i++ {\n\t\t\t\ttemp = append(temp, texto[i])\n\t\t\t}\n\n            temp = append(temp, '\\n')\n\n\t\t\tfor i := posicao; i < len(texto); i++ {\n\t\t\t\ttemp = append(temp, texto[i])\n\t\t\t}\n\n\t\t\ttexto = temp\n\t\t\tposicao++\n\t\tdefault:\n\t\t\tvar temp []rune\n\t\t\tfor i := 0; i < posicao; i++ {\n\t\t\t\ttemp = append(temp, texto[i])\n\t\t\t}\n\n\t\t\ttemp = append(temp, c)\n\t\t\tfor i := posicao; i < len(texto); i++ {\n\t\t\t\ttemp = append(temp, texto[i])\n\t\t\t}\n\t\t\ttexto = temp\n\t\t\tposicao++\n\t\t}\n\t}\n\n\tfor i, letra := range texto {\n\t\tif i == posicao {\n\t\t\tfmt.Print(\"|\")\n\t\t}\n\t\tfmt.Printf(\"%c\", letra)\n\t}\n\n\tif posicao == len(texto) {\n\t\tfmt.Print(\"|\\n\")\n\t} else {\n\t\tfmt.Println()\n\t}\n}\n",
+            "lines": "89"
+        }
+    ]
+}

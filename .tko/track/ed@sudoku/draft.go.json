@@ -2,8 +2,48 @@
     "patches": [
         {
             "label": "2026-06-23_13-05-24",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -23,118 +23,8 @@\n mt%22%0A\n-%0Afunc sudoku(x int, y int) bool %7B%0A    if coord%5By%5D%5Bx%5D != 0 %7B         %0A%0A    %7D else%7B%0A%0A    %7D%0A%0A    return false%0A%7D%0A%0A\n func\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-06-29_04-41-05",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -36,33 +36,16 @@\n oku(\n-matriz %5B%5D%5B%5Drune, l\n+x\n  int, \n-c\n+y\n  int\n@@ -57,483 +57,129 @@\n l %7B%0A\n-%09N := len(matriz)%0A%0A%09if l == N-1 && c == N-1 %7B%0A%09%09matriz%5Bl%5D%5Bc\n+    if coord%5By%5D%5Bx\n %5D \n+!\n = \n-'X'%0A%09%09return true%0A%09%7D%0A%09return false%0A%7D%0A%0Afunc noLimite(matriz %5B%5D%5B%5Drune, l, c int) bool %7B%0A%09N := len(matriz)%0A%09return l %3E= 0 && l %3C N && c %3E= 0 && c %3C N%0A%7D%0A%0Afunc podeCaminhar(matriz %5B%5D%5B%5Drune, l, c int) bool %7B%0A%09return noLimite(matriz, l, c) && matriz%5Bl%5D%5Bc%5D == '.'%0A%7D%0A%0Afunc main() %7B%0A%09N := 0%0A%09fmt.Scan(&N)%0A%0A%09matriz := make(%5B%5D%5B%5Drune, N)%0A%09for i := range matriz %7B%0A%09%09linha := %22%22%0A%09%09fmt.Scan(&linha)%0A%09%09matriz%5Bi%5D = %5B%5Drune(linha)%0A%09%7D\n+0 %7B         %0A%0A    %7D else%7B%0A%0A    %7D%0A%0A    return false%0A%7D%0A%0Afunc main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-06-29_04-52-45",
+            "content": "@@ -160,389 +160,8 @@\n %09%7D%0A%09\n-%0A    if podeCaminhar(matriz, l, c)%7B%0A        matriz%5Bl%5D%5Bc%5D = 'X'%0A%0A        if sudoku(matriz, l, c+1)%7B%0A            return true%0A        %7D%0A%0A        if sudoku(matriz, l+1, c)%7B%0A            return true%0A        %7D%0A%0A        if sudoku(matriz, l, c-1)%7B%0A            return true%0A        %7D%0A%0A        if sudoku(matriz, l-1, c)%7B%0A            return true%0A        %7D%0A%0A        matriz%5Bl%5D%5Bc%5D = '.'%0A    %7D%0A    \n retu\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-06-29_04-56-21",
+            "content": "@@ -932,133 +932,7 @@\n )%0A%09%7D\n-%0A%0A    if sudoku(matriz, 0, 0)%7B%0A        for linha := range matriz %7B%0A            fmt.Println(linha)%0A        %7D%0A    %7D else %7B%0A    %7D\n %0A%7D%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-06-29_04-59-22",
+            "content": "@@ -1042,11 +1042,23 @@\n %7D%0A    %7D \n+else %7B%0A    %7D\n %0A%7D%0A\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-06-29_05-00-52",
+            "content": "@@ -1023,22 +1023,14 @@\n tln(\n-string(\n linha)\n-)\n %0A   \n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-06-29_05-01-08",
+            "content": "@@ -75,88 +75,8 @@\n l %7B%0A\n-%09if noLimite(matriz, l, c) == false %7C%7C matriz%5Bl%5D%5Bc%5D != '.' %7B%0A%09%09return false%0A%09%7D%0A%0A\n %09N :\n@@ -147,34 +147,77 @@\n %09return true%0A%09%7D%0A\n-%0A\n %09\n+%0A    if podeCaminhar(matriz, l, c)%7B%0A        \n matriz%5Bl%5D%5Bc%5D = '\n@@ -220,17 +220,24 @@\n  = 'X'%0A%0A\n-%09\n+        \n if sudok\n@@ -253,38 +253,61 @@\n  l, c+1)\n- \n %7B%0A\n-%09%09return true%0A%09%7D%0A%0A%09\n+            return true%0A        %7D%0A%0A        \n if sudok\n@@ -323,38 +323,61 @@\n  l+1, c)\n- \n %7B%0A\n-%09%09return true%0A%09%7D%0A%0A%09\n+            return true%0A        %7D%0A%0A        \n if sudok\n@@ -393,38 +393,61 @@\n  l, c-1)\n- \n %7B%0A\n-%09%09return true%0A%09%7D%0A%0A%09\n+            return true%0A        %7D%0A%0A        \n if sudok\n@@ -467,30 +467,53 @@\n , c)\n- \n %7B%0A\n-%09%09return true%0A%09%7D%0A%0A%09\n+            return true%0A        %7D%0A%0A        \n matr\n@@ -527,18 +527,26 @@\n %5D = '.'%0A\n-%0A%09\n+    %7D%0A    \n return f\n@@ -930,17 +930,20 @@\n ha)%0A%09%7D%0A%0A\n-%09\n+    \n if sudok\n@@ -957,21 +957,26 @@\n z, 0, 0)\n- \n %7B%0A\n-%09%09\n+        \n for linh\n@@ -999,11 +999,20 @@\n z %7B%0A\n-%09%09%09\n+            \n fmt.\n@@ -1038,13 +1038,23 @@\n a))%0A\n-%09%09%7D%0A%09%7D\n+        %7D%0A    %7D \n %0A%7D%0A\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-06-29_05-04-29",
+            "content": "@@ -896,11 +896,8 @@\n %09for\n- _,\n  lin\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-06-29_05-04-47",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc sudoku(matriz [][]rune, l int, c int) bool {\n\tif noLimite(matriz, l, c) == false || matriz[l][c] != '.' {\n\t\treturn false\n\t}\n\n\tN := len(matriz)\n\n\tif l == N-1 && c == N-1 {\n\t\tmatriz[l][c] = 'X'\n\t\treturn true\n\t}\n\n\tmatriz[l][c] = 'X'\n\n\tif sudoku(matriz, l, c+1) {\n\t\treturn true\n\t}\n\n\tif sudoku(matriz, l+1, c) {\n\t\treturn true\n\t}\n\n\tif sudoku(matriz, l, c-1) {\n\t\treturn true\n\t}\n\n\tif sudoku(matriz, l-1, c) {\n\t\treturn true\n\t}\n\n\tmatriz[l][c] = '.'\n\n\treturn false\n}\n\nfunc noLimite(matriz [][]rune, l, c int) bool {\n\tN := len(matriz)\n\treturn l >= 0 && l < N && c >= 0 && c < N\n}\n\nfunc podeCaminhar(matriz [][]rune, l, c int) bool {\n\treturn noLimite(matriz, l, c) && matriz[l][c] == '.'\n}\n\nfunc main() {\n\tN := 0\n\tfmt.Scan(&N)\n\n\tmatriz := make([][]rune, N)\n\tfor i := range matriz {\n\t\tlinha := \"\"\n\t\tfmt.Scan(&linha)\n\t\tmatriz[i] = []rune(linha)\n\t}\n\n\tif sudoku(matriz, 0, 0) {\n\t\tfor _, linha := range matriz {\n\t\t\tfmt.Println(string(linha))\n\t\t}\n\t}\n}\n",
+            "lines": "65"
         }
     ]
 }
