@@ -18,7 +18,9 @@ sources:
   type: git
   writeable: false
   quests: null
-expanded: []
+expanded:
+- ed@list
+- ed@tree
 flags:
   inbox: all
   panel: skills
@@ -28,5 +30,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@tree
-selected_index: 7
+selected: ed@formatada
+selected_index: 18
