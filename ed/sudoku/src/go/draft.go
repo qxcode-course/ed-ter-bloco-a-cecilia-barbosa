@@ -2,48 +2,74 @@ package main
 
 import "fmt"
 
-func sudoku(matriz [][]rune, l int, c int) bool {
-	if noLimite(matriz, l, c) == false || matriz[l][c] != '.' {
-		return false
-	}
-
+func sudoku(matriz [][]rune, indice int) bool {
 	N := len(matriz)
 
-	if l == N-1 && c == N-1 {
-		matriz[l][c] = 'X'
+	if indice == N*N {
 		return true
 	}
 
-	matriz[l][c] = 'X'
+	l := indice / N
+	c := indice % N
 
-	if sudoku(matriz, l, c+1) {
-		return true
+	if matriz[l][c] != '.' {
+		return sudoku(matriz, indice+1)
 	}
 
-	if sudoku(matriz, l+1, c) {
-		return true
-	}
+	for v := '1'; v <= rune('0'+N); v++ {
+		if podeColocar(matriz, l, c, v) {
+			matriz[l][c] = v
+			if sudoku(matriz, indice+1) {
+				return true
+			}
 
-	if sudoku(matriz, l, c-1) {
-		return true
+			matriz[l][c] = '.'
+		}
 	}
-
-	if sudoku(matriz, l-1, c) {
-		return true
-	}
-
-	matriz[l][c] = '.'
 
 	return false
 }
 
-func noLimite(matriz [][]rune, l, c int) bool {
-	N := len(matriz)
-	return l >= 0 && l < N && c >= 0 && c < N
+func podeColocar(matriz [][]rune, l, c int, v rune) bool {
+	return !linha(matriz, l, v) && !coluna(matriz, c, v) && !quadro(matriz, l, c, v)
 }
 
-func podeCaminhar(matriz [][]rune, l, c int) bool {
-	return noLimite(matriz, l, c) && matriz[l][c] == '.'
+func linha(matriz [][]rune, l int, v rune) bool {
+	for _, x := range matriz[l] {
+		if x == v {
+			return true
+		}
+	}
+	return false
+}
+
+func coluna(matriz [][]rune, c int, v rune) bool {
+	for _, linha := range matriz {
+		if linha[c] == v {
+			return true
+		}
+	}
+	return false
+}
+
+func quadro(matriz [][]rune, l, c int, v rune) bool {
+	N := len(matriz)
+	tam := 2
+	if N == 9 {
+		tam = 3
+	}
+
+	lz := (l / tam) * tam
+	cz := (c / tam) * tam
+
+	for i := 0; i < tam; i++ {
+		for j := 0; j < tam; j++ {
+			if matriz[lz+i][cz+j] == v {
+				return true
+			}
+		}
+	}
+	return false
 }
 
 func main() {
@@ -57,7 +83,7 @@ func main() {
 		matriz[i] = []rune(linha)
 	}
 
-	if sudoku(matriz, 0, 0) {
+	if sudoku(matriz, 0) {
 		for _, linha := range matriz {
 			fmt.Println(string(linha))
 		}

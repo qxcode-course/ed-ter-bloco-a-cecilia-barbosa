@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-30_03-22-08",
+            "content": "@@ -127,30 +127,8 @@\n %0A%7D%0A%0A\n-// somar todos os n%C3%B3s%0A\n func\n@@ -159,149 +159,29 @@\n  %7B%0A%09\n-if node == nil %7B%0A%09%09return 0%0A%09%7D%0A%0A%09result := node.Value + rec_sum(node.Left) + rec_sum(node.Left)%0A%09return result%0A%7D%0A%0A// menor presente na arvore\n+_ = node%0A%09return 0%0A%7D%0A\n %0Afun\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-06-30_03-26-26",
+            "content": "@@ -246,20 +246,19 @@\n um(node.\n-Righ\n+Lef\n t) + rec\n",
+            "lines": "89"
+        },
+        {
+            "label": "2026-06-30_03-27-10",
+            "content": "@@ -356,271 +356,16 @@\n  %7B%0A%09\n-if node == nil %7B%0A%09%09return 0%0A%09%7D%0A%0A%09pontoP := node.Value%0A%0A%09if node.Left != nil %7B%0A%09%09minEsq := rec_min(node.Left)%0A%09%09if minEsq %3C pontoP %7B%0A%09%09%09pontoP = minEsq%0A%09%09%7D%0A%09%7D%0A%0A%09if node.Right != nil %7B%0A%09%09minDir := rec_min(node.Right)%0A%09%09if minDir %3C pontoP %7B%0A%09%09%09pontoP = minDir%0A%09%09%7D%0A%09%7D\n+_ = node\n %0A%09re\n@@ -373,14 +373,9 @@\n urn \n-pontoP\n+0\n %0A%7D%0A%0A\n",
+            "lines": "89"
+        },
+        {
+            "label": "2026-06-30_03-34-11",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\n// somar todos os n\u00f3s\nfunc rec_sum(node *Node) int {\n\tif node == nil {\n\t\treturn 0\n\t}\n\n\tresult := node.Value + rec_sum(node.Right) + rec_sum(node.Left)\n\treturn result\n}\n\n// menor presente na arvore\nfunc rec_min(node *Node) int {\n\tif node == nil {\n\t\treturn 0\n\t}\n\n\tpontoP := node.Value\n\n\tif node.Left != nil {\n\t\tminEsq := rec_min(node.Left)\n\t\tif minEsq < pontoP {\n\t\t\tpontoP = minEsq\n\t\t}\n\t}\n\n\tif node.Right != nil {\n\t\tminDir := rec_min(node.Right)\n\t\tif minDir < pontoP {\n\t\t\tpontoP = minDir\n\t\t}\n\t}\n\treturn pontoP\n}\n\n// MyShow imprime a \u00e1rvore bin\u00e1ria de forma formatada.\nfunc MyShow(node *Node, nivel int) {\n\t_, _ = node, nivel\n\t// TODO\n}\n\nfunc BShow(node *Node, heranca string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, heranca+\"l\")\n\t}\n\tfor i := 0; i < len(heranca)-1; i++ {\n\t\tif heranca[i] != heranca[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif heranca != \"\" {\n\t\tif heranca[len(heranca)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, heranca+\"r\")\n\t}\n}\n\nfunc create(parts *[]string) *Node {\n\telem := (*parts)[0]\n\t*parts = (*parts)[1:]\n\tif elem == \"#\" {\n\t\treturn nil\n\t}\n\tvalue, _ := strconv.Atoi(elem)\n\tnode := &Node{Value: value}\n\tnode.Left = create(parts)\n\tnode.Right = create(parts)\n\treturn node\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\troot := create(&parts)\n\tfmt.Println(\"Arvore:\")\n\tBShow(root, \"\")\n\tfmt.Printf(\"Soma: %d, Minimo: %d\\n\", rec_sum(root), rec_min(root))\n}\n",
+            "lines": "107"
+        }
+    ]
+}

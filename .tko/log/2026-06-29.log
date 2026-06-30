@@ -63,3 +63,15 @@
 2026-06-29 05:04:45, MOVE, v:1, k:ed@sudoku, mode:EDIT
 2026-06-29 05:06:00, MOVE, v:1, k:ed@sudoku, mode:EDIT
 2026-06-29 05:08:22, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-06-29 05:14:00, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-06-29 05:18:48, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-06-29 05:23:53, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-06-29 05:28:33, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-06-29 05:30:43, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:91
+2026-06-29 05:30:52, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-06-29 05:31:55, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-06-29 05:32:39, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:91
+2026-06-29 05:33:53, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:100, size:91
+2026-06-29 05:33:56, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-06-29 05:34:44, SELF, v:1, k:ed@sudoku, self:1, rate:100, study:66, friend:Juliana
+2026-06-29 05:35:47, MOVE, v:1, k:ed@subset_sum, mode:DOWN
