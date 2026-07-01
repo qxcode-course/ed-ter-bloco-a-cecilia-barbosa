@@ -15,9 +15,36 @@ type Node struct {
 	Right *Node
 }
 
+// compare valor do nó atual;
+// se diferentes, retorna imediatamente (< ou >);
+// se iguais, prossiga para a subárvore esquerda, depois direita;
+// se nenhuma diferença e ambas terminam null ao mesmo tempo: são iguais.
 func compare(a, b *Node) int {
-	_, _ = a, b
-	return 0
+	if a == nil && b == nil {
+		return 0
+	}
+
+	if a == nil {
+		return -1
+	}
+
+	if b == nil {
+		return 1
+	}
+
+	if a.Value > b.Value {
+		return 1
+	}
+	if a.Value < b.Value {
+		return -1
+	}
+
+	result := compare(a.Left, b.Left)
+
+	if result != 0 {
+		return result
+	}
+	return compare(a.Right, b.Right)
 }
 
 // ----------------------------------------------------------------------

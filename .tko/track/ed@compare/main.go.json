@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-01_02-53-44",
+            "content": "@@ -127,485 +127,61 @@\n %0A%7D%0A%0A\n-// compare valor do n%C3%B3 atual;%0A// se diferentes, retorna imediatamente (%3C ou %3E);%0A// se iguais, prossiga para a sub%C3%A1rvore esquerda, depois direita;%0A// se nenhuma diferen%C3%A7a e ambas terminam null ao mesmo tempo: s%C3%A3o iguais.%0Afunc compare(a, b *Node) int %7B%0A%09if a == nil && b == nil %7B%0A%09%09return 0%0A%09%7D%0A%0A%09if a.Value %3E b.Value %7B%0A%09%09return 1%0A%09%7D%0A%09if a.Value %3C b.Value %7B%0A%09%09return -1%0A%09%7D%0A%0A%09result := compare(a.Left, b.Left)%0A%0A%09if result != 0 %7B%0A%09%09return result%0A%09%7D%0A%09return compare(a.Right, b.Right)\n+func compare(a, b *Node) int %7B%0A%09_, _ = a, b%0A%09return 0\n %0A%7D%0A%0A\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-07-01_02-59-41",
+            "content": "@@ -420,39 +420,8 @@\n %09%7D%0A%0A\n-%09if a == nil %7B%0A%09%09return -1%0A%09%7D%0A%0A\n %09if \n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-07-01_03-02-06",
+            "content": "@@ -451,38 +451,8 @@\n %09%7D%0A%0A\n-%09if b == nil %7B%0A%09%09return 1%0A%09%7D%0A%0A\n %09if \n",
+            "lines": "106"
+        },
+        {
+            "label": "2026-07-01_03-02-31",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\n// compare valor do n\u00f3 atual;\n// se diferentes, retorna imediatamente (< ou >);\n// se iguais, prossiga para a sub\u00e1rvore esquerda, depois direita;\n// se nenhuma diferen\u00e7a e ambas terminam null ao mesmo tempo: s\u00e3o iguais.\nfunc compare(a, b *Node) int {\n\tif a == nil && b == nil {\n\t\treturn 0\n\t}\n\n\tif a == nil {\n\t\treturn -1\n\t}\n\n\tif b == nil {\n\t\treturn 1\n\t}\n\n\tif a.Value > b.Value {\n\t\treturn 1\n\t}\n\tif a.Value < b.Value {\n\t\treturn -1\n\t}\n\n\tresult := compare(a.Left, b.Left)\n\n\tif result != 0 {\n\t\treturn result\n\t}\n\treturn compare(a.Right, b.Right)\n}\n\n// ----------------------------------------------------------------------\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc create(parts *[]string) *Node {\n\telem := (*parts)[0]\n\t*parts = (*parts)[1:]\n\tif elem == \"#\" {\n\t\treturn nil\n\t}\n\tvalue, _ := strconv.Atoi(elem)\n\tnode := &Node{Value: value}\n\tnode.Left = create(parts)\n\tnode.Right = create(parts)\n\treturn node\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\ta := create(&parts)\n\tBShow(a, \"\")\n\tscanner.Scan()\n\tparts = strings.Split(scanner.Text(), \" \")\n\tb := create(&parts)\n\tBShow(b, \"\")\n\tresult := compare(a, b)\n\tif result == 0 {\n\t\tfmt.Println(\"iguais\")\n\t} else if result < 0 {\n\t\tfmt.Println(\"menor\")\n\t} else {\n\t\tfmt.Println(\"maior\")\n\t}\n}\n",
+            "lines": "110"
+        }
+    ]
+}
