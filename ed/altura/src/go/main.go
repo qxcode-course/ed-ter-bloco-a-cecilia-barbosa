@@ -14,28 +14,59 @@ type Node struct {
 	Right *Node
 }
 
-// Search node with value
 // Starts with node == root
 // Value is the value we are looking for
 // Returns the node with the value or nil if not found
 func find(node *Node, value int) *Node {
-	_, _ = node,  value
-	return nil
+	_, _ = node, value
+	if node == nil {
+		return nil
+	}
+	if node.Value == value {
+		return node
+	}
+
+	result := find(node.Left, value)
+	if result != nil {
+		return result
+	}
+	return find(node.Right, value)
 }
 
 // node is the node we want to find the height of
-// the height of a node is the number of edges on the longest path from the node to a leaf
+// the height of a node is the number of edges on
+// the longest path from the node to a leaf
 func getHeight(node *Node) int {
-	_ = node
-	return 0
+	if node == nil {
+		return 0
+	}
+
+	esqAlt := getHeight(node.Left)
+	dirAlt := getHeight(node.Right)
+
+	if esqAlt > dirAlt {
+		return esqAlt + 1
+	}
+	return dirAlt + 1
 }
 
 // node is the root of the tree
 // level is the current level in the tree (1 for root)
 // value is the value we are looking for
 func calcNodeDepth(node *Node, level int, value int) int {
-	_, _, _ = node, level, value
-	return 0
+	if node == nil {
+		return 0
+	}
+
+	if node.Value == value {
+		return level
+	}
+
+	esqProf := calcNodeDepth(node.Left, level+1, value)
+	if esqProf != 0 {
+		return esqProf
+	}
+	return calcNodeDepth(node.Right, level+1, value)
 }
 
 // --------------------------------------------------------------------
@@ -95,14 +126,14 @@ func main() {
 	fmt.Println("Arvore:")
 	BShow(root, "")
 
-	// values := strings.FieldsSeq(line)
-	// for s := range values {
-	// 	value, _ := strconv.Atoi(s)
-	// 	node := find(root, value)
-	// 	if node != nil {
-	// 		fmt.Printf("Altura: %d, Profundidade: %d\n", getHeight(node), calcNodeDepth(root, 1, value))
-	// 	} else {
-	// 		fmt.Println("-1")
-	// 	}
-	// }
+	values := strings.FieldsSeq(line)
+	for s := range values {
+		value, _ := strconv.Atoi(s)
+		node := find(root, value)
+		if node != nil {
+			fmt.Printf("Altura: %d, Profundidade: %d\n", getHeight(node), calcNodeDepth(root, 1, value))
+		} else {
+			fmt.Println("-1")
+		}
+	}
 }

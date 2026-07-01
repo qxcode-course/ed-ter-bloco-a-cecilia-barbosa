@@ -19,8 +19,8 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@tree
 - ed@list
+- ed@tree
 flags:
   inbox: all
   panel: skills
@@ -30,5 +30,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@inverter
-selected_index: 19
+selected: ed@compare
+selected_index: 23

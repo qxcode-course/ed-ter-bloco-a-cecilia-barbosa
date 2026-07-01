@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+
 	"strconv"
 	"strings"
 )
@@ -14,17 +15,12 @@ type Node struct {
 	Right *Node
 }
 
-func Reverse(node *Node) {
-	if node == nil {
-		return
-	}
-
-	node.Left, node.Right = node.Right, node.Left
-	Reverse(node.Left)
-	Reverse(node.Right)
+func compare(a, b *Node) int {
+	_, _ = a, b
+	return 0
 }
 
-// -----------------------------------------------------------------------------------
+// ----------------------------------------------------------------------
 func BShow(node *Node, history string) {
 	if node != nil && (node.Left != nil || node.Right != nil) {
 		BShow(node.Left, history+"l")
@@ -70,8 +66,18 @@ func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
 	parts := strings.Split(scanner.Text(), " ")
-	root := create(&parts)
-	BShow(root, "") // Chama a função de impressão formatada
-	Reverse(root)   // Inverte a árvore
-	BShow(root, "") // Chama novamente para mostrar a árvore invertida
+	a := create(&parts)
+	BShow(a, "")
+	scanner.Scan()
+	parts = strings.Split(scanner.Text(), " ")
+	b := create(&parts)
+	BShow(b, "")
+	result := compare(a, b)
+	if result == 0 {
+		fmt.Println("iguais")
+	} else if result < 0 {
+		fmt.Println("menor")
+	} else {
+		fmt.Println("maior")
+	}
 }
