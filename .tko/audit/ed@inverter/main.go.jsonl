@@ -3,3 +3,5 @@
 {"ts":1782705503,"hash":"e07580122ad7f3a82ac2f102a30d48ef61df9e9fe44e4ae667f9642d3c129080","mode":"diff","ops":[{"tag":"replace","a1":17,"a2":18,"text":"\tif node\n"},{"tag":"replace","a1":19,"a2":20,"text":"\n"}]}
 {"ts":1782705547,"hash":"8a0cc25886e2a2180588962fe519152bec45f104a6bdcb43195a4f580d7eb4a2","mode":"diff","ops":[{"tag":"replace","a1":17,"a2":18,"text":"\tif node == nil {\n\t\treturn\n\t}\n"},{"tag":"insert","a1":19,"a2":19,"text":"\tnode.Left\n"}]}
 {"ts":1782705586,"hash":"05649a900481f312939b6a4cd717abc92e3562efa2025d76a5c91845e9eb5d8e","mode":"diff","ops":[{"tag":"replace","a1":21,"a2":22,"text":"\tnode.Left, node.Right = node.Right, node.Left\n"},{"tag":"insert","a1":23,"a2":23,"text":"\tReverse(node)\n"}]}
+{"ts":1782871313,"hash":"314ef78c3aa578973e14d1db9b209ed2e9ef1085bd707edd97a4d0864c2689dc","mode":"diff","ops":[{"tag":"delete","a1":17,"a2":20,"text":""},{"tag":"delete","a1":21,"a2":24,"text":""}]}
+{"ts":1782871357,"hash":"d4e4a4ce635896b2c79b015a10111665e41dfc87b03e4b3ca1cb45d4a21a0db4","mode":"diff","ops":[{"tag":"replace","a1":17,"a2":18,"text":"\tif node == nil {\n\t\treturn\n\t}\n\n\tnode.Left, node\n"}]}

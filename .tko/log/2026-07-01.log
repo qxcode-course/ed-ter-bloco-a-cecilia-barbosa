@@ -1,0 +1,22 @@
+2026-07-01 01:43:02, MOVE, v:1, k:ed@formatada, mode:PICK
+2026-07-01 01:43:05, EXEC, v:1, k:ed@formatada, mode:FULL, rate:0
+2026-07-01 01:47:15, EXEC, v:1, k:ed@formatada, mode:FULL, rate:0, size:81
+2026-07-01 01:47:15, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-07-01 01:47:31, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-07-01 01:49:36, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14, size:85
+2026-07-01 01:49:51, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14, size:85
+2026-07-01 01:51:26, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14, size:94
+2026-07-01 01:52:22, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14, size:102
+2026-07-01 01:52:57, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-07-01 01:52:22, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-07-01 01:54:03, EXEC, v:1, k:ed@formatada, mode:FULL, rate:28, size:107
+2026-07-01 01:57:24, EXEC, v:1, k:ed@formatada, mode:FULL, rate:42, size:110
+2026-07-01 01:57:22, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-07-01 01:57:24, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-07-01 01:58:44, EXEC, v:1, k:ed@formatada, mode:FULL, rate:100, size:110
+2026-07-01 01:58:48, MOVE, v:1, k:ed@formatada, mode:BACK
+2026-07-01 01:59:09, SELF, v:1, k:ed@formatada, self:1, rate:100, study:25
+2026-07-01 01:59:23, MOVE, v:1, k:ed@altura, mode:DOWN
+2026-07-01 02:00:41, MOVE, v:1, k:ed@inverter, mode:PICK
+2026-07-01 02:02:59, EXEC, v:1, k:ed@inverter, mode:FULL, rate:16, size:71
+2026-07-01 02:03:01, MOVE, v:1, k:ed@inverter, mode:BACK
