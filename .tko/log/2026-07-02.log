@@ -137,3 +137,4 @@
 2026-07-02 04:56:50, SELF, v:1, k:ed@prin_list1, self:1, rate:100, study:20
 2026-07-02 04:57:08, SELF, v:1, k:ed@prin_list1, self:1, rate:100, debug:1
 2026-07-02 04:58:03, MOVE, v:1, k:ed@fila_enc, mode:PICK
+2026-07-02 04:59:38, MOVE, v:1, k:ed@fila_enc, mode:BACK
