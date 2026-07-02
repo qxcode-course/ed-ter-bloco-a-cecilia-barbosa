@@ -52,7 +52,44 @@ func rec_min(node *Node) int {
 // MyShow imprime a árvore binária de forma formatada.
 func MyShow(node *Node, nivel int) {
 	_, _ = node, nivel
-	// TODO
+	if node == nil {
+		return
+	}
+
+	// no nao tem filho
+	if node.Left == nil && node.Right == nil {
+		for i := 0; i < nivel; i++ {
+			fmt.Print("....")
+		}
+		fmt.Println(node.Value)
+		return
+	}
+
+	//esquerda
+	if node.Left == nil {
+		for i := 0; i < nivel+1; i++ {
+			fmt.Print("....")
+		}
+		fmt.Println("#")
+	} else {
+		MyShow(node.Left, nivel+1)
+	}
+
+	// raiz
+	for i := 0; i < nivel; i++ {
+		fmt.Print("....")
+	}
+	fmt.Println(node.Value)
+
+	//direita
+	if node.Right == nil {
+		for i := 0; i < nivel+1; i++ {
+			fmt.Print("....")
+		}
+		fmt.Println("#")
+	} else {
+		MyShow(node.Right, nivel+1)
+	}
 }
 
 func BShow(node *Node, heranca string) {
