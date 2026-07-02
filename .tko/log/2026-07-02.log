@@ -84,3 +84,39 @@
 2026-07-02 02:01:33, MOVE, v:1, k:ed@alternando, mode:PICK
 2026-07-02 02:01:34, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:5
 2026-07-02 02:04:36, MOVE, v:1, k:ed@alternando, mode:BACK
+2026-07-02 02:32:15, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-07-02 02:34:10, MOVE, v:1, k:ed@alternando, mode:PICK
+2026-07-02 02:34:11, EXEC, v:1, k:ed@alternando, mode:FULL, size:26, fail:COMP
+2026-07-02 02:37:24, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-07-02 02:38:49, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:40
+2026-07-02 02:42:23, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-07-02 02:38:49, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-07-02 02:44:04, EXEC, v:1, k:ed@alternando, mode:FULL, size:54, fail:COMP
+2026-07-02 02:44:13, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:54
+2026-07-02 02:45:42, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-07-02 02:44:13, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-07-02 02:49:10, MOVE, v:1, k:ed@alternando, mode:BACK
+2026-07-02 02:49:16, MOVE, v:1, k:ed@alternando, mode:PICK
+2026-07-02 02:51:41, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:64
+2026-07-02 02:52:41, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:64
+2026-07-02 02:52:56, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:64
+2026-07-02 02:54:11, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-07-02 02:52:56, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-07-02 02:54:47, EXEC, v:1, k:ed@alternando, mode:FULL, rate:100, size:65
+2026-07-02 02:54:53, MOVE, v:1, k:ed@alternando, mode:BACK
+2026-07-02 02:55:29, SELF, v:1, k:ed@alternando, self:1, rate:100, study:60, friend:Juliana Barbosa
+2026-07-02 02:56:35, MOVE, v:1, k:ed@especiais, mode:DOWN
+2026-07-02 02:57:01, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-07-02 02:57:17, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-07-02 02:57:38, MOVE, v:1, k:ed@lista_d4, mode:PICK
+2026-07-02 02:58:30, EXEC, v:1, k:ed@lista_d4, mode:FULL, rate:0
+2026-07-02 02:58:43, MOVE, v:1, k:ed@lista_d4, mode:BACK
+2026-07-02 02:58:51, MOVE, v:1, k:ed@lista_d4, mode:PICK
+2026-07-02 02:56:35, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-07-02 02:56:35, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-07-02 02:58:30, MOVE, v:1, k:ed@lista_d4, mode:EDIT
+2026-07-02 03:33:39, MOVE, v:1, k:ed@lista_d4, mode:BACK
+2026-07-02 04:43:38, MOVE, v:1, k:ed@prin_list1, mode:DOWN
+2026-07-02 04:45:01, MOVE, v:1, k:ed@prin_list1, mode:PICK
+2026-07-02 04:45:02, EXEC, v:1, k:ed@prin_list1, mode:FULL, size:172, fail:COMP
+2026-07-02 04:45:11, EXEC, v:1, k:ed@prin_list1, mode:FULL, rate:0, size:172

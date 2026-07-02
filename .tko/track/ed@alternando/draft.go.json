@@ -2,8 +2,48 @@
     "patches": [
         {
             "label": "2026-07-02_02-01-34",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,382 +23,53 @@\n mt%22%0A\n-%0A\n func \n-print_jog(jog %5B%5Dint, espada int)%7B%0A    fmt.Print(%22%5B%22)%0A    for i, elem := range jog %7B%0A        if elem == 0 %7B%0A            continue%0A        %7D%0A%0A        if i == espada %7B%0A            if elem %3E 0 %7B%0A                fmt.Printf(%22%25d%3E%22, elem)%0A            %7D else %7B%0A                fmt.Printf()%0A            %7D%0A        %7D%0A    %7D%0A%7D%0A%0Afunc main() %7B%0A%09N, E, F := 0, 0, 0%0A%09fmt.Scan(&N, &E, &F)%0A\n+main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-07-02_02-34-11",
+            "content": "@@ -58,20 +58,22 @@\n ada int)\n- \n %7B%0A\n-%09\n+    \n fmt.Prin\n@@ -79,17 +79,20 @@\n nt(%22%5B%22)%0A\n-%09\n+    \n for i, e\n@@ -110,18 +110,24 @@\n e jog %7B%0A\n-%09%09\n+        \n if elem \n@@ -137,27 +137,48 @@\n 0 %7B%0A\n-%09%09%09continue%0A%09%09%7D%0A%0A%09%09\n+            continue%0A        %7D%0A%0A        \n if i\n@@ -190,19 +190,28 @@\n spada %7B%0A\n-%09%09%09\n+            \n if elem \n@@ -216,20 +216,32 @@\n m %3E 0 %7B%0A\n-%09%09%09%09\n+                \n fmt.Prin\n@@ -260,342 +260,146 @@\n em)%0A\n-%09%09%09%7D else %7B%0A%09%09%09%09fmt.Printf(%22%3C%25d%22, elem)%0A%09%09%09%7D%0A%09%09%7D else %7B%0A%09%09%09fmt.Printf(%22%25d%22, elem)%0A%09%09%7D%0A%09%09fmt.Print(%22 %22)%0A%09%7D%0A%09fmt.Printf(%22%5D%5Cn%22)%0A%7D%0A%0Afunc main() %7B%0A%09N, E, F := 0, 0, 0%0A%09fmt.Scan(&N, &E, &F)%0A%0A%09jog := make(%5B%5Dint, 0, N)%0A%09sinal := F%0A%0A%09for i := 1; i %3C= N; i++ %7B%0A%09%09jog = append(jog, i*sinal)%0A%09%09sinal *= -1%0A%09%7D%0A%09espada := -1%0A%0A%09print_jog(jog, espada)\n+            %7D else %7B%0A                fmt.Printf()%0A            %7D%0A        %7D%0A    %7D%0A%7D%0A%0Afunc main() %7B%0A%09N, E, F := 0, 0, 0%0A%09fmt.Scan(&N, &E, &F)%0A\n %0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-07-02_02-38-49",
+            "content": "@@ -335,182 +335,8 @@\n %0A%7D%0A%0A\n-func procura_vivo(jogadores %5B%5Dint, pos int, direcao int) int %7B%0A%09n := len(jogadores)%0A%09for %7B%0A%09%09pos = (pos + direcao + n) %25 n%0A%09%09if jogadores%5Bpos%5D != 0 %7B%0A%09%09%09return pos%0A%09%09%7D%0A%09%7D%0A%7D%0A%0A\n func\n@@ -505,87 +505,44 @@\n %09%7D%0A%09\n-E -= 1%0A%09vivos := qtd%0A%09for vivos %3C 1 %7B%0A%09%09print_jog(jog, E)%0A%09%7D%0A%0A%09print_jog(jog, E\n+espada := -1%0A%0A%09print_jog(jog, espada\n )%0A%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-07-02_02-44-04",
+            "content": "@@ -692,17 +692,19 @@\n ivos := \n-N\n+qtd\n %0A%09for vi\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-07-02_02-44-13",
+            "content": "@@ -694,17 +694,16 @@\n os := N%0A\n-%0A\n %09for viv\n@@ -735,190 +735,11 @@\n  E)%0A\n-%0A%09%09print_jog(jog, E)%0A%09%09direcao := 1%0A%09%09if jog%5BE%5D %3C 0 %7B%0A%09%09%09direcao = -1%0A%09%09%7D%0A%09%09target := procura_vivo(jog, E, direcao)%0A%09%09jog%5Btarget%5D = 0%0A%09%09vivos--%0A%09%09E = procura_vivo(jog, E, direcao)%0A\n %09%7D\n+%0A\n %0A%09pr\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-07-02_02-51-41",
+            "content": "@@ -74,17 +74,16 @@\n Print(%22%5B\n- \n %22)%0A%09for \n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-07-02_02-52-41",
+            "content": "@@ -707,17 +707,17 @@\n r vivos \n-%3E\n+%3C\n  1 %7B%0A%09%09p\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-07-02_02-52-56",
+            "content": "@@ -424,31 +424,11 @@\n %09for\n- i := 1; i %3C= n; i++\n  %7B%0A\n+\n %09%09po\n@@ -503,28 +503,16 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%09return pos%0A\n %7D%0A%0Afunc \n@@ -732,16 +732,37 @@\n (jog, E)\n+%0A%0A%09%09print_jog(jog, E)\n %0A%09%09direc\n@@ -807,17 +807,16 @@\n  -1%0A%09%09%7D%0A\n-%0A\n %09%09target\n@@ -867,16 +867,16 @@\n et%5D = 0%0A\n+\n %09%09vivos-\n@@ -877,17 +877,16 @@\n vivos--%0A\n-%0A\n %09%09E = pr\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-07-02_02-54-47",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc print_jog(jog []int, espada int) {\n\tfmt.Print(\"[ \")\n\tfor i, elem := range jog {\n\t\tif elem == 0 {\n\t\t\tcontinue\n\t\t}\n\n\t\tif i == espada {\n\t\t\tif elem > 0 {\n\t\t\t\tfmt.Printf(\"%d>\", elem)\n\t\t\t} else {\n\t\t\t\tfmt.Printf(\"<%d\", elem)\n\t\t\t}\n\t\t} else {\n\t\t\tfmt.Printf(\"%d\", elem)\n\t\t}\n\t\tfmt.Print(\" \")\n\t}\n\tfmt.Printf(\"]\\n\")\n}\n\nfunc procura_vivo(jogadores []int, pos int, direcao int) int {\n\tn := len(jogadores)\n\tfor i := 1; i <= n; i++ {\n\t\tpos = (pos + direcao + n) % n\n\t\tif jogadores[pos] != 0 {\n\t\t\treturn pos\n\t\t}\n\t}\n\treturn pos\n}\n\nfunc main() {\n\tN, E, F := 0, 0, 0\n\tfmt.Scan(&N, &E, &F)\n\n\tjog := make([]int, 0, N)\n\tsinal := F\n\n\tfor i := 1; i <= N; i++ {\n\t\tjog = append(jog, i*sinal)\n\t\tsinal *= -1\n\t}\n\tE -= 1\n\tvivos := N\n\n\tfor vivos > 1 {\n\t\tprint_jog(jog, E)\n\t\tdirecao := 1\n\t\tif jog[E] < 0 {\n\t\t\tdirecao = -1\n\t\t}\n\n\t\ttarget := procura_vivo(jog, E, direcao)\n\t\tjog[target] = 0\n\t\tvivos--\n\n\t\tE = procura_vivo(jog, E, direcao)\n\t}\n\tprint_jog(jog, E)\n}\n",
+            "lines": "65"
         }
     ]
 }
