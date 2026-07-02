@@ -52,3 +52,35 @@
 2026-07-02 01:11:00, MOVE, v:1, k:ed@bst_insert, mode:BACK
 2026-07-02 01:11:36, SELF, v:1, k:ed@bst_insert, self:1, rate:100, study:20
 2026-07-02 01:11:46, MOVE, v:1, k:ed@bst_serial, mode:DOWN
+2026-07-02 01:11:46, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-07-02 01:11:46, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-07-02 01:18:59, MOVE, v:1, k:ed@bst_remove, mode:DOWN
+2026-07-02 01:19:04, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-07-02 01:19:45, MOVE, v:1, k:ed@bst_serial, mode:BACK
+2026-07-02 01:19:47, MOVE, v:1, k:ed@bst_insert, mode:PICK
+2026-07-02 01:19:49, MOVE, v:1, k:ed@bst_insert, mode:BACK
+2026-07-02 01:19:57, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-07-02 01:18:59, MOVE, v:1, k:ed@bst_remove, mode:EDIT
+2026-07-02 01:21:45, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-07-02 01:45:23, MOVE, v:1, k:ed@bst_serial, mode:BACK
+2026-07-02 01:45:53, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-07-02 01:47:59, MOVE, v:1, k:ed@bst_serial, mode:BACK
+2026-07-02 01:50:22, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-07-02 01:47:40, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-07-02 01:55:28, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-07-02 01:56:09, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:0, size:105
+2026-07-02 01:56:42, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:0, size:106
+2026-07-02 01:57:00, MOVE, v:1, k:ed@bst_serial, mode:BACK
+2026-07-02 01:57:16, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-07-02 01:57:56, EXEC, v:1, k:ed@bst_serial, mode:FULL, size:106, fail:COMP
+2026-07-02 01:58:05, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:0, size:106
+2026-07-02 01:59:38, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:100, size:107
+2026-07-02 01:59:43, MOVE, v:1, k:ed@bst_serial, mode:BACK
+2026-07-02 02:00:19, SELF, v:1, k:ed@bst_serial, self:1, rate:100, study:35
+2026-07-02 02:00:30, SELF, v:1, k:ed@bst_serial, self:1, rate:100, study:35
+2026-07-02 02:01:16, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-07-02 02:01:20, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-07-02 02:01:31, MOVE, v:1, k:ed@alternando, mode:DOWN
+2026-07-02 02:01:33, MOVE, v:1, k:ed@alternando, mode:PICK
+2026-07-02 02:01:34, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:5
+2026-07-02 02:04:36, MOVE, v:1, k:ed@alternando, mode:BACK

@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-02_01-56-09",
+            "content": "@@ -1932,10 +1932,8 @@\n %0A%09%7D%0A\n-%09%0A\n %09roo\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-07-02_01-56-42",
+            "content": "@@ -784,17 +784,16 @@\n o(root, \n-&\n result)%0A\n@@ -866,17 +866,16 @@\n  result \n-*\n %5B%5Dstring\n@@ -909,17 +909,16 @@\n urn%0A%09%7D%0A%09\n-*\n result =\n@@ -1928,16 +1928,17 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%09\n %0A%09root :\n",
+            "lines": "106"
+        },
+        {
+            "label": "2026-07-02_01-57-56",
+            "content": "@@ -928,17 +928,16 @@\n  append(\n-*\n result, \n",
+            "lines": "106"
+        },
+        {
+            "label": "2026-07-02_01-58-05",
+            "content": "@@ -902,41 +902,8 @@\n l %7B%0A\n-%09%09*result = append(*result, %22#%22)%0A\n %09%09re\n",
+            "lines": "106"
+        },
+        {
+            "label": "2026-07-02_01-59-38",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\nfunc BstInsert(values []int) *Node {\n\tvar no *Node\n\tfor _, v := range values {\n\t\tno = insert(no, v)\n\t}\n\treturn no\n}\n\nfunc insert(node *Node, value int) *Node {\n\tif node == nil { // criar novo no\n\t\treturn &Node{\n\t\t\tValue: value,\n\t\t}\n\t}\n\n\tif value == node.Value { // se ja ta nao entra\n\t\treturn node\n\t}\n\t// colocar no lugar\n\tif value < node.Value {\n\t\tnode.Left = insert(node.Left, value)\n\t} else {\n\t\tnode.Right = insert(node.Right, value)\n\t}\n\treturn node\n}\n\n// Dica: crie um vetor compartilhado e v\u00e1 preenchendo conforme anda na recurs\u00e3o\n// Depois use o strings.Join para gerar o serial\nfunc Serialize(root *Node) string {\n\tvar result []string\n\tserializacao(root, &result)\n\treturn strings.Join(result, \" \")\n}\n\nfunc serializacao(node *Node, result *[]string) {\n\tif node == nil {\n\t\t*result = append(*result, \"#\")\n\t\treturn\n\t}\n\t*result = append(*result, fmt.Sprint(node.Value))\n\n\tserializacao(node.Left, result)\n\tserializacao(node.Right, result)\n}\n\n// -----------------------------------------------------------------------------------\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tvalues := make([]int, 0, len(parts))\n\tfor _, elem := range parts {\n\t\tv, err := strconv.Atoi(elem)\n\t\tif err == nil {\n\t\t\tvalues = append(values, v)\n\t\t}\n\t}\n\n\troot := BstInsert(values)\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada\n\tfmt.Println(Serialize((root)))\n}\n",
+            "lines": "107"
+        }
+    ]
+}

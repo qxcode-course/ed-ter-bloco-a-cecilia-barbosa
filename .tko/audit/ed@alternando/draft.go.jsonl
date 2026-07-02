@@ -1,0 +1,3 @@
+{"ts":1782957803,"hash":"360a053b1296fc5fb60abc4022b8cfbd1a185d55d853ade981758debb9796157","mode":"full","content":"H4sIAO/GRWoC/ytITM5OTE9VyE3MzOPKzC3ILypRUErLLVHiSivNSwYLa2gqVHNxKQABVy0XAC4wUs0wAAAA"}
+{"ts":1782957827,"hash":"508674812033a0d7126048a361e9783016606eab033911fd57cc2460fbdd593b","mode":"diff","ops":[{"tag":"insert","a1":3,"a2":3,"text":"    N, E, F := 0, 0, 0\n"},{"tag":"insert","a1":5,"a2":5,"text":"\n"}]}
+{"ts":1782957861,"hash":"02f473d6f89016bbb6fb82e8b4057603bac0d102de86d44669fdd381ec2fc346","mode":"diff","ops":[{"tag":"insert","a1":1,"a2":1,"text":"\n"},{"tag":"insert","a1":2,"a2":2,"text":"\n"},{"tag":"replace","a1":3,"a2":6,"text":"\tN, E, F := 0, 0, 0\n\tfmt.Scan(&N, &E, &F)\n"}]}
