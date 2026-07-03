@@ -17,7 +17,7 @@ func (q *Queue[T]) Enqueue(item T) {
 	q.items.PushBack(item)
 }
 
-func (q *Queue[T]) Dequeue() T {
+func (q *Queue[T]) Dequeue() T { // o primeiro
 	if q.items.Len() == 0 {
 		var zero T
 		return zero // Return zero value if queue is empty

@@ -1,0 +1,9 @@
+2026-07-03 00:03:31, EXEC, v:1, k:ed@chaves, mode:FULL, rate:100, size:68
+2026-07-03 00:03:36, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-07-03 00:04:10, SELF, v:1, k:ed@chaves, self:1, rate:100, study:25, problem:1
+2026-07-03 00:04:56, MOVE, v:1, k:ed@pilha, mode:PICK
+2026-07-03 00:05:08, MOVE, v:1, k:ed@pilha, mode:BACK
+2026-07-03 00:05:14, MOVE, v:1, k:ed@pilha, mode:PICK
+2026-07-03 00:05:17, EXEC, v:1, k:ed@pilha, mode:FULL, rate:0, size:80
+2026-07-03 00:06:10, MOVE, v:1, k:ed@pilha, mode:BACK
+2026-07-03 00:06:12, MOVE, v:1, k:ed@pilha, mode:PICK

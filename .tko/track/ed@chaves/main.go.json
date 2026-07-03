@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-02_23-52-04",
+            "content": "@@ -20,15 +20,8 @@\n t (%0A\n-%09%22fmt%22%0A\n )%0A%0Af\n@@ -37,350 +37,6 @@\n ) %7B%0A\n-%09queue := NewQueue%5Bstring%5D()%0A%09filaTimes := %22ABCDEFGHIJKLMNOP%22%0A%0A%09for _, time := range filaTimes %7B%0A%09%09queue.Enqueue(string(time))%0A%09%7D%0A%0A%09for i := 0; i %3C 15; i++ %7B%0A%09%09m, n := 0, 0%0A%09%09fmt.Scan(&m, &n)%0A%0A%09%09t1 := queue.Dequeue()%0A%09%09t2 := queue.Dequeue()%0A%09%09if m %3E n %7B%0A%09%09%09queue.Enqueue(t1)%0A%09%09%7D else %7B%0A%09%09%09queue.Enqueue(t2)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(queue.Dequeue())%0A\n %7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-07-03_00-03-31",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tqueue := NewQueue[string]()\n\tfilaTimes := \"ABCDEFGHIJKLMNOP\"\n\n\tfor _, time := range filaTimes {\n\t\tqueue.Enqueue(string(time))\n\t}\n\n\tfor i := 0; i < 15; i++ {\n\t\tm, n := 0, 0\n\t\tfmt.Scan(&m, &n)\n\n\t\tt1 := queue.Dequeue()\n\t\tt2 := queue.Dequeue()\n\t\tif m > n {\n\t\t\tqueue.Enqueue(t1)\n\t\t} else {\n\t\t\tqueue.Enqueue(t2)\n\t\t}\n\t}\n\tfmt.Println(queue.Dequeue())\n}\n",
+            "lines": "28"
+        }
+    ]
+}
