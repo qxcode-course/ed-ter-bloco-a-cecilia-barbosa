@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-03_05-07-29",
+            "content": "@@ -223,95 +223,8 @@\n ' %7B%0A\n-            if len(pilha == 0) %7B%0A                return %22nao balanceado%22%0A            %7D%0A\n %09%09%09c\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-07-03_05-11-35",
+            "content": "@@ -219,19 +219,28 @@\n = '%5D' %7B%0A\n-%09%09%09\n+            \n if len(p\n@@ -247,21 +247,33 @@\n ilha\n-)\n  == 0\n+)\n  %7B%0A\n-%09%09%09%09\n+                \n retu\n@@ -288,27 +288,36 @@\n balanceado%22%0A\n-%09%09%09\n+            \n %7D%0A%09%09%09cima :=\n@@ -479,17 +479,20 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%09\n+    \n if len(p\n@@ -504,18 +504,24 @@\n  == 0 %7B%0A\n-%09%09\n+        \n return %22\n@@ -532,20 +532,26 @@\n nceado%22%0A\n-%09%7D%0A%09\n+    %7D%0A    \n return %22\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-07-03_05-11-50",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc balanceada(entrada string) string {\n\tpilha := []rune{}\n\tfor _, temp := range entrada {\n\t\tif temp == '(' || temp == '[' {\n\t\t\tpilha = append(pilha, temp)\n\t\t} else if temp == ')' || temp == ']' {\n\t\t\tif len(pilha) == 0 {\n\t\t\t\treturn \"nao balanceado\"\n\t\t\t}\n\t\t\tcima := pilha[len(pilha)-1]\n\t\t\tpilha = pilha[:len(pilha)-1]\n\n\t\t\tif (temp == ')' && cima != '(') || (temp == ']' && cima != '[') {\n\t\t\t\treturn \"nao balanceado\"\n\t\t\t}\n\t\t}\n\t}\n\tif len(pilha) == 0 {\n\t\treturn \"balanceado\"\n\t}\n\treturn \"nao balanceado\"\n}\n\nfunc main() {\n\tentrada := \"\"\n\n\tfmt.Scan(&entrada)\n\tfmt.Println(balanceada(entrada))\n}\n",
+            "lines": "33"
+        }
+    ]
+}
