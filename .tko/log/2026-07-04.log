@@ -1,0 +1,20 @@
+2026-07-04 01:22:28, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-07-04 01:23:08, MOVE, v:1, k:ed@queimando, mode:PICK
+2026-07-04 01:23:27, EXEC, v:1, k:ed@queimando, mode:FULL, size:77, fail:COMP
+2026-07-04 01:27:54, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-07-04 01:29:58, EXEC, v:1, k:ed@queimando, mode:FULL, rate:20, size:82
+2026-07-04 01:32:46, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-07-04 01:29:58, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-07-04 01:37:46, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-07-04 01:41:04, EXEC, v:1, k:ed@queimando, mode:FULL, rate:20, size:93
+2026-07-04 01:41:10, MOVE, v:1, k:ed@queimando, mode:BACK
+2026-07-04 01:44:28, MOVE, v:1, k:ed@queimando, mode:PICK
+2026-07-04 01:46:29, EXEC, v:1, k:ed@queimando, mode:FULL, rate:20, size:97
+2026-07-04 01:47:11, EXEC, v:1, k:ed@queimando, mode:FULL, rate:40, size:97
+2026-07-04 01:47:49, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-07-04 01:47:11, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-07-04 01:51:02, EXEC, v:1, k:ed@queimando, mode:FULL, rate:0, size:97
+2026-07-04 01:51:14, EXEC, v:1, k:ed@queimando, mode:FULL, rate:100, size:97
+2026-07-04 01:51:17, MOVE, v:1, k:ed@queimando, mode:BACK
+2026-07-04 01:51:29, SELF, v:1, k:ed@queimando, self:1, rate:100, study:30
+2026-07-04 01:53:55, MOVE, v:1, k:ed@pilhado, mode:DOWN

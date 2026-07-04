@@ -41,3 +41,5 @@
 2026-07-03 05:11:50, EXEC, v:1, k:ed@balanceada, mode:FULL, rate:100, size:33
 2026-07-03 05:12:43, MOVE, v:1, k:ed@balanceada, mode:BACK
 2026-07-03 05:14:03, SELF, v:1, k:ed@balanceada, self:1, rate:100, study:25, problem:1
+2026-07-03 21:28:04, MOVE, v:1, k:ed@fila_enc, mode:PICK
+2026-07-03 21:28:18, MOVE, v:1, k:ed@fila_enc, mode:BACK
