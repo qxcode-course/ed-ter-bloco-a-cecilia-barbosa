@@ -18,3 +18,66 @@
 2026-07-04 01:51:17, MOVE, v:1, k:ed@queimando, mode:BACK
 2026-07-04 01:51:29, SELF, v:1, k:ed@queimando, self:1, rate:100, study:30
 2026-07-04 01:53:55, MOVE, v:1, k:ed@pilhado, mode:DOWN
+2026-07-04 01:55:12, MOVE, v:1, k:ed@pilhado, mode:PICK
+2026-07-04 01:53:55, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-07-04 01:53:55, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-07-04 01:56:14, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-07-04 01:57:45, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0, size:46
+2026-07-04 02:01:04, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-07-04 01:57:45, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-07-04 02:06:20, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-07-04 02:10:10, EXEC, v:1, k:ed@pilhado, mode:FULL, size:71, fail:COMP
+2026-07-04 02:11:05, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-07-04 02:16:19, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-07-04 02:21:20, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-07-04 02:23:14, MOVE, v:1, k:ed@pilhado, mode:BACK
+2026-07-04 02:30:41, MOVE, v:1, k:ed@pilhado, mode:PICK
+2026-07-04 02:30:44, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0, size:106
+2026-07-04 02:32:02, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0, size:110
+2026-07-04 02:34:12, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0, size:116
+2026-07-04 02:34:12, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-07-04 02:34:47, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-07-04 02:38:02, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0, size:115
+2026-07-04 02:39:05, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0, size:115
+2026-07-04 02:39:24, MOVE, v:1, k:ed@pilhado, mode:BACK
+2026-07-04 02:39:37, MOVE, v:1, k:ed@pilhado, mode:PICK
+2026-07-04 02:39:40, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0
+2026-07-04 02:42:42, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0, size:115
+2026-07-04 02:43:49, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0, size:116
+2026-07-04 02:43:49, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-07-04 02:43:47, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-07-04 02:48:06, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0, size:118
+2026-07-04 02:48:05, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-07-04 02:48:06, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-07-04 02:51:27, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0, size:118
+2026-07-04 02:51:35, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0, size:117
+2026-07-04 02:52:37, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0, size:117
+2026-07-04 02:53:59, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0, size:118
+2026-07-04 02:54:27, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-07-04 02:53:59, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-07-04 02:54:32, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0, size:118
+2026-07-04 02:55:49, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0, size:117
+2026-07-04 02:57:00, MOVE, v:1, k:ed@pilhado, mode:BACK
+2026-07-04 02:57:06, MOVE, v:1, k:ed@pilhado, mode:PICK
+2026-07-04 02:58:59, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0, size:118
+2026-07-04 02:59:26, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0, size:118
+2026-07-04 02:59:25, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-07-04 02:59:26, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-07-04 02:59:35, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:100, size:118
+2026-07-04 02:59:45, MOVE, v:1, k:ed@pilhado, mode:BACK
+2026-07-04 02:59:59, SELF, v:1, k:ed@pilhado, self:1, rate:100, debug:1
+2026-07-04 03:00:08, SELF, v:1, k:ed@pilhado, self:1, rate:100
+2026-07-04 03:00:14, SELF, v:1, k:ed@pilhado, self:1, rate:100, debug:1
+2026-07-04 05:04:55, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-07-04 05:05:49, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-07-04 05:05:51, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:5
+2026-07-04 05:05:51, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-07-04 05:10:45, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-07-04 05:15:40, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-07-04 05:16:53, EXEC, v:1, k:ed@subset_sum, mode:FULL, size:36, fail:COMP
+2026-07-04 05:17:02, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:54, size:36
+2026-07-04 05:19:11, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:54, size:36
+2026-07-04 05:19:41, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:100, size:40
+2026-07-04 05:19:46, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-07-04 05:20:04, SELF, v:1, k:ed@subset_sum, self:1, rate:100, study:15
+2026-07-04 05:21:08, MOVE, v:1, k:ed@wordsearch, mode:DOWN

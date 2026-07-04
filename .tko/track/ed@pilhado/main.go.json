@@ -1,0 +1,99 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-04_01-57-45",
+            "content": "@@ -22,521 +22,82 @@\n (%0A%09%22\n-bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A)%0A%0Atype Pos struct %7B%0A%09l, c int%0A%7D%0A%0Afunc main() %7B%0A%09nl, nc := 0, 0%0A%09fmt.Scan(&nl, &nc)%0A%0A%09grid := make(%5B%5D%5B%5Drune, nl)%0A%09var start, end Pos%0A%0A%09for i := 0; i %3C nl; i++ %7B%0A%09%09scanner := bufio.NewScanner(os.Stdin)%0A%09%09scanner.Scan()%0A%09%09line := %5B%5Drune(scanner.Text())%0A%09%09grid%5Bi%5D = line%0A%09%09for j, elem := range line %7B%0A%09%09%09if elem == 'I' %7B%0A%09%09%09%09start = Pos%7Bi, j%7D%0A%09%09%09%7D else if elem == 'F' %7B%0A%09%09%09%09end = Pos%7Bi, j%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09visitado := make(%5B%5D%5B%5Dbool, nl)%0A%09for i := range visitado %7B%0A%09%09visitado%5Bi%5D = make(%5B%5Dbool, nc)%0A%09%7D\n+fmt%22%0A)%0A%0A//%22bufio%22%0A//%22os%22%0A%0Afunc main() %7B%0A%09nl, nc := 0, 0%0A%09fmt.Scan(&nl, &nc)\n %0A%7D%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-07-04_02-10-10",
+            "content": "@@ -536,586 +536,7 @@\n )%0A%09%7D\n-%0A%0A%09cam := NewStack%5BPos%5D()%0A%09pass := NewStack%5BPos%5D()%0A%09cam.Push(start)%0A%09visitado%5Bstart.l%5D%5Bstart.c%5D = true%0A%0A%09for !cam.IsEmpty() %7B%0A%09%09atual := cam.Top()%0A%09%09if atual == end %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09viz := %5B%5DPos%7B%0A%09%09%09%7Batual.l - 1, atual.c%7D,%0A%09%09%09%7Batual.l + 1, atual.c%7D,%0A%09%09%09%7Batual.l, atual.c - 1%7D,%0A%09%09%09%7Batual.l, atual.c + 1%7D,%0A%09%09%7D%0A%0A%09%09var prox *Pos%0A%09%09for _, v := range viz %7B%0A%09%09%09if v.l %3E= 0 && v.l %3C nl && v.c %3E= 0 && v.c %3C nc && grid%5Bv.l%5D%5Bv.c%5D != '#' %7B%0A%09%09%09%09prox = &v%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%0A%09%09if prox != nil %7B%0A%09%09%09visitado%5Bprox.l%5D%5Bprox.c%5D = true%0A%09%09%09cam.Push(*prox)%0A%09%09%7D else %7B%0A%09%09%09pass.Push(cam.Pop())%0A%09%09%7D%0A%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-07-04_02-30-44",
+            "content": "@@ -1115,70 +1115,7 @@\n %0A%0A%09%7D\n-%0A%0A%09for _, print := range grid %7B%0A%09%09fmt.Println(string(print))%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-07-04_02-32-02",
+            "content": "@@ -1113,152 +1113,8 @@\n %09%7D%0A%0A\n-%09%09for !cam.IsEmpty() %7B%0A%09%09%09pop := cam.Pop()%0A%09%09%09if grid%5Bpop.l%5D%5Bpop.c%5D != 'I' && grid%5Bpop.l%5D%5Bpop.c%5D != 'F' %7B%0A%09%09%09%09grid%5Bpop.l%5D%5Bpop.c%5D = '.'%0A%09%09%09%7D%0A%09%09%7D%0A\n %09%7D%0A%0A\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-07-04_02-34-12",
+            "content": "@@ -1108,19 +1108,18 @@\n ())%0A%09%09%7D%0A\n-%09%7D\n %0A\n+%09\n %09for !ca\n@@ -1134,16 +1134,17 @@\n y() %7B%0A%09%09\n+%09\n pop := c\n@@ -1148,24 +1148,25 @@\n = cam.Pop()%0A\n+%09\n %09%09if grid%5Bpo\n@@ -1215,16 +1215,17 @@\n = 'F' %7B%0A\n+%09\n %09%09%09grid%5B\n@@ -1244,16 +1244,21 @@\n %5D = '.'%0A\n+%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A%0A\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-07-04_02-38-02",
+            "content": "@@ -126,51 +126,8 @@\n nc)%0A\n-%09bufio.NewReader(os.Stdin).ReadString('%5Cn')\n %0A%09gr\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-07-04_02-39-05",
+            "content": "@@ -1006,31 +1006,8 @@\n  '#'\n- && !visitado%5Bv.l%5D%5Bv.c%5D\n  %7B%0A%09\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-07-04_02-42-42",
+            "content": "@@ -126,21 +126,9 @@\n nc)%0A\n-%0A%09scanner := \n+%09\n bufi\n@@ -136,13 +136,12 @@\n .New\n-Scann\n+Read\n er(o\n@@ -148,17 +148,33 @@\n s.Stdin)\n-%0A\n+.ReadString('%5Cn')\n %0A%09grid :\n@@ -215,16 +215,16 @@\n nd Pos%0A%0A\n-\n %09for i :\n@@ -242,16 +242,56 @@\n ; i++ %7B%0A\n+%09%09scanner := bufio.NewScanner(os.Stdin)%0A\n %09%09scanne\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-07-04_02-43-49",
+            "content": "@@ -165,24 +165,8 @@\n din)\n-%0A%09scanner.Scan()\n %0A%0A%09g\n@@ -1175,17 +1175,16 @@\n m.Pop()%0A\n-%0A\n %09%09if gri\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-07-04_02-48-06",
+            "content": "@@ -699,44 +699,8 @@\n p()%0A\n-%09%09visitado%5Bstart.l%5D%5Bstart.c%5D = true%0A\n %09%09if\n@@ -1054,16 +1054,51 @@\n = nil %7B%0A\n+%09%09%09visitado%5Bprox.l%5D%5Bprox.c%5D = true%0A\n %09%09%09cam.P\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-07-04_02-51-27",
+            "content": "@@ -615,16 +615,51 @@\n h(start)\n+%0A%09visitado%5Bstart.l%5D%5Bstart.c%5D = true\n %0A%0A%09for !\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-07-04_02-51-35",
+            "content": "@@ -675,22 +675,22 @@\n ado%5B\n-atual.l%5D%5Batual\n+start.l%5D%5Bstart\n .c%5D \n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-07-04_02-52-37",
+            "content": "@@ -696,17 +696,16 @@\n  = true%0A\n-%0A\n %09%09if atu\n@@ -749,32 +749,36 @@\n Pos%7B%0A%09%09%09%7Batual.l\n+ - 1\n , atual.c+1%7D,%0A%09%09\n@@ -770,18 +770,16 @@\n  atual.c\n-+1\n %7D,%0A%09%09%09%7Ba\n@@ -784,17 +784,19 @@\n %7Batual.l\n-+\n+ + \n 1, atual\n@@ -820,17 +820,19 @@\n  atual.c\n--\n+ - \n 1%7D,%0A%09%09%09%7B\n@@ -842,10 +842,8 @@\n al.l\n--1\n , at\n@@ -843,24 +843,28 @@\n l.l, atual.c\n+ + 1\n %7D,%0A%09%09%7D%0A%0A%09%09va\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-07-04_02-53-59",
+            "content": "@@ -767,17 +767,17 @@\n  atual.c\n--\n++\n 1%7D,%0A%09%09%09%7B\n@@ -787,9 +787,9 @@\n al.l\n--\n++\n 1, a\n@@ -809,33 +809,33 @@\n atual.l, atual.c\n-+\n+-\n 1%7D,%0A%09%09%09%7Batual.l+\n@@ -825,33 +825,33 @@\n -1%7D,%0A%09%09%09%7Batual.l\n-+\n+-\n 1, atual.c%7D,%0A%09%09%7D\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-07-04_02-54-32",
+            "content": "@@ -161,16 +161,32 @@\n s.Stdin)\n+%0A%09scanner.Scan()\n %0A%0A%09grid \n@@ -767,19 +767,17 @@\n  atual.c\n- - \n+-\n 1%7D,%0A%09%09%09%7B\n@@ -787,11 +787,9 @@\n al.l\n- - \n+-\n 1, a\n@@ -817,19 +817,17 @@\n  atual.c\n- + \n++\n 1%7D,%0A%09%09%09%7B\n@@ -837,11 +837,9 @@\n al.l\n- + \n++\n 1, a\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-07-04_02-55-49",
+            "content": "@@ -1141,19 +1141,16 @@\n am.Pop()\n-%0A%09%09\n %0A%0A%09%09if g\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-07-04_02-58-59",
+            "content": "@@ -1148,32 +1148,8 @@\n )%0A%09%09\n-grid%5Bpop.l%5D%5Bpop.c%5D = '.'\n %0A%0A%09%09\n@@ -1233,17 +1233,17 @@\n p.c%5D = '\n- \n+.\n '%0A%09%09%7D%0A%09%7D\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-07-04_02-59-26",
+            "content": "@@ -1257,17 +1257,17 @@\n p.c%5D = '\n-.\n+ \n '%0A%09%09%7D%0A%09%7D\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-07-04_02-59-35",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc main() {\n\tnl, nc := 0, 0\n\tfmt.Scan(&nl, &nc)\n\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tgrid := make([][]rune, nl)\n\tvar start, end Pos\n\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid[i] = line\n\t\tfor j, elem := range line {\n\t\t\tif elem == 'I' {\n\t\t\t\tstart = Pos{i, j}\n\t\t\t} else if elem == 'F' {\n\t\t\t\tend = Pos{i, j}\n\t\t\t}\n\t\t}\n\t}\n\n\tvisitado := make([][]bool, nl)\n\tfor i := range visitado {\n\t\tvisitado[i] = make([]bool, nc)\n\t}\n\n\tcam := NewStack[Pos]()\n\tpass := NewStack[Pos]()\n\tcam.Push(start)\n\n\tfor !cam.IsEmpty() {\n\t\tatual := cam.Top()\n\t\tvisitado[atual.l][atual.c] = true\n\n\t\tif atual == end {\n\t\t\tbreak\n\t\t}\n\n\t\tviz := []Pos{\n\t\t\t{atual.l, atual.c - 1},\n\t\t\t{atual.l - 1, atual.c},\n\t\t\t{atual.l, atual.c + 1},\n\t\t\t{atual.l + 1, atual.c},\n\t\t}\n\n\t\tvar prox *Pos\n\t\tfor _, v := range viz {\n\t\t\tif v.l >= 0 && v.l < nl && v.c >= 0 && v.c < nc && grid[v.l][v.c] != '#' && !visitado[v.l][v.c] {\n\t\t\t\tprox = &v\n\t\t\t\tbreak\n\t\t\t}\n\t\t}\n\n\t\tif prox != nil {\n\t\t\tcam.Push(*prox)\n\t\t} else {\n\t\t\tpass.Push(cam.Pop())\n\t\t}\n\t}\n\tfor !cam.IsEmpty() {\n\t\tpop := cam.Pop()\n\t\tgrid[pop.l][pop.c] = '.'\n\n\t\tif grid[pop.l][pop.c] != 'I' && grid[pop.l][pop.c] != 'F' {\n\t\t\tgrid[pop.l][pop.c] = '.'\n\t\t}\n\t}\n\n\tfor _, print := range grid {\n\t\tfmt.Println(string(print))\n\t}\n}\n",
+            "lines": "85"
+        }
+    ]
+}
