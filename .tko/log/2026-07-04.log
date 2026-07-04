@@ -81,3 +81,24 @@
 2026-07-04 05:19:46, MOVE, v:1, k:ed@subset_sum, mode:BACK
 2026-07-04 05:20:04, SELF, v:1, k:ed@subset_sum, self:1, rate:100, study:15
 2026-07-04 05:21:08, MOVE, v:1, k:ed@wordsearch, mode:DOWN
+2026-07-04 05:24:48, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-07-04 05:21:08, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-07-04 05:21:08, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-07-04 05:21:08, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-07-04 05:25:18, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-07-04 05:25:23, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-07-04 05:25:41, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-07-04 05:25:43, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-07-04 05:26:24, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:40
+2026-07-04 05:26:24, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-07-04 05:29:43, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-07-04 05:30:10, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:20, size:41
+2026-07-04 05:34:06, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:100, size:57
+2026-07-04 05:34:13, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-07-04 05:34:45, SELF, v:1, k:ed@permutacoes, self:1, rate:100, concept:1, debug:1
+2026-07-04 05:33:59, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-07-04 05:34:06, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-07-04 05:34:59, SELF, v:1, k:ed@permutacoes, self:1, rate:100, concept:1
+2026-07-04 05:35:05, SELF, v:1, k:ed@permutacoes, self:1, rate:100, concept:1, debug:1
+2026-07-04 05:35:30, SELF, v:1, k:ed@ilhas, self:1, rate:100
+2026-07-04 05:35:36, SELF, v:1, k:ed@ilhas, self:1, rate:100, guided:1
