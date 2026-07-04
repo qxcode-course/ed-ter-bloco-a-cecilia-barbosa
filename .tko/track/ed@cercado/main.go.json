@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-04_06-00-06",
+            "content": "@@ -54,17 +54,16 @@\n dfs(grid\n- \n %5B%5D%5B%5Dbyte\n@@ -162,145 +162,15 @@\n  'O'\n- \n %7B%0A%09%09\n-return%0A%09%7D%0A%0A%09grid%5Bi%5D%5Bj%5D = '0' // precisa tornar invalido%0A%0A%09dfs(grid, i+1, j)%0A%09dfs(grid, i-1, j)%0A%09dfs(grid, i, j+1)%0A%09dfs(grid, i, j-1)\n+%0A%09%7D\n %0A%7D%0A%0A\n@@ -242,16 +242,18 @@\n yte) %7B%0A%09\n+//\n l, c := \n@@ -278,179 +278,8 @@\n ard)\n-%0A%0A%09for i := 0; i %3C l; i++ %7B%0A%09%09for j := 0; j %3C c; j++ %7B%0A%09%09%09if board%5Bi%5D%5Bj%5D == 'O' %7B%0A%09%09%09%09board%5Bi%5D%5Bj%5D = 'X'%0A%09%09%09%7D else if board%5Bi%5D%5Bj%5D == '0' %7B%0A%09%09%09%09board%5Bi%5D%5Bj%5D = 'O'%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-07-04_06-10-45",
+            "content": "@@ -347,153 +347,8 @@\n lve%0A\n-// Crie um mapa de visitados e visite todas as ilhas que %0A// est%C3%A3o conectadas %C3%A0s bordas do tabuleiro. Se est%C3%A1 na borda, %0A// ent%C3%A3o n%C3%A3o %C3%A9 cercada.%0A\n func\n@@ -407,58 +407,8 @@\n ard)\n-%0A%09%0A%09for i := 0; i %3C l; i++ %7B%0A%09%09dfs(board, i, 0)%0A%09%7D\n %0A%0A%09f\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-07-04_06-16-53",
+            "content": "@@ -399,16 +399,17 @@\n lhas que\n+ \n %0A// est%C3%A3\n@@ -462,16 +462,17 @@\n a borda,\n+ \n %0A// ent%C3%A3\n@@ -549,17 +549,18 @@\n (board)%0A\n+%09\n %0A\n-\n %09for i :\n@@ -577,16 +577,16 @@\n ; i++ %7B%0A\n+\n %09%09dfs(bo\n@@ -600,29 +600,8 @@\n  0)%0A\n-%09%09dfs(board, i, c-1)%0A\n %09%7D%0A%0A\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-07-04_06-17-21",
+            "content": "@@ -618,29 +618,8 @@\n -1)%0A\n-%09%09dfs(board, l-1, i)%0A\n %09%7D%0A%0A\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-04_06-18-01",
+            "content": "@@ -343,16 +343,159 @@\n O solve%0A\n+// Crie um mapa de visitados e visite todas as ilhas que%0A// est%C3%A3o conectadas %C3%A0s bordas do tabuleiro. Se est%C3%A1 na borda,%0A// ent%C3%A3o n%C3%A3o %C3%A9 cercada.%0A\n func sol\n@@ -585,32 +585,32 @@\n fs(board, i, 0)%0A\n+\n %09%09dfs(board, i, \n@@ -618,57 +618,8 @@\n -1)%0A\n-%09%7D%0A%0A%09for i := 0; i %3C c; i++ %7B%0A%09%09dfs(board, i, 0)%0A\n %09%09df\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-07-04_06-24-44",
+            "content": "@@ -518,12 +518,12 @@\n rd, \n-0, i\n+i, 0\n )%0A%09%09\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-07-04_06-26-34",
+            "content": "@@ -402,19 +402,16 @@\n en(board\n-%5B0%5D\n )%0A%0A%09for \n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-07-04_06-28-33",
+            "content": "@@ -153,25 +153,25 @@\n d%5Bi%5D%5Bj%5D == '\n-0\n+O\n ' %7B%0A%09%09return\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-07-04_06-29-30",
+            "content": "@@ -157,13 +157,13 @@\n %5Bj%5D \n-!= 'O\n+== '0\n ' %7B%0A\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-07-04_06-30-49",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc dfs(grid [][]byte, i int, j int) {\n\tif i < 0 || i >= len(grid) || j < 0 || j >= len(grid[0]) || grid[i][j] != 'O' {\n\t\treturn\n\t}\n\n\tgrid[i][j] = '0' // precisa tornar invalido\n\n\tdfs(grid, i+1, j)\n\tdfs(grid, i-1, j)\n\tdfs(grid, i, j+1)\n\tdfs(grid, i, j-1)\n}\n\n// N\u00c3O ALTERE A ASSINATURA DA FUN\u00c7\u00c3O solve\nfunc solve(board [][]byte) {\n\tl, c := len(board), len(board[0])\n\n\tfor i := 0; i < l; i++ {\n\t\tdfs(board, i, 0)\n\t\tdfs(board, i, c-1)\n\t}\n\n\tfor i := 0; i < c; i++ {\n\t\tdfs(board, 0, i)\n\t\tdfs(board, l-1, i)\n\t}\n\n\tfor i := 0; i < l; i++ {\n\t\tfor j := 0; j < c; j++ {\n\t\t\tif board[i][j] == 'O' {\n\t\t\t\tboard[i][j] = 'X'\n\t\t\t} else if board[i][j] == '0' {\n\t\t\t\tboard[i][j] = 'O'\n\t\t\t}\n\t\t}\n\t}\n}\n\n// N\u00c3O ALTERE A MAIN\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar nrows, ncols int\n\tfmt.Sscanf(scanner.Text(), \"%d %d\", &nrows, &ncols)\n\tboard := make([][]byte, nrows)\n\tfor i := 0; i < nrows; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\tsolve(board)\n\tfor _, row := range board {\n\t\tfmt.Println(string(row))\n\t}\n}\n",
+            "lines": "62"
+        }
+    ]
+}

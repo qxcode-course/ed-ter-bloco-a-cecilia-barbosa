@@ -37,8 +37,33 @@
         },
         {
             "label": "2026-05-19_00-27-02",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc dfs(grid [][]byte, i int, j int) { // quase a msm coisa que o codigo da queimada\n\tif i < 0 || i >= len(grid) || j < 0 || j >= len(grid[0]) || grid[i][j] == '0' {\n\t\treturn\n\t}\n\n\tgrid[i][j] = '0' // precisa transfromar em invalido dps\n\n\tdfs(grid, i+1, j)\n\tdfs(grid, i-1, j)\n\tdfs(grid, i, j+1)\n\tdfs(grid, i, j-1)\n\n}\n\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o numIslands\n// Ela \u00e9 a fun\u00e7\u00e3o que ser\u00e1 chamada no LeetCode para resolver o problema\nfunc numIslands(grid [][]byte) int {\n\tif len(grid) == 0 || len(grid[0]) == 0 {\n\t\treturn 0\n\t}\n\n\tcont := 0\n\tfor i := 0; i < len(grid); i++ {\n\t\tfor j := 0; j < len(grid[0]); j++ {\n\t\t\tif grid[i][j] == '1' {\n\t\t\t\tdfs(grid, i, j)\n\t\t\t\tcont++\n\t\t\t}\n\t\t}\n\t}\n\treturn cont\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\tgrid := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tgrid[i] = []byte(scanner.Text())\n\t}\n\tresult := numIslands(grid)\n\tfmt.Println(result)\n}\n",
+            "content": "@@ -45,171 +45,707 @@\n %0A)%0A%0A\n-%0A%0A// N%C3%A3o modifique a assinatura da fun%C3%A7%C3%A3o numIslands%0A// Ela %C3%A9 a fun%C3%A7%C3%A3o que ser%C3%A1 chamada no LeetCode para resolver o problema%0Afunc numIslands(grid %5B%5D%5B%5Dbyte) int %7B%0A%09\n+func dfs(grid %5B%5D%5B%5Dbyte, i int, j int) %7B // quase a msm coisa que o codigo da queimada%0A%09if i %3C 0 %7C%7C i %3E= len(grid) %7C%7C j %3C 0 %7C%7C j %3E= len(grid%5B0%5D) %7C%7C grid%5Bi%5D%5Bj%5D == '0' %7B%0A%09%09return%0A%09%7D%0A%0A%09grid%5Bi%5D%5Bj%5D = '0' // precisa transfromar em invalido dps%0A%0A%09dfs(grid, i+1, j)%0A%09dfs(grid, i-1, j)%0A%09dfs(grid, i, j+1)%0A%09dfs(grid, i, j-1)%0A%0A%7D%0A%0A// N%C3%A3o modifique a assinatura da fun%C3%A7%C3%A3o numIslands%0A// Ela %C3%A9 a fun%C3%A7%C3%A3o que ser%C3%A1 chamada no LeetCode para resolver o problema%0Afunc numIslands(grid %5B%5D%5B%5Dbyte) int %7B%0A%09if len(grid) == 0 %7C%7C len(grid%5B0%5D) == 0 %7B%0A%09%09return 0%0A%09%7D%0A%0A%09cont := 0%0A%09for i := 0; i %3C len(grid); i++ %7B%0A%09%09for j := 0; j %3C len(grid%5B0%5D); j++ %7B%0A%09%09%09if grid%5Bi%5D%5Bj%5D == '1' %7B%0A%09%09%09%09dfs(grid, i, j)%0A%09%09%09%09cont++%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09return cont\n %0A%7D%0A%0A\n",
             "lines": "57"
+        },
+        {
+            "label": "2026-07-04_06-42-32",
+            "content": "@@ -208,16 +208,8 @@\n  %7B%0A%09\n-return 0\n %0A%7D%0A%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-07-04_06-42-43",
+            "content": "@@ -45,234 +45,8 @@\n %0A)%0A%0A\n-func dfs(grid %5B%5D%5B%5Dbyte, l, c int) %7B%0A%09if l %3C 0 %7C%7C l %3E= len(grid) %7C%7C c %3C 0 %7C%7C c %3E= len(grid%5B0%5D) %7C%7C grid%5Bl%5D%5Bc%5D == '0' %7B%0A%09%09return%0A%09%7D%0A%0A%09grid%5Bl%5D%5Bc%5D = '0'%0A%0A%09dfs(grid, l+1, c)%0A%09dfs(grid, l-1, c)%0A%09dfs(grid, l, c+1)%0A%09dfs(grid, l, c-1)%0A%7D\n %0A%0A//\n@@ -207,136 +207,16 @@\n t %7B%0A\n-%09cont := 0%0A%0A%09for i := 0; i %3C len(grid); i++ %7B%0A%09%09for j := 0; j %3C len(grid%5B0%5D); j++ %7B%0A%09%09%09dfs(grid, i, j)%0A%09%09%09cont++%0A%09%09%7D%0A%09%7D%0A\n %09return \n cont\n@@ -215,12 +215,9 @@\n urn \n-cont\n+0\n %0A%7D%0A%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-07-04_06-50-31",
+            "content": "@@ -517,35 +517,8 @@\n + %7B%0A\n-%09%09%09if grid%5Bl%5D%5Bc%5D == '1' %7B%0A%09\n %09%09%09d\n@@ -539,21 +539,15 @@\n %0A%09%09%09\n-%09\n cont++%0A\n-%09%09%09%7D%0A\n %09%09%7D%0A\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-07-04_06-51-23",
+            "content": "@@ -528,12 +528,12 @@\n rid%5B\n-i%5D%5Bj\n+l%5D%5Bc\n %5D ==\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-07-04_06-52-09",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc dfs(grid [][]byte, l, c int) {\n\tif l < 0 || l >= len(grid) || c < 0 || c >= len(grid[0]) || grid[l][c] == '0' {\n\t\treturn\n\t}\n\n\tgrid[l][c] = '0'\n\n\tdfs(grid, l+1, c)\n\tdfs(grid, l-1, c)\n\tdfs(grid, l, c+1)\n\tdfs(grid, l, c-1)\n}\n\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o numIslands\n// Ela \u00e9 a fun\u00e7\u00e3o que ser\u00e1 chamada no LeetCode para resolver o problema\nfunc numIslands(grid [][]byte) int {\n\tcont := 0\n\n\tfor i := 0; i < len(grid); i++ {\n\t\tfor j := 0; j < len(grid[0]); j++ {\n\t\t\tif grid[i][j] == '1' {\n\t\t\t\tdfs(grid, i, j)\n\t\t\t\tcont++\n\t\t\t}\n\t\t}\n\t}\n\treturn cont\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\tgrid := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tgrid[i] = []byte(scanner.Text())\n\t}\n\tresult := numIslands(grid)\n\tfmt.Println(result)\n}\n",
+            "lines": "53"
         }
     ]
 }
