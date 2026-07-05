@@ -1,0 +1,65 @@
+2026-07-05 03:40:19, MOVE, v:1, k:ed@rotten, mode:PICK
+2026-07-05 03:40:20, MOVE, v:1, k:ed@rotten, mode:BACK
+2026-07-05 03:40:22, MOVE, v:1, k:ed@detonate, mode:PICK
+2026-07-05 03:40:25, MOVE, v:1, k:ed@detonate, mode:BACK
+2026-07-05 03:40:27, MOVE, v:1, k:ed@detonate, mode:PICK
+2026-07-05 03:40:29, EXEC, v:1, k:ed@detonate, mode:FULL, size:7, fail:COMP
+2026-07-05 03:44:51, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-07-05 03:50:12, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-07-05 03:53:14, MOVE, v:1, k:ed@detonate, mode:BACK
+2026-07-05 03:53:20, MOVE, v:1, k:ed@detonate, mode:PICK
+2026-07-05 03:53:25, EXEC, v:1, k:ed@detonate, mode:FULL, rate:0, size:29
+2026-07-05 03:55:11, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-07-05 03:53:25, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-07-05 03:57:41, MOVE, v:1, k:ed@detonate, mode:BACK
+2026-07-05 03:58:30, MOVE, v:1, k:ed@detonate, mode:PICK
+2026-07-05 03:59:58, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-07-05 04:02:41, EXEC, v:1, k:ed@detonate, mode:FULL, size:47, fail:COMP
+2026-07-05 04:05:12, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-07-05 04:08:44, EXEC, v:1, k:ed@detonate, mode:FULL, rate:0, size:60
+2026-07-05 04:10:00, EXEC, v:1, k:ed@detonate, mode:FULL, rate:0, size:60
+2026-07-05 04:09:58, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-07-05 04:09:59, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-07-05 04:13:12, EXEC, v:1, k:ed@detonate, mode:FULL, rate:66, size:60
+2026-07-05 04:14:13, MOVE, v:1, k:ed@detonate, mode:BACK
+2026-07-05 04:14:26, MOVE, v:1, k:ed@detonate, mode:PICK
+2026-07-05 04:14:58, EXEC, v:1, k:ed@detonate, mode:FULL, rate:100, size:60
+2026-07-05 04:15:01, MOVE, v:1, k:ed@detonate, mode:BACK
+2026-07-05 04:15:39, SELF, v:1, k:ed@detonate, self:1, rate:100, study:60, friend:neetcodeIO
+2026-07-05 04:15:54, SELF, v:1, k:ed@detonate, self:1, rate:100, study:60, friend:neetcodeIO
+2026-07-05 04:16:40, SELF, v:1, k:ed@detonate, self:1, rate:100, study:60, friend:neetcodeIO do Youtube
+2026-07-05 04:17:03, MOVE, v:1, k:ed@rotten, mode:PICK
+2026-07-05 04:17:07, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:5
+2026-07-05 04:17:06, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-05 04:22:58, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-05 04:25:34, MOVE, v:1, k:ed@rotten, mode:BACK
+2026-07-05 04:25:40, MOVE, v:1, k:ed@rotten, mode:PICK
+2026-07-05 04:25:46, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:8
+2026-07-05 04:25:55, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0
+2026-07-05 04:25:58, EXEC, v:1, k:ed@rotten, mode:FREE
+2026-07-05 04:26:13, MOVE, v:1, k:ed@rotten, mode:BACK
+2026-07-05 04:26:43, MOVE, v:1, k:ed@detonate, mode:PICK
+2026-07-05 04:27:24, EXEC, v:1, k:ed@detonate, mode:FULL, rate:100, size:60
+2026-07-05 04:27:25, MOVE, v:1, k:ed@detonate, mode:BACK
+2026-07-05 04:27:43, MOVE, v:1, k:ed@rotten, mode:PICK
+2026-07-05 04:29:54, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:10
+2026-07-05 04:30:02, MOVE, v:1, k:ed@rotten, mode:BACK
+2026-07-05 04:30:04, MOVE, v:1, k:ed@rotten, mode:PICK
+2026-07-05 04:28:43, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-05 04:29:54, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-05 04:27:23, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-07-05 04:27:24, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-07-05 04:35:06, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-05 04:39:44, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-05 04:44:30, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-05 04:50:10, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-05 04:53:36, MOVE, v:1, k:ed@rotten, mode:BACK
+2026-07-05 04:53:50, MOVE, v:1, k:ed@rotten, mode:PICK
+2026-07-05 04:58:45, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-07-05 04:58:51, EXEC, v:1, k:ed@rotten, mode:FULL, size:72, fail:COMP
+2026-07-05 04:59:35, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:70
+2026-07-05 05:00:38, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:68
+2026-07-05 05:01:49, EXEC, v:1, k:ed@rotten, mode:FULL, rate:100, size:68
+2026-07-05 05:02:15, MOVE, v:1, k:ed@rotten, mode:BACK
+2026-07-05 05:02:32, SELF, v:1, k:ed@rotten, self:1, rate:100, study:60, friend:neetcode
+2026-07-05 05:02:50, SELF, v:1, k:ed@rotten, self:1, rate:100, study:60, friend:neetcode, guided:1

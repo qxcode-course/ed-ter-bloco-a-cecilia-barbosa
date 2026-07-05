@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-05_04-17-06",
+            "content": "@@ -23,29 +23,8 @@\n mt%22%0A\n-%0A// assistindo aula%0A%0A\n func\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-07-05_04-25-46",
+            "content": "@@ -44,22 +44,8 @@\n la%0A%0A\n-func bfs()%7B%7D%0A%0A\n func\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-07-05_04-29-54",
+            "content": "@@ -10,41 +10,20 @@\n ain%0A\n-%0A\n import \n-(%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A)\n+%22fmt%22\n %0A%0A//\n@@ -50,17 +50,16 @@\n nc bfs()\n- \n %7B%7D%0A%0Afunc\n@@ -63,1302 +63,48 @@\n unc \n-orangesRotting(grid %5B%5D%5B%5Dint) %7B%0A%09l, c := len(grid), len(grid%5B0%5D)%0A%09queue := %5B%5D%5B%5Dint%7B%7D%0A%09frescas := 0%0A%0A%09for lin := 0; lin %3C l; lin++ %7B%0A%09%09for col := 0; col %3C c; col++ %7B%0A%09%09%09if grid%5Blin%5D%5Bcol%5D == 1 %7B%0A%09%09%09%09frescas++%0A%09%09%09%7D%0A%09%09%09if grid%5Blin%5D%5Bcol%5D == 2 %7B%0A%09%09%09%09queue = append(queue, %5B%5Dint%7Blin, col%7D)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A    direcoes := %5B%5D%5B%5Dint%7B%7B0, 1%7D, %7B0, -1%7D, %7B1, 0%7D, %7B-1, 0%7D%7D%0A    tempo := 0%0A%0A    for len(queue) %3E 0 && frescas %3E 0%7B%0A        tam := len(queue)%0A%0A        for i := 0; i %3C tam; i++ %7B%0A            atual := queue%5B0%5D%0A            queue = queue%5B1:%5D%0A            lin, col := atual%5B0%5D, atual%5B1%5D%0A            for _, dir := direcoes %7B%0A                ln, cl := lin+dir%5B0%5D, col+dir%5B1%5D%0A                if ln %3C 0 %7C%7C ln == l %7C%7C cl %3C 0 %7C%7C cl == col %7C%7C grid%5Bl%5D%5Bc%5D != 1 %7B%0A                    continue%0A                %7D%0A                grid%5Bl%5D%5Bc%5D = 2%0A                queue = append(queue, %5B%5Dint%7Bl, c%7D)%0A                frescas--%0A            %7D%0A        %7D%0A        tempo++%0A    %7D%0A%0A    if fresca == 0 %7B%0A        return tempo%0A    %7D%0A    return -1%0A%7D%0A%0Afunc main() %7B%0A%09l, c := 0, 0%0A    fmt.Scan(&l, &c)%0A%0A    grid := make(%5B%5D%5B%5Dint, l)%0A    for i := 0; i %3C l; i++%7B%0A        grid%5Bi%5D = make(%5B%5Dint, c)%0A        for j := 0; j %3C c; j++ %7B%0A            fmt.Scan(&grid%5Bi%5D%5Bj%5D)%0A        %7D%0A    %7D%0A%0A    resultado := orangesRotting(grid)%0A    fmt.Println(resultado\n+main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-07-05_04-58-51",
+            "content": "@@ -18,19 +18,34 @@\n ort (%0A%09%22\n-fmt\n+bufio%22%0A%09%22fmt%22%0A%09%22os\n %22%0A)%0A%0A// \n@@ -113,12 +113,8 @@\n int)\n- int\n  %7B%0A%09\n@@ -376,17 +376,20 @@\n %09%09%7D%0A%09%7D%0A%0A\n-%09\n+    \n direcoes\n@@ -434,17 +434,20 @@\n -1, 0%7D%7D%0A\n-%09\n+    \n tempo :=\n@@ -446,25 +446,28 @@\n tempo := 0%0A%0A\n-%09\n+    \n for len(queu\n@@ -487,21 +487,26 @@\n scas %3E 0\n- \n %7B%0A\n-%09%09\n+        \n tam := l\n@@ -516,18 +516,24 @@\n queue)%0A%0A\n-%09%09\n+        \n for i :=\n@@ -551,19 +551,28 @@\n ; i++ %7B%0A\n-%09%09%09\n+            \n atual :=\n@@ -581,19 +581,28 @@\n ueue%5B0%5D%0A\n-%09%09%09\n+            \n queue = \n@@ -611,19 +611,28 @@\n eue%5B1:%5D%0A\n-%09%09%09\n+            \n lin, col\n@@ -654,19 +654,28 @@\n tual%5B1%5D%0A\n-%09%09%09\n+            \n for _, d\n@@ -683,14 +683,8 @@\n r :=\n- range\n  dir\n@@ -691,20 +691,32 @@\n ecoes %7B%0A\n-%09%09%09%09\n+                \n ln, cl :\n@@ -740,20 +740,32 @@\n +dir%5B1%5D%0A\n-%09%09%09%09\n+                \n if ln %3C \n@@ -825,124 +825,214 @@\n 1 %7B%0A\n-%09%09%09%09%09continue%0A%09%09%09%09%7D%0A%09%09%09%09grid%5Bl%5D%5Bc%5D = 2%0A%09%09%09%09queue = append(queue, %5B%5Dint%7Bl, c%7D)%0A%09%09%09%09frescas--%0A%09%09%09%7D%0A%09%09%7D%0A%09%09tempo++%0A%09%7D%0A%0A%09\n+                    continue%0A                %7D%0A                grid%5Bl%5D%5Bc%5D = 2%0A                queue = append(queue, %5B%5Dint%7Bl, c%7D)%0A                frescas--%0A            %7D%0A        %7D%0A        tempo++%0A    %7D%0A%0A    \n if f\n@@ -1040,17 +1040,16 @@\n esca\n-s\n  == 0 %7B%0A\n %09%09re\n@@ -1044,18 +1044,24 @@\n  == 0 %7B%0A\n-%09%09\n+        \n return t\n@@ -1065,20 +1065,26 @@\n n tempo%0A\n-%09%7D%0A%09\n+    %7D%0A    \n return -\n@@ -1116,17 +1116,20 @@\n := 0, 0%0A\n-%09\n+    \n fmt.Scan\n@@ -1138,17 +1138,20 @@\n l, &c)%0A%0A\n-%09\n+    \n grid := \n@@ -1167,17 +1167,20 @@\n int, l)%0A\n-%09\n+    \n for i :=\n@@ -1193,21 +1193,26 @@\n %3C l; i++\n- \n %7B%0A\n-%09%09\n+        \n grid%5Bi%5D \n@@ -1228,18 +1228,24 @@\n int, c)%0A\n-%09%09\n+        \n for j :=\n@@ -1261,19 +1261,28 @@\n ; j++ %7B%0A\n-%09%09%09\n+            \n fmt.Scan\n@@ -1299,17 +1299,29 @@\n j%5D)%0A\n-%09%09%7D%0A%09%7D%0A%0A%09\n+        %7D%0A    %7D%0A%0A    \n resu\n@@ -1350,17 +1350,20 @@\n g(grid)%0A\n-%09\n+    \n fmt.Prin\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-07-05_04-59-35",
+            "content": "@@ -26,16 +26,36 @@\n fmt%22%0A)%0A%0A\n+// assistindo aula%0A%0A\n func bfs\n@@ -712,16 +712,18 @@\n  cl == c\n+ol\n  %7C%7C grid\n@@ -728,13 +728,11 @@\n id%5Bl\n-n\n %5D%5Bc\n-l\n %5D !=\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-07-05_05-00-38",
+            "content": "@@ -746,21 +746,19 @@\n %09%09grid%5Bl\n-n\n %5D%5Bc\n-l\n %5D = 2%0A%09%09\n@@ -788,21 +788,19 @@\n  %5B%5Dint%7Bl\n-n\n , c\n-l\n %7D)%0A%09%09%09%09f\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-07-05_05-01-49",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc bfs() {}\n\nfunc orangesRotting(grid [][]int) int {\n\tl, c := len(grid), len(grid[0])\n\tqueue := [][]int{}\n\tfrescas := 0\n\n\tfor lin := 0; lin < l; lin++ {\n\t\tfor col := 0; col < c; col++ {\n\t\t\tif grid[lin][col] == 1 {\n\t\t\t\tfrescas++\n\t\t\t}\n\t\t\tif grid[lin][col] == 2 {\n\t\t\t\tqueue = append(queue, []int{lin, col})\n\t\t\t}\n\t\t}\n\t}\n\n\tdirecoes := [][]int{{0, 1}, {0, -1}, {1, 0}, {-1, 0}}\n\ttempo := 0\n\n\tfor len(queue) > 0 && frescas > 0 {\n\t\ttam := len(queue)\n\n\t\tfor i := 0; i < tam; i++ {\n\t\t\tatual := queue[0]\n\t\t\tqueue = queue[1:]\n\t\t\tlin, col := atual[0], atual[1]\n\t\t\tfor _, dir := range direcoes {\n\t\t\t\tln, cl := lin+dir[0], col+dir[1]\n\t\t\t\tif ln < 0 || ln == l || cl < 0 || cl == c || grid[ln][cl] != 1 {\n\t\t\t\t\tcontinue\n\t\t\t\t}\n\t\t\t\tgrid[ln][cl] = 2\n\t\t\t\tqueue = append(queue, []int{ln, cl})\n\t\t\t\tfrescas--\n\t\t\t}\n\t\t}\n\t\ttempo++\n\t}\n\n\tif frescas == 0 {\n\t\treturn tempo\n\t}\n\treturn -1\n}\n\nfunc main() {\n\tl, c := 0, 0\n\tfmt.Scan(&l, &c)\n\n\tgrid := make([][]int, l)\n\tfor i := 0; i < l; i++ {\n\t\tgrid[i] = make([]int, c)\n\t\tfor j := 0; j < c; j++ {\n\t\t\tfmt.Scan(&grid[i][j])\n\t\t}\n\t}\n\n\tresultado := orangesRotting(grid)\n\tfmt.Println(resultado)\n}\n",
+            "lines": "68"
+        }
+    ]
+}

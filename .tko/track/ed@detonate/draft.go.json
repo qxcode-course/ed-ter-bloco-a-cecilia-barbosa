@@ -2,8 +2,48 @@
     "patches": [
         {
             "label": "2026-07-04_21-10-26",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -33,12 +33,43 @@\n ain() %7B%0A\n-%0A\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-07-05_03-40-29",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -29,358 +29,17 @@\n unc \n-dfs(graph %5B%5D%5B%5Dint, i int, visitado %5B%5Dbool) int %7B%0A%09visitado%5Bi%5D = true%0A%09cont := 1%0A%09for j := range graph%5Bi%5D %7B%0A%09%09if !visitado%5Bj%5D %7B%0A%09%09%09cont += dfs(graph, i, visitado)%0A%09%09%7D%0A%09%7D%0A%09return 0%0A%7D%0A%0Afunc main() %7B%0A%09n, m := 0, 0%0A%0A%09fmt.Scan(&n, &m)%0A%0A%09//bombas := make(%5B%5D%5B%5Dint, n)%0A%0A%09/*for i := 0; i %3C n; i++%7B%0A%09%09var x, y, r int%0A%09%09fmt.Scan(&x, &y, &r)%0A%09%7D*/%0A%0A%09fmt.Println(%22%22)\n+main() %7B%0A%0A\n %0A%7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-07-05_03-53-25",
+            "content": "@@ -199,261 +199,8 @@\n %0A%09%7D%0A\n-%09return cont%0A%7D%0A%0Afunc detonate(bombas %5B%5D%5B%5Dint) int %7B%0A%09n := len(bombas)%0A%09graph := make(%5B%5D%5B%5Dint, n)%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09xi, yi, ri := bombas%5Bi%5D%5B0%5D, bombas%5Bi%5D%5B1%5D, bombas%5Bi%5D%5B2%5D%0A%09%09for j := 0; j %3C n; j++ %7B%0A%09%09%09if i == j %7B%0A%09%09%09%09continue%0A%09%09%09%7D%0A%09%09%09%0A%09%09%7D%0A%09%7D%0A%0A\n %09ret\n@@ -257,16 +257,18 @@\n , &m)%0A%0A%09\n+//\n bombas :\n@@ -288,16 +288,18 @@\n t, n)%0A%0A%09\n+/*\n for i :=\n@@ -321,25 +321,22 @@\n %0A%09%09var x\n-i\n , y\n-i\n , r\n-i\n  int%0A%09%09f\n@@ -349,86 +349,39 @@\n n(&x\n-i\n , &y\n-i\n , &r\n-i\n )%0A%09\n-%09bombas%5Bi%5D = %5B%5Dint%7Bxi, yi, ri%7D%0A%09%7D%0A%0A%09fmt.Println(detonate(bombas)\n+%7D*/%0A%0A%09fmt.Println(%22%22\n )%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-07-05_04-02-41",
+            "content": "@@ -440,306 +440,19 @@\n %09%09%7D%0A\n-%0A\n %09%09%09\n-x2, y2 := bombas%5Bj%5D%5B0%5D, bombas%5Bj%5D%5B1%5D%0A%09%09%09dx := xi - x2%0A%09%09%09dy := yi - y2%0A%09%09%09if dx*dx*dy*dy %3C= ri*ri %7B%0A%09%09%09%09graph%5Bi%5D = append(graph%5Bi%5D, j)%0A%09\n+%0A\n %09%09%7D%0A\n-%09\n %09%7D%0A\n-%09%7D%0A%09result := 0%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09visitado := make(%5B%5Dbool, n)%0A%09%09cont := dfs(graph, i, visitado)%0A%09%09if cont %3E result %7B%0A%09%09%09result = cont%0A%09%09%7D%0A%09%7D\n %0A%09re\n@@ -460,14 +460,9 @@\n urn \n-result\n+0\n %0A%7D%0A%0A\n@@ -557,25 +557,24 @@\n ; i %3C n; i++\n- \n %7B%0A%09%09var xi, \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-07-05_04-08-44",
+            "content": "@@ -522,17 +522,17 @@\n if dx*dx\n-+\n+*\n dy*dy %3C=\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-05_04-10-00",
+            "content": "@@ -175,17 +175,17 @@\n (graph, \n-j\n+i\n , visita\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-05_04-13-12",
+            "content": "@@ -114,11 +114,8 @@\n %09for\n- _,\n  j :\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-05_04-14-58",
+            "content": "@@ -26,17 +26,17 @@\n %22%0A%0Afunc \n-b\n+d\n fs(graph\n@@ -167,17 +167,17 @@\n cont += \n-b\n+d\n fs(graph\n@@ -669,17 +669,17 @@\n cont := \n-b\n+d\n fs(graph\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-05_04-27-24",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc bfs(graph [][]int, i int, visitado []bool) int {\n\tvisitado[i] = true\n\tcont := 1\n\tfor _, j := range graph[i] {\n\t\tif !visitado[j] {\n\t\t\tcont += bfs(graph, j, visitado)\n\t\t}\n\t}\n\treturn cont\n}\n\nfunc detonate(bombas [][]int) int {\n\tn := len(bombas)\n\tgraph := make([][]int, n)\n\n\tfor i := 0; i < n; i++ {\n\t\txi, yi, ri := bombas[i][0], bombas[i][1], bombas[i][2]\n\t\tfor j := 0; j < n; j++ {\n\t\t\tif i == j {\n\t\t\t\tcontinue\n\t\t\t}\n\n\t\t\tx2, y2 := bombas[j][0], bombas[j][1]\n\t\t\tdx := xi - x2\n\t\t\tdy := yi - y2\n\t\t\tif dx*dx+dy*dy <= ri*ri {\n\t\t\t\tgraph[i] = append(graph[i], j)\n\t\t\t}\n\t\t}\n\t}\n\tresult := 0\n\tfor i := 0; i < n; i++ {\n\t\tvisitado := make([]bool, n)\n\t\tcont := bfs(graph, i, visitado)\n\t\tif cont > result {\n\t\t\tresult = cont\n\t\t}\n\t}\n\treturn result\n}\n\nfunc main() {\n\tn, m := 0, 0\n\n\tfmt.Scan(&n, &m)\n\n\tbombas := make([][]int, n)\n\n\tfor i := 0; i < n; i++ {\n\t\tvar xi, yi, ri int\n\t\tfmt.Scan(&xi, &yi, &ri)\n\t\tbombas[i] = []int{xi, yi, ri}\n\t}\n\n\tfmt.Println(detonate(bombas))\n}\n",
+            "lines": "60"
         }
     ]
 }
